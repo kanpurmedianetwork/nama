@@ -21,6 +21,15 @@ export default function Home() {
             addressCountry: "IN"
           },
           geo: { latitude: 26.4499, longitude: 80.3319 },
+          areaServed: [
+            { "@type": "City", name: "Kanpur" },
+            { "@type": "City", name: "Lucknow" },
+            { "@type": "City", name: "Noida" },
+            { "@type": "City", name: "Prayagraj" },
+            { "@type": "City", name: "Varanasi" },
+            { "@type": "City", name: "Agra" },
+            { "@type": "State", name: "Uttar Pradesh" }
+          ],
           openingHours: "Mo-Sa 10:00-19:00",
           priceRange: "₹₹"
         }}
@@ -38,6 +47,59 @@ export default function Home() {
           }))
         }}
       />
+      <JsonLd 
+        type="Service"
+        data={{
+          name: "Digital Marketing and Brand Identity",
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Nexudyam"
+          },
+          areaServed: [
+            { "@type": "City", name: "Kanpur" },
+            { "@type": "City", name: "Lucknow" },
+            { "@type": "City", name: "Noida" },
+            { "@type": "City", name: "Prayagraj" },
+            { "@type": "City", name: "Varanasi" },
+            { "@type": "City", name: "Agra" },
+            { "@type": "State", name: "Uttar Pradesh" }
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Digital Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Brand Identity Design"
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Website Development"
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Meta & Google Ads"
+                }
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Local SEO"
+                }
+              }
+            ]
+          }
+        }}
+      />
 
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-28 md:pb-20">
@@ -48,7 +110,7 @@ export default function Home() {
             Build your brand now.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Most small businesses lose customers to competitors with better online presence.{" "}
+            Most startups and small businesses lose customers to competitors with a better online presence.{" "}
             <a href="https://wa.me/919161881100" target="_blank" rel="noopener noreferrer" className="text-foreground font-bold underline underline-offset-4 hover:opacity-70 transition-opacity">
               Get your free audit
             </a>{" "}
@@ -92,15 +154,15 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <MapPin size={22} className="text-muted-foreground" />
               <div>
-                <span className="font-display text-3xl font-bold text-foreground">6+</span>
-                <span className="text-sm text-muted-foreground ml-2">Cities across UP</span>
+                <span className="font-display text-3xl font-bold text-foreground">UP</span>
+                <span className="text-sm text-muted-foreground ml-2">Kanpur, Lucknow, Noida, Prayagraj & More</span>
               </div>
             </div>
           </div>
 
           {/* Trusted By Label */}
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground text-center mb-6">
-            Trusted by businesses across India
+            Trusted by Startups & Businesses across India
           </p>
 
           {/* Service Tags Strip */}
@@ -118,10 +180,10 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8">
-            Most Small Businesses Are Invisible Online. <span className="text-brand">We Fix That.</span>
+            Most Startups & Businesses Are Invisible Online. <span className="text-brand">We Fix That.</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            You built something real. A business, a craft, a dream. But without the right digital presence, your potential customers can't find you — they're finding your competitors instead. The problem isn't your product. It's visibility. And that's exactly what Nexudyam was built to solve.
+            You built something real. A business, a craft, a dream. But without the right digital presence, your potential customers can&apos;t find you — they&apos;re finding your competitors instead. The problem isn&apos;t your product. It&apos;s visibility. And that&apos;s exactly what Nexudyam was built to solve.
           </p>
         </div>
       </section>
@@ -135,55 +197,62 @@ export default function Home() {
               Everything Your Business Needs — In One Place
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             <ServiceCard 
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
               icon={<Palette size={28} />}
+              href="/services#brand-identity"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
               icon={<Share2 size={28} />}
+              href="/services#social-media"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
               icon={<Megaphone size={28} />}
+              href="/services#paid-ads"
             />
             <ServiceCard 
               title="Website Development"
               description="Fast, mobile-first websites built on modern stack."
               features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
               icon={<Monitor size={28} />}
+              href="/services#web-development"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
               icon={<MapPin size={28} />}
+              href="/services#local-seo"
             />
             <ServiceCard 
               title="AI Content Marketing"
               description="10x faster than traditional agencies — at 1/3rd the cost."
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Cpu size={28} />}
+              href="/services#ai-content"
             />
             <ServiceCard 
               title="Event Promotion"
               description="End-to-end event buzz and coverage."
               features={["Pre-event ads & WhatsApp", "Live coverage brief", "Post-event repurposing"]}
               icon={<Calendar size={28} />}
+              href="/events"
             />
             <ServiceCard 
               title="Artist Management"
               description="Professional profile for independent creators."
-              href="/artist-management"
               features={["Brand identity for artists", "Booking management", "Instagram/YouTube growth"]}
               icon={<Users size={28} />}
+              href="/artist-management"
             />
           </div>
         </div>
@@ -297,27 +366,27 @@ export default function Home() {
 
 const faqData = [
   {
-    question: "What is Nexudyam and what does it do?",
-    answer: "Nexudyam is a next-generation entrepreneurship platform based in Kanpur, India. We help small businesses, MSMEs, and individual creators build their brand identity, grow their digital presence through social media and paid advertising — all under one roof at affordable prices."
+    question: "What is Nexudyam and what services do you offer?",
+    answer: "Nexudyam is a premier brand identity and digital marketing agency based in Kanpur. We help startups, MSMEs, and independent creators build their brands from the ground up. Our core services include Brand Identity Design, Website Development, AI-Powered Social Media Marketing, Meta & Google Ads management, and Local SEO (Google Business Profile optimization)."
   },
   {
-    question: "How much does Nexudyam charge?",
-    answer: "Our packages start at ₹4,999 per month for the Launch plan, which includes brand identity design, Google Business Profile setup, and 8 AI-powered social posts. Our most popular Grow plan is ₹9,999/month and includes a website and ads setup."
+    question: "Do you work with startups, or just established MSMEs?",
+    answer: "We work with both! Nexudyam is designed specifically to help early-stage startups and established MSMEs scale. Our 'Launch' package is perfect for new businesses needing a foundational brand identity and digital presence, while our 'Grow' and 'Scale' packages are tailored for businesses ready to dominate their market through aggressive ad campaigns."
   },
   {
-    question: "What is AI content marketing and how does Nexudyam use it?",
-    answer: "AI content marketing uses artificial intelligence tools to create social media captions, Instagram Reels scripts, ad copy, and WhatsApp campaign messages at a fraction of the time and cost. Nexudyam delivers 30-day content calendars in 48 hours."
+    question: "What cities in Uttar Pradesh do you provide digital marketing services for?",
+    answer: "While our headquarters is in Kanpur, we provide comprehensive digital marketing, web development, and SEO services across all major cities in Uttar Pradesh — including Lucknow, Noida, Prayagraj, Varanasi, and Agra. Since our services are entirely digital, we also partner with clients across India."
   },
   {
-    question: "Does Nexudyam run paid ads for small businesses?",
-    answer: "Yes. We set up and manage Meta Ads (Facebook and Instagram) and Google Ads campaigns for businesses of all sizes. Campaigns can start with as little as ₹2,000 in ad spend."
+    question: "How does your AI Content Marketing work?",
+    answer: "Our AI Content Marketing utilizes advanced artificial intelligence tools to generate high-converting ad copy, Instagram Reels scripts, blog posts, and social media calendars. This allows us to deliver agency-quality content 10x faster and at a fraction of traditional costs, passing the speed and savings directly to you."
   },
   {
-    question: "What cities does Nexudyam serve?",
-    answer: "Nexudyam is headquartered in Kanpur, Uttar Pradesh, and serves businesses across UP including Lucknow, Varanasi, Agra, Prayagraj, and Ayodhya. We also work with clients across India for digital services."
+    question: "How much do your digital marketing packages cost?",
+    answer: "Our pricing is transparent and MSME-friendly. The 'Launch' plan starts at ₹4,999/month and covers essential branding and social media setup. The 'Grow' plan (₹9,999/month) includes website development and ad setup. The 'Scale' plan (₹18,999/month) is for comprehensive ad management and priority support."
   },
   {
-    question: "Does Nexudyam offer artist management?",
-    answer: "Yes. We provide professional brand building, content strategy, booking management, and Instagram/YouTube growth execution for artists and independent creators."
+    question: "Do you offer custom Website Development and Local SEO?",
+    answer: "Yes. We build fast, mobile-first, SEO-optimized websites designed to convert visitors into customers. Alongside development, we fully optimize your Google Business Profile to ensure your startup or MSME ranks highly in local 'near me' searches across your target cities."
   }
 ];

@@ -16,11 +16,11 @@ export default function ServicesPage() {
             Everything Your Business Needs
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From brand identity to full-scale ad campaigns, we provide end-to-end digital growth solutions tailored for Indian MSMEs and creators.
+            From brand identity to full-scale ad campaigns, we provide end-to-end digital growth solutions tailored for Indian Startups, MSMEs, and creators.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           <ServiceCard 
             title="Brand Identity Design"
             description="Visual identity that builds trust and recognition."

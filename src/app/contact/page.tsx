@@ -13,10 +13,10 @@ export default function ContactPage() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Let's Talk About Your Growth
+            Let&apos;s Talk About Your Growth
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Whether you need a complete rebrand or just want to run better ads, we're here to help. Reach out to us directly or fill out the form below.
+            Whether you need a complete rebrand or just want to run better ads, we&apos;re here to help. Reach out to us directly or fill out the form below.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-display font-bold text-3xl mb-4">Send us a message</h3>
               <p className="text-muted-foreground leading-relaxed max-w-md mb-8">
-                Tell us about your business and what you're looking to achieve. We'll respond within 4 hours on business days.
+                Tell us about your business and what you&apos;re looking to achieve. We&apos;ll respond within 4 hours on business days.
               </p>
               <TallyPopupButton
                 className="bg-foreground text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-brand-dark transition-colors shadow-md flex items-center gap-3"

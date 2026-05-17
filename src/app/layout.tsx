@@ -25,8 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nexudyam │ Brand Identity & Digital Marketing for Small Businesses │ Kanpur",
-  description: "Nexudyam helps small businesses, MSMEs & artists build brand identity, grow on Instagram & Google, and run paid ads — all from ₹4,999/mo.",
+  metadataBase: new URL("https://nexudyam.in"),
+  title: "Nexudyam │ Brand Identity & Digital Marketing for Startups & Small Businesses │ Kanpur & UP",
+  description: "Nexudyam helps startups, MSMEs & artists across Kanpur, Lucknow, Noida, Prayagraj & UP build brand identity, run paid ads, and grow online — starting at ₹4,999/mo.",
   icons: {
     icon: "/logo.svg",
   },

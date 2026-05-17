@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
@@ -8,13 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <img src="/logo.svg" alt="Nexudyam Logo" className="w-8 h-8" />
+              <Image src="/logo.svg" alt="Nexudyam Logo" width={32} height={32} className="w-8 h-8" />
               <span className="font-display font-bold text-xl tracking-tight text-foreground">
                 NEXUDYAM
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Next Generation Entrepreneurship. We help small businesses, MSMEs, and creators build brand identity and grow online.
+              Next Generation Entrepreneurship. We help startups, MSMEs, and creators build brand identity and grow online.
             </p>
           </div>
 
