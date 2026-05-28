@@ -15,7 +15,7 @@ export default function EventsPage() {
             Make Your Next Event Unforgettable
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We handle the digital buzz so you can focus on hosting. From pre-event promotions to live coverage and post-event content generation.
+            We make your next event unforgettable by handling the digital buzz so you can focus on hosting. From pre-event promotions to live coverage and post-event content generation.
           </p>
         </div>
 

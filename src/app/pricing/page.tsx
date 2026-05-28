@@ -46,7 +46,7 @@ export default function PricingPage() {
               Simple Packages. Real Growth.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We built our packages for real Indian businesses — not for corporates. One new customer often covers the entire monthly cost.
+              We offer simple monthly pricing packages designed for real business growth. No hidden fees or corporate jargon — just real results for Indian MSMEs.
             </p>
           </div>
 

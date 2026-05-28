@@ -3,8 +3,8 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services │ Social Media, Ads, Website, Brand Design │ Nexudyam",
-  description: "Explore Nexudyam services: Instagram Reels strategy, Meta & Google Ads, website development, Google Business Profile, and full ads management.",
+  title: "Digital Marketing & Branding Services | Nexudyam",
+  description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
 };
 
 export default function ServicesPage() {
@@ -13,10 +13,10 @@ export default function ServicesPage() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Everything Your Business Needs
+            Digital Marketing & Branding Services for Your Business
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From brand identity to full-scale ad campaigns, we provide end-to-end digital growth solutions tailored for Indian Startups, MSMEs, and creators.
+            We provide all the digital marketing, web development, and branding services your business needs to grow and find more customers. Get a free audit today!
           </p>
         </div>
 

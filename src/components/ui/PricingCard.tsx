@@ -22,7 +22,7 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
       )}
       
       <div className="mb-6">
-        <h3 className="font-display font-bold text-2xl text-foreground mb-2">{name}</h3>
+        <p className="font-display font-bold text-2xl text-foreground mb-2">{name}</p>
         <p className="text-subtle-foreground text-sm">{target}</p>
       </div>
       
@@ -44,7 +44,7 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
             : "bg-surface text-foreground border border-border hover:bg-border/50"
         )}
       >
-        Get Started
+        Get Started with {name}
       </a>
       
       <div className="flex-grow">

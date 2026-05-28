@@ -17,7 +17,7 @@ export default function BlogPage() {
             Insights for Growth
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Actionable strategies, deep dives, and the latest trends in digital marketing tailored for the Indian entrepreneur.
+            We share actionable insights for your business growth. Read about the latest trends in digital marketing, branding, and local SEO in India.
           </p>
         </div>
 

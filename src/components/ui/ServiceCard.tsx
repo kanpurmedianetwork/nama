@@ -24,7 +24,7 @@ export function ServiceCard({ title, description, features, icon }: ServiceCardP
         {icon}
       </div>
       
-      <h3 className="font-display font-bold text-xl text-foreground mb-3">{title}</h3>
+      <p className="font-display font-bold text-xl text-foreground mb-3">{title}</p>
       <p className="text-muted-foreground text-sm mb-6">{description}</p>
       
       {!isExpanded ? (

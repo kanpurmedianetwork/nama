@@ -73,12 +73,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           author: {
             "@type": "Organization",
             name: "Nexudyam",
-            url: "https://nexudyam.in",
+            url: "https://www.nexudyam.in",
           },
           publisher: {
             "@type": "Organization",
             name: "Nexudyam",
-            url: "https://nexudyam.in",
+            url: "https://www.nexudyam.in",
           },
         }}
       />

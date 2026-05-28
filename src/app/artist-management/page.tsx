@@ -19,7 +19,7 @@ export default function ArtistManagementPage() {
             Build Your Fanbase. <br />We Handle the Rest.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            You focus on your art. We focus on building your brand, growing your reach on Instagram and YouTube, and managing your bookings.
+            We handle the rest while you build your fanbase and focus on your art. We focus on building your brand, growing your reach on Instagram and YouTube, and managing bookings.
           </p>
           <a 
             href="https://wa.me/919161881100" 

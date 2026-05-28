@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nexudyam.in";
+  const baseUrl = "https://www.nexudyam.in";
 
   // Base routes
   const routes = [

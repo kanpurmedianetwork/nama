@@ -16,7 +16,7 @@ export default function ContactPage() {
             Let&apos;s Talk About Your Growth
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Whether you need a complete rebrand or just want to run better ads, we&apos;re here to help. Reach out to us directly or fill out the form below.
+            Let&apos;s talk about your business growth. Whether you need digital marketing, web design, or paid advertising help, we are here to support your journey. Reach out to us directly or fill out the form below.
           </p>
         </div>
 
@@ -41,7 +41,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-foreground">Email</p>
-                    <a href="mailto:hello@nexudyam.in" className="text-muted-foreground hover:text-brand transition-colors block mt-1">hello@nexudyam.in</a>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: '<!--email_off--><a href="mailto:hello@nexudyam.in" class="text-muted-foreground hover:text-brand transition-colors block mt-1">hello@nexudyam.in</a><!--/email_off-->'
+                      }}
+                    />
                   </div>
                 </li>
                 <li className="flex items-start">

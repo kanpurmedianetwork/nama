@@ -20,7 +20,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-bold text-foreground mb-4">Services</h3>
+            <p className="font-display font-bold text-foreground mb-4">Services</p>
             <ul className="flex flex-col gap-3">
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
@@ -30,7 +30,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-bold text-foreground mb-4">Company</h3>
+            <p className="font-display font-bold text-foreground mb-4">Company</p>
             <ul className="flex flex-col gap-3">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-brand">About Us</Link></li>
               <li><Link href="/pricing" className="text-sm text-muted-foreground hover:text-brand">Pricing</Link></li>
@@ -40,7 +40,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-bold text-foreground mb-4">Contact Us</h3>
+            <p className="font-display font-bold text-foreground mb-4">Contact Us</p>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-brand shrink-0 mt-0.5" />
@@ -52,7 +52,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand shrink-0" />
-                <span className="text-sm text-muted-foreground">hello@nexudyam.in</span>
+                <span 
+                  className="text-sm text-muted-foreground"
+                  dangerouslySetInnerHTML={{ 
+                    __html: '<!--email_off-->hello@nexudyam.in<!--/email_off-->' 
+                  }} 
+                />
               </li>
             </ul>
           </div>

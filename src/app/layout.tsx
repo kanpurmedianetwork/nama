@@ -26,11 +26,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexudyam.in"),
-  title: "Nexudyam │ Brand Identity & Digital Marketing for Startups & Small Businesses │ Kanpur & UP",
-  description: "Nexudyam helps startups, MSMEs & artists across Kanpur, Lucknow, Noida, Prayagraj & UP build brand identity, run paid ads, and grow online — starting at ₹4,999/mo.",
+  metadataBase: new URL("https://www.nexudyam.in"),
+  title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
+  description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
   icons: {
     icon: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 

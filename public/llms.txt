@@ -1,0 +1,29 @@
+# Nexudyam
+
+> Nexudyam is a next-generation entrepreneurship agency helping startups, MSMEs, and creators build brand identity, run paid advertising, develop high-performance websites, and grow online.
+
+Based in Kanpur, Uttar Pradesh, India, Nexudyam offers professional digital marketing packages tailored for small businesses and growing creators.
+
+## Core Pages
+
+- [Homepage](https://www.nexudyam.in/): Overview of services, agency philosophy, and client success stories.
+- [About Us](https://www.nexudyam.in/about): Mission, history, and the vision of Nexudyam for next-generation entrepreneurship.
+- [Pricing](https://www.nexudyam.in/pricing): Details of affordable digital marketing and branding packages.
+- [Blog](https://www.nexudyam.in/blog): SEO content hub and articles on digital marketing, business growth, and local SEO.
+- [Contact](https://www.nexudyam.in/contact): Communication channels including WhatsApp, call details, and inquiry form.
+
+## Services
+
+- [Digital Services](https://www.nexudyam.in/services): Core offerings including brand design, Meta & Google Ads, and website development.
+- [Artist Management](https://www.nexudyam.in/artist-management): Influencer management, branding, and career growth for creators.
+
+## Blog Articles
+
+- [AI Content Marketing vs Traditional](https://www.nexudyam.in/blog/ai-content-marketing-vs-traditional): A comparative study on which marketing method is best for MSMEs in 2026.
+- [Get Found on Google in 2026](https://www.nexudyam.in/blog/get-found-on-google-2026): A complete guide on search engine visibility and ranking strategies.
+- [Google Business Profile in Kanpur](https://www.nexudyam.in/blog/google-business-profile-kanpur): Why local businesses in Kanpur need Google Business Profile optimization.
+
+## Legal
+
+- [Privacy Policy](https://www.nexudyam.in/privacy): Privacy policy details, data collection, cookies, and usage rights.
+- [Terms of Service](https://www.nexudyam.in/terms): Terms and conditions, payment terms, and agreements for engaging Nexudyam's services.

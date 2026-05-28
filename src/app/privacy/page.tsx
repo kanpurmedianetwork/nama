@@ -101,7 +101,11 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-display text-2xl font-bold text-foreground mb-4">Contact Us</h2>
             <p className="mb-2">If you have any questions about this Privacy Policy, please contact us:</p>
             <ul className="space-y-2 mt-4">
-              <li><strong className="text-foreground">Email:</strong> hello@nexudyam.in</li>
+              <li
+                dangerouslySetInnerHTML={{
+                  __html: '<strong class="text-foreground">Email:</strong> <!--email_off-->hello@nexudyam.in<!--/email_off-->'
+                }}
+              />
               <li><strong className="text-foreground">Phone:</strong> +91 91618 81100</li>
               <li><strong className="text-foreground">Address:</strong> Kanpur, Uttar Pradesh, India</li>
             </ul>

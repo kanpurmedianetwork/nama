@@ -12,7 +12,7 @@ export default function Home() {
         type="LocalBusiness"
         data={{
           name: "Nexudyam",
-          url: "https://nexudyam.in",
+          url: "https://www.nexudyam.in",
           telephone: "+91-9161881100",
           address: {
             "@type": "PostalAddress",
@@ -105,16 +105,13 @@ export default function Home() {
       <section className="pt-16 pb-12 md:pt-28 md:pb-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
-            Don't let your business stay invisible.{" "}
-            <br className="hidden md:block" />
-            Build your brand now.
+            Grow Your Business Online with Kanpur's Top Digital Marketing Agency
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Most startups and small businesses lose customers to competitors with a better online presence.{" "}
+            Nexudyam helps startups and MSMEs in Kanpur and UP grow online. We create high-converting digital marketing campaigns, build websites, and design brand identities to get you more leads.{" "}
             <a href="https://wa.me/919161881100" target="_blank" rel="noopener noreferrer" className="text-foreground font-bold underline underline-offset-4 hover:opacity-70 transition-opacity">
-              Get your free audit
-            </a>{" "}
-            before they find your next customer first.
+              Claim your free marketing audit today
+            </a> before your competitors find your next customer.
           </p>
 
           {/* Dark CTA Bar */}
@@ -125,6 +122,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-foreground px-5 py-2.5 rounded-full text-sm font-bold hover:bg-accent transition-colors flex items-center gap-2"
+              aria-label="Contact us on WhatsApp"
             >
               <ArrowRight size={16} />
             </a>
@@ -332,19 +330,19 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl border border-border shadow-sm">
-              <h3 className="font-display font-bold text-2xl mb-3">One Partner, Everything Included</h3>
+              <p className="font-display font-bold text-2xl mb-3">One Partner, Everything Included</p>
               <p className="text-muted-foreground leading-relaxed">No juggling between a designer, a developer, and an agency. We handle brand, digital, and ads — together.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-border shadow-sm">
-              <h3 className="font-display font-bold text-2xl mb-3">AI-Powered, Agency Quality</h3>
+              <p className="font-display font-bold text-2xl mb-3">AI-Powered, Agency Quality</p>
               <p className="text-muted-foreground leading-relaxed">Our AI tools cut delivery time and cost in half. You get faster content, better results, and more savings than any traditional agency.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-border shadow-sm">
-              <h3 className="font-display font-bold text-2xl mb-3">MSME-First Pricing</h3>
+              <p className="font-display font-bold text-2xl mb-3">MSME-First Pricing</p>
               <p className="text-muted-foreground leading-relaxed">We built our packages for real Indian businesses — not for corporates. ₹4,999 gets you started. One new customer covers it.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-border shadow-sm">
-              <h3 className="font-display font-bold text-2xl mb-3">Local Roots, National Reach</h3>
+              <p className="font-display font-bold text-2xl mb-3">Local Roots, National Reach</p>
               <p className="text-muted-foreground leading-relaxed">Based in Kanpur. Built for Bharat. We understand the Indian entrepreneur's journey — because we are one.</p>
             </div>
           </div>
