@@ -6,6 +6,7 @@ import { blogPosts } from "@/lib/blog-data";
 export const metadata: Metadata = {
   title: "Blog │ SEO Content Hub │ Nexudyam",
   description: "Read the latest insights on digital marketing, SEO, Meta Ads, and brand building for small businesses in India.",
+  keywords: ["digital marketing blog", "seo articles india", "social media marketing tips", "branding guide for startups", "lead generation guides", "seo content hub"],
 };
 
 export default function BlogPage() {

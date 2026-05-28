@@ -5,6 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Artist Management │ Creators & Influencers │ Nexudyam",
   description: "Professional brand building, booking management, and Instagram/YouTube growth execution for artists and independent creators in Kanpur & UP.",
+  keywords: ["artist management agency", "creator growth agency up", "instagram growth strategist", "booking agent for influencers", "youtube growth for artists"],
 };
 
 export default function ArtistManagementPage() {

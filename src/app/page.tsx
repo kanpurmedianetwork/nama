@@ -364,27 +364,27 @@ export default function Home() {
 
 const faqData = [
   {
-    question: "What is Nexudyam and what services do you offer?",
-    answer: "Nexudyam is a premier brand identity and digital marketing agency based in Kanpur. We help startups, MSMEs, and independent creators build their brands from the ground up. Our core services include Brand Identity Design, Website Development, AI-Powered Social Media Marketing, Meta & Google Ads management, and Local SEO (Google Business Profile optimization)."
+    question: "Why should I choose Nexudyam as my digital marketing agency in Kanpur?",
+    answer: "Nexudyam is a leading digital marketing agency in Kanpur, offering tailored branding, local SEO, and paid advertising solutions. We specialize in helping startups and MSMEs build their online presence, run high-converting campaigns, and grow their businesses starting at affordable monthly retainers."
   },
   {
-    question: "Do you work with startups, or just established MSMEs?",
-    answer: "We work with both! Nexudyam is designed specifically to help early-stage startups and established MSMEs scale. Our 'Launch' package is perfect for new businesses needing a foundational brand identity and digital presence, while our 'Grow' and 'Scale' packages are tailored for businesses ready to dominate their market through aggressive ad campaigns."
+    question: "What services does your website development company in Kanpur provide?",
+    answer: "As a top web design and website development company in Kanpur, we build fast, responsive, SEO-optimized business websites on modern platforms like Next.js, WordPress, and Shopify. We focus on creating high-converting websites that load in milliseconds and turn visitors into active customer leads."
   },
   {
-    question: "What cities in Uttar Pradesh do you provide digital marketing services for?",
-    answer: "While our headquarters is in Kanpur, we provide comprehensive digital marketing, web development, and SEO services across all major cities in Uttar Pradesh — including Lucknow, Noida, Prayagraj, Varanasi, and Agra. Since our services are entirely digital, we also partner with clients across India."
+    question: "How do your local SEO services in Kanpur help small businesses rank?",
+    answer: "Our local SEO services in Kanpur focus on Claiming, Optimizing, and Managing your Google Business Profile to help you rank at the top of Google Maps and 'near me' searches. We build local citations, manage reviews, and target geotargeted keywords across Kanpur, Lucknow, and UP to drive local store traffic."
   },
   {
-    question: "How does your AI Content Marketing work?",
-    answer: "Our AI Content Marketing utilizes advanced artificial intelligence tools to generate high-converting ad copy, Instagram Reels scripts, blog posts, and social media calendars. This allows us to deliver agency-quality content 10x faster and at a fraction of traditional costs, passing the speed and savings directly to you."
+    question: "Which digital marketing packages are best for startup lead generation?",
+    answer: "Our affordable digital marketing packages are designed to scale with your budget. The 'Launch' package is ideal for early-stage branding and local SEO at ₹4,999/month, while our 'Grow' and 'Scale' packages include full website development, social media posting, and Meta/Google Ads lead generation campaigns."
   },
   {
-    question: "How much do your digital marketing packages cost?",
-    answer: "Our pricing is transparent and MSME-friendly. The 'Launch' plan starts at ₹4,999/month and covers essential branding and social media setup. The 'Grow' plan (₹9,999/month) includes website development and ad setup. The 'Scale' plan (₹18,999/month) is for comprehensive ad management and priority support."
+    question: "How does AI content marketing compare to a traditional branding agency?",
+    answer: "Our AI-powered content marketing lets us write scripts, create captions, and draft social posts 10x faster than a traditional branding agency. This eliminates slow turnaround times and cuts costs by 70%, giving startups premium-quality marketing assets at an unbeatable speed and price."
   },
   {
-    question: "Do you offer custom Website Development and Local SEO?",
-    answer: "Yes. We build fast, mobile-first, SEO-optimized websites designed to convert visitors into customers. Alongside development, we fully optimize your Google Business Profile to ensure your startup or MSME ranks highly in local 'near me' searches across your target cities."
+    question: "How can I contact Nexudyam for a free digital marketing audit?",
+    answer: "You can claim a free marketing audit for your business by contacting our team directly on WhatsApp or calling +91-9161881100. We'll analyze your website, review your current search presence, check your local listings, and outline a step-by-step plan to get more leads."
   }
 ];

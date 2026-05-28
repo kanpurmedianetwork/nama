@@ -5,6 +5,7 @@ import { TallyPopupButton } from "@/components/ui/TallyEmbed";
 export const metadata: Metadata = {
   title: "Contact Nexudyam │ WhatsApp, Call, or Email │ Kanpur",
   description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
+  keywords: ["contact nexudyam", "digital marketing agency kanpur contact", "whatsapp marketing support", "free digital marketing audit", "hire marketing expert up"],
 };
 
 export default function ContactPage() {

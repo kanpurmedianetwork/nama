@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Nexudyam | Next Generation Entrepreneurship",
   description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
+  keywords: ["about nexudyam", "digital marketing founders", "akash kumar kanpur", "startup growth agency india", "msme support up", "next generation entrepreneurship"],
 };
 
 export default function AboutPage() {

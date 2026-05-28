@@ -4,6 +4,7 @@ import { CalendarDays, Megaphone, Camera, Share2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Event Promotion & Coverage │ Nexudyam",
   description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
+  keywords: ["event promotion services", "event marketing campaigns", "live coverage team UP", "social media countdown ads", "pre-event buzz agency"],
 };
 
 export default function EventsPage() {

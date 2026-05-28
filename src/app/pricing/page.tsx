@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Pricing │ Affordable Digital Marketing Packages │ Nexudyam",
   description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
+  keywords: ["digital marketing packages price", "affordable marketing packages", "branding cost for startups", "website design packages msme", "lead generation pricing india", "social media management packages"],
 };
 
 const faqData = [
