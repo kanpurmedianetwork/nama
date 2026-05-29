@@ -322,8 +322,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Nexudyam Section */}
+      {/* Testimonials Section */}
       <section className="py-24 bg-surface border-y border-border">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="text-brand font-bold uppercase tracking-wider text-sm mb-2 block">Success Stories</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
+              What Local Businesses Say About Us
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((t, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="flex text-amber-400 gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed italic mb-6">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-brand/10 text-brand font-bold flex items-center justify-center text-sm shrink-0">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground text-sm">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">{t.role}, {t.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Nexudyam Section */}
+      <section className="py-24 bg-background border-b border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-center text-foreground mb-16">
             Why Hundreds of Businesses Choose Nexudyam
@@ -386,5 +423,29 @@ const faqData = [
   {
     question: "How can I contact Nexudyam for a free digital marketing audit?",
     answer: "You can claim a free marketing audit for your business by contacting our team directly on WhatsApp or calling +91-9161881100. We'll analyze your website, review your current search presence, check your local listings, and outline a step-by-step plan to get more leads."
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Nexudyam set up our Google Business Profile and ran a local Meta Ads campaign. We got over 40 active inquiries for our bakery within 30 days. Their pricing is extremely affordable for small businesses.",
+    name: "Aditya Mishra",
+    role: "Founder",
+    company: "Kanpur Bakery Co.",
+    initials: "AM"
+  },
+  {
+    quote: "We were struggling to get noticed in Kanpur. Nexudyam designed our brand logo, created our Instagram reel templates, and got us ranking on Google Maps. Now customers find our boutique easily!",
+    name: "Sneha Gupta",
+    role: "Owner",
+    company: "SG Fashion Studio",
+    initials: "SG"
+  },
+  {
+    quote: "The Grow plan was perfect for our agritech startup. We got a fast, professional website and a complete Meta and Google Ads setup. They delivered everything within 2 weeks and the support is outstanding.",
+    name: "Rajesh Yadav",
+    role: "Director",
+    company: "Yadav AgroTech",
+    initials: "RY"
   }
 ];

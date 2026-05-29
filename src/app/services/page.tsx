@@ -3,7 +3,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Branding Services | Nexudyam",
+  title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
   description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
   keywords: ["digital marketing services", "branding services kanpur", "web development services kanpur", "meta ads campaign setup", "google ads agency kanpur", "local seo services up", "social media marketing packages"],
 };
