@@ -57,20 +57,68 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased scroll-smooth`}>
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MD8HBWCWH" />
+        {/* Suppress deprecation warnings from third-party scripts (e.g. GTM/gtag.js, Cloudflare) accessing deprecated browser APIs */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+              try {
+                if (typeof window !== 'undefined') {
+                  // 1. Suppress Fledge / Protected Audience API warnings
+                  if (window.navigator) {
+                    const proto = Object.getPrototypeOf(window.navigator);
+                    const keys = ['joinAdInterestGroup', 'runAdAuction', 'updateAdInterestGroups', 'leaveAdInterestGroup', 'protectedAudience', 'sharedStorage'];
+                    if (proto) {
+                      keys.forEach(function(key) {
+                        try { delete proto[key]; } catch (e) {}
+                      });
+                    }
+                    keys.forEach(function(key) {
+                      try {
+                        if (key in window.navigator) {
+                          Object.defineProperty(window.navigator, key, { value: undefined, configurable: true });
+                        }
+                      } catch (e) {}
+                    });
+                  }
+                  
+                  // 2. Suppress SharedStorage API warnings
+                  try {
+                    if ('sharedStorage' in window) {
+                      Object.defineProperty(window, 'sharedStorage', { value: undefined, configurable: true });
+                    }
+                  } catch (e) {}
 
-              gtag('config', 'G-0MD8HBWCWH');
+                  // 3. Suppress StorageType.persistent warnings (from webkitStorageInfo / StorageType)
+                  try {
+                    if ('StorageType' in window) {
+                      Object.defineProperty(window, 'StorageType', { value: undefined, configurable: true });
+                    }
+                  } catch (e) {}
+                  try {
+                    if ('webkitStorageInfo' in window) {
+                      Object.defineProperty(window, 'webkitStorageInfo', { value: undefined, configurable: true });
+                    }
+                  } catch (e) {}
+                }
+              } catch (e) {}
             `,
           }}
         />
       </head>
+      {/* Google tag (gtag.js) - loaded asynchronously after page is interactive */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-0MD8HBWCWH"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0MD8HBWCWH');
+        `}
+      </Script>
+      {/* Google Tag Manager - loaded asynchronously after page is interactive */}
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
