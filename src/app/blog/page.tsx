@@ -2,16 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Blog │ SEO Content Hub │ Nexudyam",
   description: "Read the latest insights on digital marketing, SEO, Meta Ads, and brand building for small businesses in India.",
-  keywords: ["digital marketing blog", "seo articles india", "social media marketing tips", "branding guide for startups", "lead generation guides", "seo content hub"],
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {
   return (
-    <div className="py-20 md:py-32 bg-background">
+    <>
+      <JsonLd 
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.nexudyam.in"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: "https://www.nexudyam.in/blog"
+            }
+          ]
+        }}
+      />
+      <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
@@ -55,5 +78,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

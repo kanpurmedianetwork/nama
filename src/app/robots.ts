@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/private/",
+        disallow: ["/private/", "/api/", "/admin/"],
       },
     ],
     sitemap: "https://www.nexudyam.in/sitemap.xml",

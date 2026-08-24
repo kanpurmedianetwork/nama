@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu } from "lucide-react";
+import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu } from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { HERO_CTA_TEXT, HERO_SUB_CTA_TEXT, WHATSAPP_URL, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants";
+import { LeadForm } from "@/components/ui/LeadForm";
 
 export default function Home() {
   return (
@@ -13,14 +15,24 @@ export default function Home() {
         data={{
           name: "Nexudyam",
           url: "https://www.nexudyam.in",
-          telephone: "+91-9161881100",
+          logo: "https://www.nexudyam.in/logo.svg",
+          image: "https://www.nexudyam.in/logo.svg",
+          telephone: CONTACT_PHONE,
+          email: CONTACT_EMAIL,
+          priceRange: "₹₹",
           address: {
             "@type": "PostalAddress",
+            streetAddress: "Civil Lines",
             addressLocality: "Kanpur",
             addressRegion: "Uttar Pradesh",
+            postalCode: "208001",
             addressCountry: "IN"
           },
-          geo: { latitude: 26.4499, longitude: 80.3319 },
+          geo: { 
+            "@type": "GeoCoordinates",
+            latitude: 26.4499, 
+            longitude: 80.3319 
+          },
           areaServed: [
             { "@type": "City", name: "Kanpur" },
             { "@type": "City", name: "Lucknow" },
@@ -30,8 +42,51 @@ export default function Home() {
             { "@type": "City", name: "Agra" },
             { "@type": "State", name: "Uttar Pradesh" }
           ],
-          openingHours: "Mo-Sa 10:00-19:00",
-          priceRange: "₹₹"
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            opens: "10:00",
+            closes: "19:00"
+          },
+          sameAs: [
+            "https://www.facebook.com/nexudyam",
+            "https://www.instagram.com/nexudyam",
+            "https://www.linkedin.com/company/nexudyam"
+          ],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "3"
+          },
+          review: testimonials.map(t => ({
+            "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: t.name
+            },
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5"
+            },
+            reviewBody: t.quote
+          }))
+        }}
+      />
+      <JsonLd 
+        type="Organization"
+        data={{
+          name: "Nexudyam",
+          url: "https://www.nexudyam.in",
+          logo: "https://www.nexudyam.in/logo.svg",
+          founder: {
+            "@type": "Person",
+            name: "Akash Kumar"
+          },
+          sameAs: [
+            "https://www.facebook.com/nexudyam",
+            "https://www.instagram.com/nexudyam",
+            "https://www.linkedin.com/company/nexudyam"
+          ]
         }}
       />
       <JsonLd 
@@ -47,59 +102,13 @@ export default function Home() {
           }))
         }}
       />
-      <JsonLd 
-        type="Service"
-        data={{
-          name: "Digital Marketing and Brand Identity",
-          provider: {
-            "@type": "LocalBusiness",
-            name: "Nexudyam"
-          },
-          areaServed: [
-            { "@type": "City", name: "Kanpur" },
-            { "@type": "City", name: "Lucknow" },
-            { "@type": "City", name: "Noida" },
-            { "@type": "City", name: "Prayagraj" },
-            { "@type": "City", name: "Varanasi" },
-            { "@type": "City", name: "Agra" },
-            { "@type": "State", name: "Uttar Pradesh" }
-          ],
-          hasOfferCatalog: {
-            "@type": "OfferCatalog",
-            name: "Digital Services",
-            itemListElement: [
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Brand Identity Design"
-                }
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Website Development"
-                }
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Meta & Google Ads"
-                }
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Local SEO"
-                }
-              }
-            ]
-          }
-        }}
-      />
+      {serviceSchemas.map((service, idx) => (
+        <JsonLd 
+          key={idx}
+          type="Service"
+          data={service}
+        />
+      ))}
 
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-28 md:pb-20">
@@ -109,23 +118,28 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             Nexudyam helps startups and MSMEs in Kanpur and UP grow online. We create high-converting digital marketing campaigns, build websites, and design brand identities to get you more leads.{" "}
-            <a href="https://wa.me/919161881100" target="_blank" rel="noopener noreferrer" className="text-foreground font-bold underline underline-offset-4 hover:opacity-70 transition-opacity">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-foreground font-bold underline underline-offset-4 hover:opacity-70 transition-opacity">
               Claim your free marketing audit today
             </a> before your competitors find your next customer.
           </p>
 
-          {/* Dark CTA Bar */}
-          <div className="inline-flex items-center bg-foreground rounded-full pl-6 pr-2 py-2 gap-4 mb-8 shadow-xl">
-            <span className="text-white/80 text-sm md:text-base font-medium">nexudyam.in</span>
+          {/* Configuration Hero CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
-              href="https://wa.me/919161881100"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-foreground px-5 py-2.5 rounded-full text-sm font-bold hover:bg-accent transition-colors flex items-center gap-2"
-              aria-label="Contact us on WhatsApp"
+              className="bg-brand text-white px-8 py-4 rounded-full text-base font-bold hover:bg-brand-dark transition-all flex items-center gap-2 shadow-lg"
             >
-              <ArrowRight size={16} />
+              <span>{HERO_CTA_TEXT}</span>
+              <ArrowRight size={18} />
             </a>
+            <Link
+              href="/pricing"
+              className="border border-border text-foreground bg-white px-8 py-4 rounded-full text-base font-bold hover:bg-surface transition-colors"
+            >
+              {HERO_SUB_CTA_TEXT}
+            </Link>
           </div>
 
           {/* Trust Badges */}
@@ -174,8 +188,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* On-Page Copywriting Content Expansion Section (GEO/SEO Optimization) */}
+      <section className="py-16 bg-white border-t border-border">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">
+            Empowering MSMEs with Premium Digital Solutions in Uttar Pradesh
+          </h2>
+          <div className="text-muted-foreground leading-relaxed space-y-4 text-center max-w-3xl mx-auto">
+            <p>
+              Nexudyam is a leading <strong className="text-foreground">digital marketing agency in Kanpur</strong>, dedicated to helping startups, micro, small, and medium enterprises (MSMEs) establish a dominant online presence. The modern marketplace demands that local businesses be visible on search engines and social platforms. However, traditional agencies often charge hefty retainers that are out of reach for growing Indian businesses. Nexudyam was founded to level the playing field by providing high-quality, tech-enabled marketing support.
+            </p>
+            <p>
+              As a full-service <strong className="text-foreground">branding agency for MSMEs</strong>, we combine cutting-edge artificial intelligence tools with human strategic editing to deliver creative designs, high-converting social media campaigns, and custom websites. We serve clients across Uttar Pradesh—including Kanpur, Lucknow, Noida, Prayagraj, and Varanasi—offering a single partner for all digital growth.
+            </p>
+            <p>
+              Whether you are looking to rank your store on Google Maps, build a professional business website, or launch targeted social media ads, we have tailored packages that fit your requirements. Our <strong className="text-foreground">affordable digital marketing packages UP</strong> start at just ₹4,999 per month, ensuring that even early-stage startups can afford to get found online by active customers. Stop losing leads to competitors and start scaling your business with Nexudyam.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Problem Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8">
             Most Startups & Businesses Are Invisible Online. <span className="text-brand">We Fix That.</span>
@@ -386,8 +420,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reusable Lead Capture Form Section (Task 6) */}
+      <section className="py-20 bg-surface border-t border-border">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <div className="max-w-2xl mx-auto mb-10">
+            <span className="text-brand font-bold uppercase tracking-wider text-sm mb-2 block">Free Audit</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Get Your Free Digital Growth Audit
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Fill out the form below with your name and WhatsApp number. Our strategy team will analyze your website, local map rankings, and social profiles, and get in touch with you with a custom roadmap.
+            </p>
+          </div>
+          <LeadForm />
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-center text-foreground mb-16">
             Frequently Asked Questions
@@ -399,30 +449,137 @@ export default function Home() {
   );
 }
 
+const serviceSchemas = [
+  {
+    "@type": "Service",
+    name: "Brand Identity Design",
+    description: "Visual identity that builds trust and recognition for MSMEs and startups, including logo, color palette, typography, and brand guidelines.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#brand-identity",
+    offers: {
+      "@type": "Offer",
+      "price": "4999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Social Media Marketing",
+    description: "Consistent posting, Instagram Reels strategy, Facebook page management, and AI captions & scripts for local businesses.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#social-media",
+    offers: {
+      "@type": "Offer",
+      "price": "4999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Ads Campaign Setup",
+    description: "Meta Ads (Facebook & Instagram) and Google Ads (Search & Display) campaign setups to drive lead generation starting at any budget.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#paid-ads",
+    offers: {
+      "@type": "Offer",
+      "price": "9999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Website Development",
+    description: "Fast, mobile-first, SEO-optimized business websites on modern stack with Google Business Profile setup included.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#web-development",
+    offers: {
+      "@type": "Offer",
+      "price": "9999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Google Business Profile",
+    description: "Rank in Google Maps and 'near me' local searches. Claim, verify, and optimize local listings with review management.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#local-seo",
+    offers: {
+      "@type": "Offer",
+      "price": "4999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "AI Content Marketing",
+    description: "10x faster Reels scripts, blog posts, WhatsApp broadcast content, and monthly calendars at 1/3rd the cost of traditional agencies.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/services#ai-content",
+    offers: {
+      "@type": "Offer",
+      "price": "4999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Event Promotion & Coverage",
+    description: "Pre-event buzz, live coverage via Instagram Reels/Stories, and post-event evergreen content repurposing.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/events",
+    offers: {
+      "@type": "Offer",
+      "price": "18999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  },
+  {
+    "@type": "Service",
+    name: "Artist Management",
+    description: "Professional profile design, booking management, brand deal outreach, and content strategy for creators and influencers.",
+    provider: { "@type": "LocalBusiness", name: "Nexudyam" },
+    url: "https://www.nexudyam.in/artist-management",
+    offers: {
+      "@type": "Offer",
+      "price": "18999",
+      "priceCurrency": "INR",
+      "url": "https://www.nexudyam.in/pricing"
+    }
+  }
+];
+
 const faqData = [
   {
     question: "Why should I choose Nexudyam as my digital marketing agency in Kanpur?",
-    answer: "Nexudyam is a leading digital marketing agency in Kanpur, offering tailored branding, local SEO, and paid advertising solutions. We specialize in helping startups and MSMEs build their online presence, run high-converting campaigns, and grow their businesses starting at affordable monthly retainers."
+    answer: "Nexudyam is Kanpur's premier digital marketing agency, specializing in helping local startups and MSMEs navigate the digital landscape. We offer a comprehensive suite of branding, local SEO, website development, and social media marketing services. Unlike traditional agencies that charge high retainers, we leverage artificial intelligence to cut content creation costs by up to 70%, delivering professional results at a fraction of the price. Based in Kanpur, Uttar Pradesh, we understand the local market dynamics and are dedicated to building long-term growth partnerships with local entrepreneurs."
   },
   {
     question: "What services does your website development company in Kanpur provide?",
-    answer: "As a top web design and website development company in Kanpur, we build fast, responsive, SEO-optimized business websites on modern platforms like Next.js, WordPress, and Shopify. We focus on creating high-converting websites that load in milliseconds and turn visitors into active customer leads."
+    answer: "As a leading website development company in Kanpur, Nexudyam builds high-performance, mobile-first websites tailored for MSMEs and startups. Our services cover custom front-end development using modern frameworks like Next.js, e-commerce stores on Shopify, and easy-to-manage WordPress sites. Every website we build is speed-optimized, visually stunning, and built with local SEO best practices from day one to ensure you rank on search engines. We also handle domain setup, hosting, and integrate Google Business Profile to deliver a complete, turn-key web solution."
   },
   {
     question: "How do your local SEO services in Kanpur help small businesses rank?",
-    answer: "Our local SEO services in Kanpur focus on Claiming, Optimizing, and Managing your Google Business Profile to help you rank at the top of Google Maps and 'near me' searches. We build local citations, manage reviews, and target geotargeted keywords across Kanpur, Lucknow, and UP to drive local store traffic."
+    answer: "Our local SEO services in Kanpur focus on claiming, optimizing, and managing your Google Business Profile to rank at the top of Google Maps and 'near me' searches. We maintain NAP consistency, build high-authority local citations, target geo-targeted search keywords, and manage customer reviews. This local map visibility helps retail stores, salons, clinics, and professional offices across Kanpur and UP attract high-intent local foot traffic and direct phone calls."
   },
   {
     question: "Which digital marketing packages are best for startup lead generation?",
-    answer: "Our affordable digital marketing packages are designed to scale with your budget. The 'Launch' package is ideal for early-stage branding and local SEO at ₹4,999/month, while our 'Grow' and 'Scale' packages include full website development, social media posting, and Meta/Google Ads lead generation campaigns."
+    answer: "For early-stage startups and small businesses, Nexudyam offers flexible, affordable digital marketing packages with clear pricing and zero hidden costs. Our 'Launch' package at ₹4,999/month is perfect for establishing brand identity and local SEO. The popular 'Grow' package at ₹9,999/month introduces a 5-page custom website and Meta/Google Ads campaign setups. For established brands looking for full ads management, event promotion, and artist representation, our 'Scale' package at ₹18,999/month provides priority support and comprehensive marketing execution."
   },
   {
     question: "How does AI content marketing compare to a traditional branding agency?",
-    answer: "Our AI-powered content marketing lets us write scripts, create captions, and draft social posts 10x faster than a traditional branding agency. This eliminates slow turnaround times and cuts costs by 70%, giving startups premium-quality marketing assets at an unbeatable speed and price."
+    answer: "Nexudyam's AI content marketing uses cutting-edge artificial intelligence to draft Reels scripts, social captions, ad copy, and blog posts in 48 hours instead of weeks. Traditional branding agencies rely on slow, manual workflows and charge high retainers (₹50k-₹1L/month). By combining AI speed with expert human editing, Nexudyam delivers 10x faster content production and cuts costs by 70%. This gives MSMEs and startups a high volume of premium marketing assets without the bloated budgets of legacy agencies."
   },
   {
     question: "How can I contact Nexudyam for a free digital marketing audit?",
-    answer: "You can claim a free marketing audit for your business by contacting our team directly on WhatsApp or calling +91-9161881100. We'll analyze your website, review your current search presence, check your local listings, and outline a step-by-step plan to get more leads."
+    answer: "You can contact Nexudyam directly by clicking our floating WhatsApp button, calling us at +91-9161881100, or filling out the lead capture form on our contact page. We offer a free, comprehensive digital marketing audit where we analyze your current website speed, Google Maps visibility, social media engagement, and ad performance. We'll identify exactly where you are losing customers to competitors and provide a step-by-step digital strategy to increase your leads within 24 hours of our consultation."
   }
 ];
 

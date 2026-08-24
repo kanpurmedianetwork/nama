@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} │ Nexudyam Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
   };
 }
 
@@ -64,6 +67,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <JsonLd 
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.nexudyam.in"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: "https://www.nexudyam.in/blog"
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.title,
+              item: `https://www.nexudyam.in/blog/${post.slug}`
+            }
+          ]
+        }}
+      />
       <JsonLd
         type="Article"
         data={{

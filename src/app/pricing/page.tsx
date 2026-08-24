@@ -6,7 +6,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Pricing │ Affordable Digital Marketing Packages │ Nexudyam",
   description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
-  keywords: ["digital marketing packages price", "affordable marketing packages", "branding cost for startups", "website design packages msme", "lead generation pricing india", "social media management packages"],
+  alternates: {
+    canonical: "/pricing",
+  },
 };
 
 const faqData = [
@@ -27,6 +29,25 @@ const faqData = [
 export default function PricingPage() {
   return (
     <>
+      <JsonLd 
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.nexudyam.in"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Pricing",
+              item: "https://www.nexudyam.in/pricing"
+            }
+          ]
+        }}
+      />
       <JsonLd 
         type="FAQPage"
         data={{

@@ -29,20 +29,31 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.nexudyam.in"),
   title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
   description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
-  keywords: [
-    "digital marketing agency in kanpur",
-    "branding agency in kanpur",
-    "website development company in kanpur",
-    "best digital marketing company in kanpur",
-    "local seo services in kanpur",
-    "social media marketing agency in kanpur",
-    "google ads agency in kanpur",
-    "logo design services in kanpur",
-    "startup marketing agency in up",
-    "msme marketing agency kanpur",
-    "lead generation agency in kanpur",
-    "affordable digital marketing packages"
-  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.nexudyam.in",
+    siteName: "Nexudyam",
+    title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
+    description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
+    description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+    images: ["/logo.svg"],
+  },
   icons: {
     icon: "/logo.svg",
     apple: "/logo.svg",

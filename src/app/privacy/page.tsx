@@ -1,13 +1,37 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy │ Nexudyam",
   description: "Nexudyam's privacy policy explains how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="py-20 md:py-32 bg-background">
+    <>
+      <JsonLd 
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.nexudyam.in"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Privacy Policy",
+              item: "https://www.nexudyam.in/privacy"
+            }
+          ]
+        }}
+      />
+      <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-16">
           <p className="font-mono text-sm text-subtle-foreground uppercase tracking-wider mb-4">
@@ -113,5 +137,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

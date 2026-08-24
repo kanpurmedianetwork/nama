@@ -1,13 +1,37 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Terms of Service │ Nexudyam",
   description: "Nexudyam's terms of service outline the rules, guidelines, and agreements for using our digital marketing and branding services.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {
   return (
-    <div className="py-20 md:py-32 bg-background">
+    <>
+      <JsonLd 
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.nexudyam.in"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Terms of Service",
+              item: "https://www.nexudyam.in/terms"
+            }
+          ]
+        }}
+      />
+      <div className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-16">
           <p className="font-mono text-sm text-subtle-foreground uppercase tracking-wider mb-4">
@@ -129,5 +153,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -36,7 +36,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image src="/logo.svg" alt="Nexudyam Logo" width={28} height={28} className="w-7 h-7" />
+          <Image src="/logo.svg" alt="Nexudyam digital marketing agency Kanpur logo" width={28} height={28} className="w-7 h-7" />
           <span className="font-display font-bold text-lg tracking-tight group-hover:opacity-70 transition-opacity">
             NEXUDYAM
           </span>
