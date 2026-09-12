@@ -4,10 +4,32 @@ import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Pricing │ Affordable Digital Marketing Packages │ Nexudyam",
+  title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
   description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
   alternates: {
     canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
+    description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
+    url: "https://www.nexudyam.in/pricing",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
+    description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -65,7 +87,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Simple Packages. Real Growth.
+              Affordable Digital Marketing Packages in Kanpur
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We offer simple monthly pricing packages designed for real business growth. No hidden fees or corporate jargon — just real results for Indian MSMEs.

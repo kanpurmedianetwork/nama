@@ -2,10 +2,32 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy │ Nexudyam",
+  title: "Privacy Policy | Nexudyam",
   description: "Nexudyam's privacy policy explains how we collect, use, and protect your personal information.",
   alternates: {
     canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Nexudyam",
+    description: "Nexudyam's privacy policy explains how we collect, use, and protect your personal information.",
+    url: "https://www.nexudyam.in/privacy",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Nexudyam",
+    description: "Nexudyam's privacy policy explains how we collect, use, and protect your personal information.",
+    images: ["/logo.svg"],
   },
 };
 

@@ -4,10 +4,32 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Artist Management │ Creators & Influencers │ Nexudyam",
+  title: "Artist Management & Creator Growth Agency in UP | Nexudyam",
   description: "Professional brand building, booking management, and Instagram/YouTube growth execution for artists and independent creators in Kanpur & UP.",
   alternates: {
     canonical: "/artist-management",
+  },
+  openGraph: {
+    title: "Artist Management & Creator Growth Agency in UP | Nexudyam",
+    description: "Professional brand building, booking management, and Instagram/YouTube growth execution for artists and independent creators in Kanpur & UP.",
+    url: "https://www.nexudyam.in/artist-management",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artist Management & Creator Growth Agency in UP | Nexudyam",
+    description: "Professional brand building, booking management, and Instagram/YouTube growth execution for artists and independent creators in Kanpur & UP.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -40,7 +62,7 @@ export default function ArtistManagementPage() {
               Creator Vertical
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Build Your Fanbase. <br />We Handle the Rest.
+              Artist Management & Creator Growth in UP
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We handle the rest while you build your fanbase and focus on your art. We focus on building your brand, growing your reach on Instagram and YouTube, and managing bookings.

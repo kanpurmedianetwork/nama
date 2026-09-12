@@ -3,10 +3,32 @@ import { CalendarDays, Megaphone, Camera, Share2 } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Event Promotion & Coverage │ Nexudyam",
+  title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
   description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
   alternates: {
     canonical: "/events",
+  },
+  openGraph: {
+    title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
+    description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
+    url: "https://www.nexudyam.in/events",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
+    description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -36,7 +58,7 @@ export default function EventsPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Make Your Next Event Unforgettable
+              Event Promotion & Digital Coverage in Kanpur
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We make your next event unforgettable by handling the digital buzz so you can focus on hosting. From pre-event promotions to live coverage and post-event content generation.

@@ -5,10 +5,32 @@ import { blogPosts } from "@/lib/blog-data";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Blog │ SEO Content Hub │ Nexudyam",
-  description: "Read the latest insights on digital marketing, SEO, Meta Ads, and brand building for small businesses in India.",
+  title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
+  description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
   alternates: {
     canonical: "/blog",
+  },
+  openGraph: {
+    title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
+    description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
+    url: "https://www.nexudyam.in/blog",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
+    description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -38,7 +60,7 @@ export default function BlogPage() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Insights for Growth
+            Digital Marketing Blog & Guides for MSMEs
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             We share actionable insights for your business growth. Read about the latest trends in digital marketing, branding, and local SEO in India.

@@ -5,10 +5,32 @@ import { LeadForm } from "@/components/ui/LeadForm";
 import { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Nexudyam │ WhatsApp, Call, or Email │ Kanpur",
+  title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
   description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
+    description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
+    url: "https://www.nexudyam.in/contact",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
+    description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -38,7 +60,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Let&apos;s Talk About Your Growth
+              Contact Our Kanpur Marketing Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Let&apos;s talk about your business growth. Whether you need digital marketing, web design, or paid advertising help, we are here to support your journey. Reach out to us directly or fill out the form below.

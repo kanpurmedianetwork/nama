@@ -9,6 +9,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services",
   },
+  openGraph: {
+    title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
+    description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
+    url: "https://www.nexudyam.in/services",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
+    description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
+    images: ["/logo.svg"],
+  },
 };
 
 export default function ServicesPage() {
@@ -39,7 +61,7 @@ export default function ServicesPage() {
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Digital Marketing & Branding Services for Your Business
+              Digital Marketing & Branding Services in Kanpur
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We provide all the digital marketing, web development, and branding services your business needs to grow and find more customers. Get a free audit today!

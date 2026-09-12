@@ -2,10 +2,32 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Nexudyam | Next Generation Entrepreneurship",
+  title: "About Nexudyam | Digital Growth Agency in Kanpur",
   description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About Nexudyam | Digital Growth Agency in Kanpur",
+    description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
+    url: "https://www.nexudyam.in/about",
+    siteName: "Nexudyam",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Nexudyam | Digital Growth Agency in Kanpur",
+    description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
+    images: ["/logo.svg"],
   },
 };
 
@@ -35,7 +57,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Next Generation Entrepreneurship
+              About Nexudyam — Building India&apos;s Next-Gen Businesses
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Nexudyam represents the next generation of entrepreneurship. We are on a mission to give every Indian startup, MSME, and independent creator an equal chance to grow and compete online.

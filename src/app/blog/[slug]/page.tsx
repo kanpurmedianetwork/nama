@@ -15,14 +15,41 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((p) => p.slug === slug);
   
   if (!post) {
-    return { title: "Post Not Found │ Nexudyam" };
+    return { title: "Post Not Found | Nexudyam" };
   }
 
+  const url = `https://www.nexudyam.in/blog/${slug}`;
+  const title = `${post.title} | Nexudyam Blog`;
+  const description = post.excerpt;
+
   return {
-    title: `${post.title} │ Nexudyam Blog`,
-    description: post.excerpt,
+    title,
+    description,
     alternates: {
       canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      publishedTime: post.date,
+      siteName: "Nexudyam",
+      locale: "en_IN",
+      images: [
+        {
+          url: "/logo.svg",
+          width: 800,
+          height: 600,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/logo.svg"],
     },
   };
 }
