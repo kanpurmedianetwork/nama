@@ -69,10 +69,10 @@ export default function AboutPage() {
             <section className="bg-surface border border-border p-8 rounded-2xl mb-12">
               <h2 className="font-display text-2xl font-bold text-foreground mt-0 mb-4">Company Overview</h2>
               <p className="mb-4">
-                <strong>Nexudyam</strong> is an Indian digital marketing and brand building agency founded in 2026 by Akash Kumar. Headquartered in Kanpur, Uttar Pradesh, the company specializes in providing affordable, AI-powered marketing solutions tailored for Startups, Micro, Small, and Medium Enterprises (MSMEs), local retail businesses, and independent artists.
+                <strong>Nexudyam</strong> is an Indian digital marketing and brand building agency founded in 2026 by Akash Kumar. Headquartered in Kanpur, Uttar Pradesh, the company specializes in providing affordable, AI-powered marketing solutions tailored for Startups, Micro, Small, and Medium Enterprises (MSMEs), local retail businesses, and e-commerce brands.
               </p>
               <p className="mb-0">
-                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization, AI Content Marketing, Event Promotion, and Artist Management. Nexudyam serves clients locally across Uttar Pradesh (including Kanpur, Lucknow, Noida, Varanasi, Agra, Prayagraj, and Ayodhya) as well as Pan-India for digital services.
+                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization, AI Content Marketing, Event Promotion, and E-commerce Website Development (Shopify). Nexudyam serves clients locally across Uttar Pradesh (including Kanpur, Lucknow, Noida, Varanasi, Agra, Prayagraj, and Ayodhya) as well as Pan-India for digital services.
               </p>
             </section>
 

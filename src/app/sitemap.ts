@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/services",
     "/pricing",
-    "/artist-management",
+    "/ecom-websites",
     "/events",
     "/about",
     "/contact",

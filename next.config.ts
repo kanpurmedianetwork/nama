@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.nexudyam.in/:path*",
         permanent: true,
       },
+      {
+        source: "/artist-management",
+        destination: "/ecom-websites",
+        permanent: true,
+      },
     ];
   },
   async headers() {

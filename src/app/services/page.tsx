@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, CheckCircle2 } from "lucide-react";
+import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, CheckCircle2, ShoppingBag } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -120,11 +120,11 @@ export default function ServicesPage() {
               href="/events"
             />
             <ServiceCard 
-              title="Artist Management"
-              description="Professional profile for independent creators."
-              href="/artist-management"
-              features={["Brand identity for artists", "Booking management", "Instagram/YouTube growth"]}
-              icon={<Users size={28} />}
+              title="E-commerce Websites"
+              description="High-converting Shopify stores built to sell."
+              href="/ecom-websites"
+              features={["Custom Shopify store setup", "Payment & shipping setup", "Mobile-first & SEO-ready"]}
+              icon={<ShoppingBag size={28} />}
             />
           </div>
 

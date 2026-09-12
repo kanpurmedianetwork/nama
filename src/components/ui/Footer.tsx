@@ -25,7 +25,7 @@ export function Footer() {
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
-              <li><Link href="/artist-management" className="text-sm text-muted-foreground hover:text-brand">Artist Management</Link></li>
+              <li><Link href="/ecom-websites" className="text-sm text-muted-foreground hover:text-brand">Shopify & E-com</Link></li>
             </ul>
           </div>
 

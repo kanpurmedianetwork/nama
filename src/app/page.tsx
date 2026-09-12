@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu } from "lucide-react";
+import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, ShoppingBag } from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
@@ -179,7 +179,7 @@ export default function Home() {
 
           {/* Service Tags Strip */}
           <div className="flex flex-wrap justify-center items-center gap-4">
-            {["Brand Identity", "Social Media", "Google Ads", "Meta Ads", "Websites", "Artist Mgmt", "Events", "AI Content"].map((tag) => (
+            {["Brand Identity", "Social Media", "Google Ads", "Meta Ads", "Websites", "Shopify Stores", "Events", "AI Content"].map((tag) => (
               <span key={tag} className="text-sm font-bold text-subtle-foreground border border-border px-4 py-1.5 rounded-full">
                 {tag}
               </span>
@@ -280,11 +280,11 @@ export default function Home() {
               href="/events"
             />
             <ServiceCard 
-              title="Artist Management"
-              description="Professional profile for independent creators."
-              features={["Brand identity for artists", "Booking management", "Instagram/YouTube growth"]}
-              icon={<Users size={28} />}
-              href="/artist-management"
+              title="E-commerce Websites"
+              description="High-converting Shopify stores built to sell."
+              features={["Custom Shopify store setup", "Payment & shipping setup", "Mobile-first & SEO-ready"]}
+              icon={<ShoppingBag size={28} />}
+              href="/ecom-websites"
             />
           </div>
         </div>
@@ -348,7 +348,7 @@ export default function Home() {
                 "Everything in Grow, plus:",
                 "Full ads management",
                 "Event promotion (1/month)",
-                "Artist management services",
+                "Shopify / E-com store setup",
                 "Priority support (2-hour response)"
               ]}
             />
@@ -543,10 +543,10 @@ const serviceSchemas = [
   },
   {
     "@type": "Service",
-    name: "Artist Management",
-    description: "Professional profile design, booking management, brand deal outreach, and content strategy for creators and influencers.",
+    name: "E-commerce Website Development (Shopify)",
+    description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs in Kanpur & UP.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/artist-management",
+    url: "https://www.nexudyam.in/ecom-websites",
     offers: {
       "@type": "Offer",
       "price": "18999",
@@ -571,7 +571,7 @@ const faqData = [
   },
   {
     question: "Which digital marketing packages are best for startup lead generation?",
-    answer: "For early-stage startups and small businesses, Nexudyam offers flexible, affordable digital marketing packages with clear pricing and zero hidden costs. Our 'Launch' package at ₹4,999/month is perfect for establishing brand identity and local SEO. The popular 'Grow' package at ₹9,999/month introduces a 5-page custom website and Meta/Google Ads campaign setups. For established brands looking for full ads management, event promotion, and artist representation, our 'Scale' package at ₹18,999/month provides priority support and comprehensive marketing execution."
+    answer: "For early-stage startups and small businesses, Nexudyam offers flexible, affordable digital marketing packages with clear pricing and zero hidden costs. Our 'Launch' package at ₹4,999/month is perfect for establishing brand identity and local SEO. The popular 'Grow' package at ₹9,999/month introduces a 5-page custom website and Meta/Google Ads campaign setups. For established brands looking for full ads management, event promotion, and Shopify e-commerce store setup, our 'Scale' package at ₹18,999/month provides priority support and comprehensive marketing execution."
   },
   {
     question: "How does AI content marketing compare to a traditional branding agency?",

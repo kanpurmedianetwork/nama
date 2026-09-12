@@ -78,7 +78,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-display text-2xl font-bold text-foreground mb-4">2. Services</h2>
             <p className="mb-4">
-              Nexudyam provides digital marketing, brand identity design, social media marketing, paid advertising management, website development, AI content marketing, event promotion, and artist management services. The scope, deliverables, and timelines of each engagement will be agreed upon between Nexudyam and the client before work commences.
+              Nexudyam provides digital marketing, brand identity design, social media marketing, paid advertising management, website development, AI content marketing, event promotion, and e-commerce website development (Shopify) services. The scope, deliverables, and timelines of each engagement will be agreed upon between Nexudyam and the client before work commences.
             </p>
             <p>
               Service packages and pricing are as listed on our website. Nexudyam reserves the right to modify pricing with reasonable notice. Existing agreements will be honored at their agreed-upon rates for the duration of the engagement.

@@ -127,7 +127,7 @@ export default function PricingPage() {
                 "Everything in Grow, plus:",
                 "Full ads management",
                 "Event promotion (1/month)",
-                "Artist management services",
+                "Shopify / E-com store setup",
                 "Priority support (2-hour response)"
               ]}
             />
