@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
             <ul className="space-y-2 mt-4">
               <li
                 dangerouslySetInnerHTML={{
-                  __html: '<strong class="text-foreground">Email:</strong> <!--email_off-->hello@nexudyam.in<!--/email_off-->'
+                  __html: '<strong class="text-foreground">Email:</strong> <!--email_off-->support@nexudyam.in<!--/email_off-->'
                 }}
               />
               <li><strong className="text-foreground">Phone:</strong> +91 91618 81100</li>

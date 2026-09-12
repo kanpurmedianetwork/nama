@@ -5,7 +5,7 @@ export const HERO_SUB_CTA_TEXT = "View Our Packages";
 
 export const WHATSAPP_NUMBER = "919161881100";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
-export const CONTACT_EMAIL = "hello@nexudyam.in";
+export const CONTACT_EMAIL = "support@nexudyam.in";
 export const CONTACT_PHONE = "+91-9161881100";
 
 // Trust badges & signals

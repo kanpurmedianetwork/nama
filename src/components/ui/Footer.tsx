@@ -55,7 +55,7 @@ export function Footer() {
                 <span 
                   className="text-sm text-muted-foreground"
                   dangerouslySetInnerHTML={{ 
-                    __html: '<!--email_off-->hello@nexudyam.in<!--/email_off-->' 
+                    __html: '<!--email_off-->support@nexudyam.in<!--/email_off-->' 
                   }} 
                 />
               </li>
