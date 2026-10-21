@@ -1,38 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
   description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
-  alternates: {
-    canonical: "/blog",
-  },
-  openGraph: {
-    title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
-    description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
-    url: "https://www.nexudyam.in/blog",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
-    description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (

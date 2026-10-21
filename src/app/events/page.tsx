@@ -1,36 +1,12 @@
-import type { Metadata } from "next";
 import { CalendarDays, Megaphone, Camera, Share2 } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
   description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
-  alternates: {
-    canonical: "/events",
-  },
-  openGraph: {
-    title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
-    description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
-    url: "https://www.nexudyam.in/events",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
-    description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/events",
+});
 
 export default function EventsPage() {
   return (

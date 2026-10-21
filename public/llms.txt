@@ -1,6 +1,6 @@
 # Nexudyam
 
-> Nexudyam is a next-generation entrepreneurship agency helping startups, MSMEs, and creators build brand identity, run paid advertising, develop high-performance websites, and grow online.
+> Nexudyam is a digital marketing, website development, and branding agency helping startups, MSMEs, and creators build brand identity, run paid advertising, develop high-performance websites, and grow online.
 
 Based in Kanpur, Uttar Pradesh, India, Nexudyam offers professional digital marketing packages tailored for small businesses and growing creators.
 
@@ -8,20 +8,31 @@ Based in Kanpur, Uttar Pradesh, India, Nexudyam offers professional digital mark
 
 - [Homepage](https://www.nexudyam.in/): Overview of services, agency philosophy, and client success stories.
 - [About Us](https://www.nexudyam.in/about): Mission, history, and the vision of Nexudyam for next-generation entrepreneurship.
-- [Pricing](https://www.nexudyam.in/pricing): Details of affordable digital marketing and branding packages.
-- [Blog](https://www.nexudyam.in/blog): SEO content hub and articles on digital marketing, business growth, and local SEO.
-- [Contact](https://www.nexudyam.in/contact): Communication channels including WhatsApp, call details, and inquiry form.
+- [Pricing](https://www.nexudyam.in/pricing): Details of affordable digital marketing and branding packages starting at ₹4,999/month.
+- [Blog](https://www.nexudyam.in/blog): SEO content hub and actionable guides on digital marketing, local SEO, and business growth.
+- [Contact](https://www.nexudyam.in/contact): Communication channels including WhatsApp (+91-9161881100), phone, and inquiry form.
 
 ## Services
 
-- [Digital Services](https://www.nexudyam.in/services): Core offerings including brand design, Meta & Google Ads, and website development.
+- [Services Hub](https://www.nexudyam.in/services): Overview of all digital marketing, branding, and web development offerings.
+- [Website Development in Kanpur](https://www.nexudyam.in/services/website-development-kanpur): Custom, fast-loading business websites built on Next.js and WordPress with on-page SEO.
+- [Google Business Profile in Kanpur](https://www.nexudyam.in/services/google-business-profile-kanpur): Setup, verification, optimization, and local review strategy for Google Maps 3-Pack ranking.
+- [Meta & Google Ads in Kanpur](https://www.nexudyam.in/services/meta-google-ads-kanpur): Targeted Instagram, Facebook, and Google Search advertising management for local lead generation.
+- [Brand Identity in Kanpur](https://www.nexudyam.in/services/brand-identity-kanpur): Custom logo design, brand guidelines, typography hierarchies, and vector assets.
+- [Social Media Marketing in Kanpur](https://www.nexudyam.in/services/social-media-marketing-kanpur): Monthly content calendars, Instagram Reels scripts, graphics, and community engagement.
+- [AI Content Marketing](https://www.nexudyam.in/services/ai-content-marketing): Fast video scripts, WhatsApp broadcast copy, and SEO blog writing with human review.
 - [E-commerce Websites (Shopify)](https://www.nexudyam.in/ecom-websites): Custom Shopify store setup, payment gateway integration, and conversion optimization for MSMEs.
+- [Artist Management](https://www.nexudyam.in/artist-management): Brand building, booking management, and growth strategy for creators and artists in UP.
+- [Event Promotion](https://www.nexudyam.in/events): Pre-event ads, live coverage coordination, and evergreen post-event content repurposing.
 
 ## Blog Articles
 
-- [AI Content Marketing vs Traditional](https://www.nexudyam.in/blog/ai-content-marketing-vs-traditional): A comparative study on which marketing method is best for MSMEs in 2026.
-- [Get Found on Google in 2026](https://www.nexudyam.in/blog/get-found-on-google-2026): A complete guide on search engine visibility and ranking strategies.
-- [Google Business Profile in Kanpur](https://www.nexudyam.in/blog/google-business-profile-kanpur): Why local businesses in Kanpur need Google Business Profile optimization.
+- [How to Get Your Business Found on Google in 2026](https://www.nexudyam.in/blog/get-found-on-google-2026): A complete guide on search engine visibility and ranking strategies.
+- [Why Every Small Business in Kanpur Needs a Google Business Profile](https://www.nexudyam.in/blog/google-business-profile-kanpur): Why local businesses in Kanpur need Google Business Profile optimization.
+- [AI Content Marketing vs Traditional Agency](https://www.nexudyam.in/blog/ai-content-marketing-vs-traditional): A comparative study on which marketing method delivers the highest ROI for MSMEs.
+- [How Much Does Digital Marketing Cost in Kanpur?](https://www.nexudyam.in/blog/digital-marketing-cost-kanpur): Transparent review of marketing service prices and packages for small businesses.
+- [Best Digital Marketing Agency in Kanpur: What to Look For](https://www.nexudyam.in/blog/best-digital-marketing-agency-kanpur): Objective criteria to evaluate marketing partners in UP.
+- [How to Rank on Google Maps for Local Businesses in UP](https://www.nexudyam.in/blog/rank-google-maps-local-seo-up): Local SEO blueprint for Google Maps 3-Pack ranking in Uttar Pradesh.
 
 ## Legal
 

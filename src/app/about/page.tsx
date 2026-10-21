@@ -1,35 +1,11 @@
-import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About Nexudyam | Digital Growth Agency in Kanpur",
   description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
-  alternates: {
-    canonical: "/about",
-  },
-  openGraph: {
-    title: "About Nexudyam | Digital Growth Agency in Kanpur",
-    description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
-    url: "https://www.nexudyam.in/about",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Nexudyam | Digital Growth Agency in Kanpur",
-    description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

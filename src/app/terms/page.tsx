@@ -1,35 +1,11 @@
-import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Terms of Service | Nexudyam",
   description: "Nexudyam's terms of service outline the rules, guidelines, and agreements for using our digital marketing and branding services.",
-  alternates: {
-    canonical: "/terms",
-  },
-  openGraph: {
-    title: "Terms of Service | Nexudyam",
-    description: "Nexudyam's terms of service outline the rules, guidelines, and agreements for using our digital marketing and branding services.",
-    url: "https://www.nexudyam.in/terms",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Terms of Service | Nexudyam",
-    description: "Nexudyam's terms of service outline the rules, guidelines, and agreements for using our digital marketing and branding services.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

@@ -1,59 +1,24 @@
-import type { Metadata } from "next";
+import Link from "next/link";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, CheckCircle2, ShoppingBag } from "lucide-react";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Cpu, ShoppingBag, ArrowRight } from "lucide-react";
+import { JsonLd, breadcrumbs } from "@/lib/schema";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
-  description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
-  alternates: {
-    canonical: "/services",
-  },
-  openGraph: {
-    title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
-    description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
-    url: "https://www.nexudyam.in/services",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Digital Marketing & Branding Services in Kanpur | Nexudyam",
-    description: "Explore Nexudyam's digital marketing, web development, and branding services. We help startups and MSMEs get more customers. Get a free audit today!",
-    images: ["/logo.svg"],
-  },
-};
+export const metadata = pageMetadata({
+  title: "Digital Marketing, Website & Branding Services in Kanpur | Nexudyam",
+  description: "Explore Nexudyam's digital marketing, website development, and branding services in Kanpur. Tailored growth packages for MSMEs and startups.",
+  path: "/services",
+  ogImage: "/og/default.png",
+});
 
 export default function ServicesPage() {
   return (
     <>
       <JsonLd 
-        type="BreadcrumbList"
-        data={{
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.nexudyam.in"
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Services",
-              item: "https://www.nexudyam.in/services"
-            }
-          ]
-        }}
+        data={breadcrumbs([
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+        ])}
       />
       
       <div className="py-20 md:py-32">
@@ -61,56 +26,56 @@ export default function ServicesPage() {
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Digital Marketing & Branding Services in Kanpur
+              Digital Marketing, Website & Branding Services in Kanpur
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We provide all the digital marketing, web development, and branding services your business needs to grow and find more customers. Get a free audit today!
             </p>
           </div>
 
-          {/* Service Cards Grid linking to detailed sections below */}
+          {/* Service Cards Grid linking to dedicated service routes */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start mb-24">
             <ServiceCard 
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
               icon={<Palette size={28} />}
-              href="#brand-identity"
+              href="/services/brand-identity-kanpur"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
               icon={<Share2 size={28} />}
-              href="#social-media"
+              href="/services/social-media-marketing-kanpur"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
               icon={<Megaphone size={28} />}
-              href="#paid-ads"
+              href="/services/meta-google-ads-kanpur"
             />
             <ServiceCard 
               title="Website Development"
               description="Fast, mobile-first websites built on modern stack."
               features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
               icon={<Monitor size={28} />}
-              href="#web-development"
+              href="/services/website-development-kanpur"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
               icon={<MapPin size={28} />}
-              href="#local-seo"
+              href="/services/google-business-profile-kanpur"
             />
             <ServiceCard 
               title="AI Content Marketing"
-              description="10x faster than traditional agencies — at 1/3rd the cost."
+              description="Fast Reels scripts, blog posts, and calendar planning."
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Cpu size={28} />}
-              href="#ai-content"
+              href="/services/ai-content-marketing"
             />
             <ServiceCard 
               title="Event Promotion"
@@ -147,6 +112,11 @@ export default function ServicesPage() {
                 <p>
                   By establishing a cohesive, polished visual identity, your startup projects the authority of a seasoned corporate player. This visual credibility makes it much easier to attract high-value leads, secure partnership deals, and establish long-term equity in the Uttar Pradesh marketplace. Whether you run a manufacturing plant, a retail showroom, or an agritech venture, a solid visual presence is what turns initial impressions into sales. We make sure that all typography, colors, and layout elements align perfectly with your target audience's psychological triggers, building trust from the very first click.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/brand-identity-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Brand Identity Design in Kanpur <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
 
@@ -163,6 +133,11 @@ export default function ServicesPage() {
                 <p>
                   By combining modern AI-assisted copy production with experienced editors, we deliver consistent, algorithm-optimized content that keeps your followers engaged. This regular digital touchpoint increases your brand recall value, boosts organic profile reach, and converts random social media scrollers into active, recurring customers. Our approach goes beyond generic posts. We research local trends and create hyper-localized content that speaks directly to the community in Kanpur and wider Uttar Pradesh. From festive graphics to educational posts, we align everything with your direct lead generation goals.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/social-media-marketing-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Social Media Marketing in Kanpur <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
 
@@ -179,6 +154,11 @@ export default function ServicesPage() {
                 <p>
                   Whether you are seeking direct phone calls, map directions, website traffic, or WhatsApp inquiries, we optimize your ad spend for the highest conversion rates. With weekly optimizations and transparent monthly reporting, we track which campaigns deliver the highest return on investment. This data-driven strategy ensures your marketing budget is spent directly on acquiring customers rather than wasting impressions on irrelevant audiences. Our campaign managers stay updated on the latest shifts in Google and Meta algorithms, avoiding common pitfalls like broad-match keyword bleeding or poor audience segmentation. We focus purely on low cost-per-lead (CPL) and high return on ad spend (ROAS) for your business.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/meta-google-ads-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Meta & Google Ads in Kanpur <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
 
@@ -195,6 +175,11 @@ export default function ServicesPage() {
                 <p>
                   A fast, beautifully designed website increases user trust and elevates your professional brand. This ensures that when prospective clients find your site, they are guided by clear navigation paths directly to call or message you, maximizing your conversion funnel. We avoid clunky website builders that slow down your load speed. By coding clean, lightweight structures, we guarantee that your website ranks well in Core Web Vitals audits. We also make it easy to update contents, allowing your site to evolve as your business scales.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/website-development-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Website Development in Kanpur <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
 
@@ -211,6 +196,11 @@ export default function ServicesPage() {
                 <p>
                   Local SEO ensures that when a customer searches for your services 'near me', your profile appears immediately with directions, call buttons, and opening hours. This local search optimization drives immediate store foot traffic, direct phone calls, and highly qualified inquiries from customers ready to buy. We build dozens of local citations on high-authority Indian business directories like JustDial, IndiaMART, and trade portals. This search engine validation reinforces your geographic authority, making it easier to outrank competitors in surrounding Uttar Pradesh areas.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/google-business-profile-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Google Business Profile in Kanpur <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
 
@@ -227,6 +217,11 @@ export default function ServicesPage() {
                 <p>
                   This hybrid system gives startups and MSMEs a high volume of consistent, high-quality content that engages audiences without the bloated retainer budgets of traditional agencies. This cost-efficient approach allows even micro-enterprises to run robust content campaigns that build authority and drive organic traffic. From scripts that hooks viewer attention in the first 3 seconds of a Reel to detailed blog articles structured to answer search engine queries, we calibrate our AI systems for conversion. This ensures that you stay top-of-mind for your audience while keeping your overhead low.
                 </p>
+                <div className="pt-2">
+                  <Link href="/services/ai-content-marketing" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about AI Content Marketing <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </section>
           </div>

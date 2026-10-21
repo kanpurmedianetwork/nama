@@ -1,37 +1,13 @@
-import type { Metadata } from "next";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
   description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
-  alternates: {
-    canonical: "/pricing",
-  },
-  openGraph: {
-    title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
-    description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
-    url: "https://www.nexudyam.in/pricing",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
-    description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/pricing",
+});
 
 const faqData = [
   {

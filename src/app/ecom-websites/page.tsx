@@ -1,37 +1,13 @@
-import type { Metadata } from "next";
 import { ShoppingBag, CreditCard, Truck, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "E-commerce Website Development (Shopify) in Kanpur | Nexudyam",
   description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs in Kanpur & UP.",
-  alternates: {
-    canonical: "/ecom-websites",
-  },
-  openGraph: {
-    title: "E-commerce Website Development (Shopify) in Kanpur | Nexudyam",
-    description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs in Kanpur & UP.",
-    url: "https://www.nexudyam.in/ecom-websites",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "E-commerce Website Development (Shopify) in Kanpur | Nexudyam",
-    description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs in Kanpur & UP.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/ecom-websites",
+});
 
 export default function EcomWebsitesPage() {
   return (

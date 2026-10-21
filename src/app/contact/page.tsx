@@ -1,38 +1,14 @@
-import type { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LeadForm } from "@/components/ui/LeadForm";
 import { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/constants";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
   description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
-    description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
-    url: "https://www.nexudyam.in/contact",
-    siteName: "Nexudyam",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
-    description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
-    images: ["/logo.svg"],
-  },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

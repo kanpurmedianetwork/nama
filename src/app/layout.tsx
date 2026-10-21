@@ -6,6 +6,7 @@ import { Footer } from "@/components/ui/Footer";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { TallyPopup } from "@/components/ui/TallyEmbed";
 import Script from "next/script";
+import { JsonLd, organization, website } from "@/lib/schema";
 
 const syne = Syne({ 
   subsets: ["latin"], 
@@ -41,10 +42,10 @@ export const metadata: Metadata = {
     description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
     images: [
       {
-        url: "/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "Nexudyam Digital Marketing Agency Kanpur logo",
+        url: "/og/home.png",
+        width: 1200,
+        height: 630,
+        alt: "Nexudyam logo",
       },
     ],
   },
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
     description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
-    images: ["/logo.svg"],
+    images: ["/og/home.png"],
   },
   robots: {
     index: true,
@@ -66,8 +67,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
@@ -127,30 +128,30 @@ export default function RootLayout({
           }}
         />
       </head>
-      {/* Google tag (gtag.js) - loaded asynchronously after page is interactive */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-0MD8HBWCWH"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0MD8HBWCWH');
-        `}
-      </Script>
-      {/* Google Tag Manager - loaded asynchronously after page is interactive */}
-      <Script id="google-tag-manager" strategy="afterInteractive">
-        {`
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TW7KHTGT');
-        `}
-      </Script>
       <body className="bg-background text-foreground min-h-screen flex flex-col">
+        {/* Google tag (gtag.js) - loaded asynchronously after page is interactive */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0MD8HBWCWH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0MD8HBWCWH');
+          `}
+        </Script>
+        {/* Google Tag Manager - loaded asynchronously after page is interactive */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TW7KHTGT');
+          `}
+        </Script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TW7KHTGT"
@@ -159,6 +160,8 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <JsonLd data={organization} />
+        <JsonLd data={website} />
         <Navbar />
         <main className="flex-grow pt-24">
           {children}

@@ -6,102 +6,20 @@ import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { HERO_CTA_TEXT, HERO_SUB_CTA_TEXT, WHATSAPP_URL, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants";
 import { LeadForm } from "@/components/ui/LeadForm";
+import { pageMetadata } from "@/lib/metadata";
+import { faqPage } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
+  description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+  path: "/",
+  ogImage: "/og/home.png",
+});
 
 export default function Home() {
   return (
     <>
-      <JsonLd 
-        type="LocalBusiness"
-        data={{
-          name: "Nexudyam",
-          url: "https://www.nexudyam.in",
-          logo: "https://www.nexudyam.in/logo.svg",
-          image: "https://www.nexudyam.in/logo.svg",
-          telephone: CONTACT_PHONE,
-          email: CONTACT_EMAIL,
-          priceRange: "₹₹",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Civil Lines",
-            addressLocality: "Kanpur",
-            addressRegion: "Uttar Pradesh",
-            postalCode: "208001",
-            addressCountry: "IN"
-          },
-          geo: { 
-            "@type": "GeoCoordinates",
-            latitude: 26.4499, 
-            longitude: 80.3319 
-          },
-          areaServed: [
-            { "@type": "City", name: "Kanpur" },
-            { "@type": "City", name: "Lucknow" },
-            { "@type": "City", name: "Noida" },
-            { "@type": "City", name: "Prayagraj" },
-            { "@type": "City", name: "Varanasi" },
-            { "@type": "City", name: "Agra" },
-            { "@type": "State", name: "Uttar Pradesh" }
-          ],
-          openingHoursSpecification: {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            opens: "10:00",
-            closes: "19:00"
-          },
-          sameAs: [
-            "https://www.facebook.com/nexudyam",
-            "https://www.instagram.com/nexudyam",
-            "https://www.linkedin.com/company/nexudyam"
-          ],
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "5.0",
-            reviewCount: "3"
-          },
-          review: testimonials.map(t => ({
-            "@type": "Review",
-            author: {
-              "@type": "Person",
-              name: t.name
-            },
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: "5"
-            },
-            reviewBody: t.quote
-          }))
-        }}
-      />
-      <JsonLd 
-        type="Organization"
-        data={{
-          name: "Nexudyam",
-          url: "https://www.nexudyam.in",
-          logo: "https://www.nexudyam.in/logo.svg",
-          founder: {
-            "@type": "Person",
-            name: "Akash Kumar"
-          },
-          sameAs: [
-            "https://www.facebook.com/nexudyam",
-            "https://www.instagram.com/nexudyam",
-            "https://www.linkedin.com/company/nexudyam"
-          ]
-        }}
-      />
-      <JsonLd 
-        type="FAQPage"
-        data={{
-          mainEntity: faqData.map(faq => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer
-            }
-          }))
-        }}
-      />
+      <JsonLd data={faqPage(faqData)} />
       {serviceSchemas.map((service, idx) => (
         <JsonLd 
           key={idx}

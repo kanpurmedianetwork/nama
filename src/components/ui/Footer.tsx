@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <Image src="/logo.svg" alt="Nexudyam digital marketing agency Kanpur logo" width={32} height={32} className="w-8 h-8" />
+              <Image src="/logo.svg" alt="Nexudyam logo" width={32} height={32} className="w-8 h-8" />
               <span className="font-display font-bold text-xl tracking-tight text-foreground">
                 NEXUDYAM
               </span>
@@ -25,7 +25,8 @@ export function Footer() {
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
               <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
-              <li><Link href="/ecom-websites" className="text-sm text-muted-foreground hover:text-brand">Shopify & E-com</Link></li>
+              <li><Link href="/ecom-websites" className="text-sm text-muted-foreground hover:text-brand">Shopify & E-commerce</Link></li>
+              <li><Link href="/artist-management" className="text-sm text-muted-foreground hover:text-brand">Artist Management</Link></li>
             </ul>
           </div>
 

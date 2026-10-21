@@ -1,26 +1,11 @@
 import type { NextConfig } from "next";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const redirectsList = require("./redirects");
 
 const nextConfig: NextConfig = {
   /* config options here */
   async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "nexudyam.in",
-          },
-        ],
-        destination: "https://www.nexudyam.in/:path*",
-        permanent: true,
-      },
-      {
-        source: "/artist-management",
-        destination: "/ecom-websites",
-        permanent: true,
-      },
-    ];
+    return redirectsList;
   },
   async headers() {
     return [
