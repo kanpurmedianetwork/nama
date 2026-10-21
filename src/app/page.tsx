@@ -153,42 +153,42 @@ export default function Home() {
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
               icon={<Palette size={28} />}
-              href="/services#brand-identity"
+              href="/services/brand-identity-kanpur"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
               icon={<Share2 size={28} />}
-              href="/services#social-media"
+              href="/services/social-media-marketing-kanpur"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
               icon={<Megaphone size={28} />}
-              href="/services#paid-ads"
+              href="/services/meta-google-ads-kanpur"
             />
             <ServiceCard 
               title="Website Development"
               description="Fast, mobile-first websites built on modern stack."
               features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
               icon={<Monitor size={28} />}
-              href="/services#web-development"
+              href="/services/website-development-kanpur"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
               icon={<MapPin size={28} />}
-              href="/services#local-seo"
+              href="/services/google-business-profile-kanpur"
             />
             <ServiceCard 
               title="AI Content Marketing"
               description="10x faster than traditional agencies — at 1/3rd the cost."
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Cpu size={28} />}
-              href="/services#ai-content"
+              href="/services/ai-content-marketing"
             />
             <ServiceCard 
               title="Event Promotion"
@@ -373,7 +373,7 @@ const serviceSchemas = [
     name: "Brand Identity Design",
     description: "Visual identity that builds trust and recognition for MSMEs and startups, including logo, color palette, typography, and brand guidelines.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#brand-identity",
+    url: "https://www.nexudyam.in/services/brand-identity-kanpur",
     offers: {
       "@type": "Offer",
       "price": "4999",
@@ -386,7 +386,7 @@ const serviceSchemas = [
     name: "Social Media Marketing",
     description: "Consistent posting, Instagram Reels strategy, Facebook page management, and AI captions & scripts for local businesses.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#social-media",
+    url: "https://www.nexudyam.in/services/social-media-marketing-kanpur",
     offers: {
       "@type": "Offer",
       "price": "4999",
@@ -399,7 +399,7 @@ const serviceSchemas = [
     name: "Ads Campaign Setup",
     description: "Meta Ads (Facebook & Instagram) and Google Ads (Search & Display) campaign setups to drive lead generation starting at any budget.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#paid-ads",
+    url: "https://www.nexudyam.in/services/meta-google-ads-kanpur",
     offers: {
       "@type": "Offer",
       "price": "9999",
@@ -412,7 +412,7 @@ const serviceSchemas = [
     name: "Website Development",
     description: "Fast, mobile-first, SEO-optimized business websites on modern stack with Google Business Profile setup included.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#web-development",
+    url: "https://www.nexudyam.in/services/website-development-kanpur",
     offers: {
       "@type": "Offer",
       "price": "9999",
@@ -425,7 +425,7 @@ const serviceSchemas = [
     name: "Google Business Profile",
     description: "Rank in Google Maps and 'near me' local searches. Claim, verify, and optimize local listings with review management.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#local-seo",
+    url: "https://www.nexudyam.in/services/google-business-profile-kanpur",
     offers: {
       "@type": "Offer",
       "price": "4999",
@@ -438,7 +438,7 @@ const serviceSchemas = [
     name: "AI Content Marketing",
     description: "10x faster Reels scripts, blog posts, WhatsApp broadcast content, and monthly calendars at 1/3rd the cost of traditional agencies.",
     provider: { "@type": "LocalBusiness", name: "Nexudyam" },
-    url: "https://www.nexudyam.in/services#ai-content",
+    url: "https://www.nexudyam.in/services/ai-content-marketing",
     offers: {
       "@type": "Offer",
       "price": "4999",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TallyPopupButton } from "./TallyEmbed";
 
@@ -12,7 +13,7 @@ interface ServiceCardProps {
   href?: string;
 }
 
-export function ServiceCard({ title, description, features, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, features, icon, href }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -38,13 +39,23 @@ export function ServiceCard({ title, description, features, icon }: ServiceCardP
             ))}
           </ul>
           
-          <button 
-            onClick={() => setIsExpanded(true)}
-            className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button"
-          >
-            Learn more 
-            <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
-          </button>
+          {href ? (
+            <Link
+              href={href}
+              className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button hover:underline"
+            >
+              Learn more 
+              <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
+            </Link>
+          ) : (
+            <button 
+              onClick={() => setIsExpanded(true)}
+              className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button"
+            >
+              Learn more 
+              <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
+            </button>
+          )}
         </>
       ) : (
         <div className="mt-auto animate-in fade-in slide-in-from-bottom-2 duration-300">

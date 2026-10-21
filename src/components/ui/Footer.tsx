@@ -22,9 +22,12 @@ export function Footer() {
           <div>
             <p className="font-display font-bold text-foreground mb-4">Services</p>
             <ul className="flex flex-col gap-3">
-              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
-              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
-              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
+              <li><Link href="/services/website-development-kanpur" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
+              <li><Link href="/services/google-business-profile-kanpur" className="text-sm text-muted-foreground hover:text-brand">Google Business Profile</Link></li>
+              <li><Link href="/services/meta-google-ads-kanpur" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
+              <li><Link href="/services/brand-identity-kanpur" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
+              <li><Link href="/services/social-media-marketing-kanpur" className="text-sm text-muted-foreground hover:text-brand">Social Media Marketing</Link></li>
+              <li><Link href="/services/ai-content-marketing" className="text-sm text-muted-foreground hover:text-brand">AI Content Marketing</Link></li>
               <li><Link href="/ecom-websites" className="text-sm text-muted-foreground hover:text-brand">Shopify & E-commerce</Link></li>
               <li><Link href="/artist-management" className="text-sm text-muted-foreground hover:text-brand">Artist Management</Link></li>
             </ul>
