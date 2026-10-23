@@ -7,6 +7,7 @@ export const WHATSAPP_NUMBER = "919161881100";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const CONTACT_EMAIL = "support@nexudyam.in";
 export const CONTACT_PHONE = "+91-9161881100";
+export const GOOGLE_MAPS_REVIEW_URL = "https://share.google/B15NK2QgaMEn9hpoX";
 
 // Trust badges & signals
 export const TRUST_SIGNAL_BUSINESSES = "50+ businesses trust us";

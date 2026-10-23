@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, Clock, IndianRupee, ArrowRight, MapPin } from "lucide-react";
+import { CheckCircle2, Clock, IndianRupee, ArrowRight, MapPin, Star, ExternalLink } from "lucide-react";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd, breadcrumbs, serviceSchema, faqPage } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
@@ -99,6 +99,29 @@ export default function GoogleBusinessProfilePage() {
                 <p className="text-xs text-muted-foreground">Subject to Google verification processing</p>
               </div>
             </div>
+          </div>
+
+          {/* Google Reviews Trust Banner */}
+          <div className="mb-16 p-6 bg-white border border-border rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="flex text-amber-400 gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={18} fill="currentColor" />
+                ))}
+              </div>
+              <span className="font-bold text-foreground text-sm">
+                5.0 ★ Google Rating based on verified reviews
+              </span>
+            </div>
+            <a
+              href="https://share.google/B15NK2QgaMEn9hpoX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
+            >
+              <span>View Nexudyam on Google Maps</span>
+              <ExternalLink size={14} />
+            </a>
           </div>
 
           {/* What is Included */}

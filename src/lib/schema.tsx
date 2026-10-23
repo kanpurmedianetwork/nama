@@ -39,7 +39,63 @@ export const organization = {
       name: "India",
     },
   ],
-  sameAs: [],
+  sameAs: [
+    "https://share.google/B15NK2QgaMEn9hpoX",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "3",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Neha Gandhi",
+      },
+      datePublished: "2026-09-25",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "I'm really happy with my experience with the team! They're warm, supportive, creative, and always willing to understand exactly what I'm looking for. I truly appreciate their effort and personal attention. It's been lovely working with them, and I would happily recommend them to anyone looking for a great digital marketing team",
+    },
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Krishang Gandhi",
+      },
+      datePublished: "2026-09-25",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "NexUdyam ke saath mera experience kaafi achha raha. Starting se hi team kaafi professional aur cooperative thi. Inhone meri requirements ko properly samjha aur uske according suggestions diye, jo mujhe kaafi useful lage. Communication bhi smooth raha aur kaam ko lekar response time bhi achha tha. Sabse achhi baat ye lagi ki sirf service provide karne ke liye nahi, but business ko actually kaise grow kiya ja sakta hai uss perspective se bhi guidance di. Kanpur mein digital marketing aur branding ke liye definitely ek baar NexUdyam ko consider kar sakte ho. Overall experience very positive raha. Keep up the good work!",
+    },
+    {
+      "@type": "Review",
+      author: {
+        "@type": "Organization",
+        name: "Clamss International Limited",
+      },
+      datePublished: "2026-05-30",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "Had a great experience with NexUdyam Brand Launch Agency. Their team is professional, supportive, and highly dedicated to helping brands grow and reach the right audience. The collaboration process was smooth, communication was excellent, and the overall service quality exceeded expectations. Highly recommended for startups, businesses, and brands looking for strong promotion and launch support. 🚀",
+    },
+  ],
 };
 
 export const website = {

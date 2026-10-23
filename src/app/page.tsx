@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, ShoppingBag } from "lucide-react";
+import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Users, Cpu, ShoppingBag, Star, CheckCircle2, ExternalLink } from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
@@ -274,39 +274,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section (Google Business Profile Verified Reviews) */}
       <section className="py-24 bg-surface border-y border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <span className="text-brand font-bold uppercase tracking-wider text-sm mb-2 block">Success Stories</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-              What Local Businesses Say About Us
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3">
+              <CheckCircle2 size={14} className="text-emerald-600" />
+              <span>Google Business Profile Verified Reviews</span>
+            </div>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Rated 5.0 ★ on Google Reviews
             </h2>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-6">
+              Read authentic feedback from founders, startups, and business owners who partner with Nexudyam in Kanpur and Uttar Pradesh.
+            </p>
+            <a
+              href="https://share.google/B15NK2QgaMEn9hpoX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline"
+            >
+              <span>View our live listing &amp; reviews on Google Maps</span>
+              <ExternalLink size={14} />
+            </a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col justify-between">
+              <div 
+                key={idx} 
+                className="bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden"
+              >
+                {/* Accent top border */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400" />
+                
                 <div>
-                  <div className="flex text-amber-400 gap-1 mb-4">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex text-amber-400 gap-1" aria-label={`${t.rating} out of 5 stars`}>
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} size={16} fill="currentColor" />
+                      ))}
+                    </div>
+                    <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100 flex items-center gap-1">
+                      <CheckCircle2 size={11} />
+                      Verified
+                    </span>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed italic mb-6">
+
+                  <p className="text-foreground/90 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-brand/10 text-brand font-bold flex items-center justify-center text-sm shrink-0">
-                    {t.initials}
+
+                <div className="pt-4 border-t border-border/60">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-brand/10 text-brand font-bold flex items-center justify-center text-sm shrink-0">
+                      {t.initials}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-foreground text-sm truncate">{t.name}</p>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1.5">
+                        <span>{t.role}</span>
+                        <span>•</span>
+                        <span>{t.date}</span>
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-bold text-foreground text-sm">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}, {t.company}</p>
-                  </div>
+
+                  {t.ownerReply && (
+                    <div className="bg-surface/80 border border-border/80 rounded-xl p-3 text-xs text-muted-foreground mt-3">
+                      <span className="font-semibold text-foreground block mb-0.5">Response from owner:</span>
+                      <p className="italic">&ldquo;{t.ownerReply}&rdquo;</p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://share.google/B15NK2QgaMEn9hpoX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white border border-border px-6 py-3 rounded-full text-sm font-bold text-foreground hover:bg-surface hover:border-brand/40 transition-colors shadow-sm"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+              <span>Review Nexudyam on Google Business Profile</span>
+              <ExternalLink size={14} className="text-muted-foreground" />
+            </a>
           </div>
         </div>
       </section>
@@ -503,24 +564,33 @@ const faqData = [
 
 const testimonials = [
   {
-    quote: "Nexudyam set up our Google Business Profile and ran a local Meta Ads campaign. We got over 40 active inquiries for our bakery within 30 days. Their pricing is extremely affordable for small businesses.",
-    name: "Aditya Mishra",
-    role: "Founder",
-    company: "Kanpur Bakery Co.",
-    initials: "AM"
+    quote: "I'm really happy with my experience with the team! They're warm, supportive, creative, and always willing to understand exactly what I'm looking for. I truly appreciate their effort and personal attention. It's been lovely working with them, and I would happily recommend them to anyone looking for a great digital marketing team",
+    name: "Neha Gandhi",
+    role: "Verified Google Review",
+    company: "Google Business Profile",
+    initials: "NG",
+    rating: 5,
+    date: "4 weeks ago",
+    ownerReply: "Thanks mam for your valuable feedback 🙏",
   },
   {
-    quote: "We were struggling to get noticed in Kanpur. Nexudyam designed our brand logo, created our Instagram reel templates, and got us ranking on Google Maps. Now customers find our boutique easily!",
-    name: "Sneha Gupta",
-    role: "Owner",
-    company: "SG Fashion Studio",
-    initials: "SG"
+    quote: "NexUdyam ke saath mera experience kaafi achha raha. Starting se hi team kaafi professional aur cooperative thi. Inhone meri requirements ko properly samjha aur uske according suggestions diye, jo mujhe kaafi useful lage. Communication bhi smooth raha aur kaam ko lekar response time bhi achha tha. Sabse achhi baat ye lagi ki sirf service provide karne ke liye nahi, but business ko actually kaise grow kiya ja sakta hai uss perspective se bhi guidance di. Kanpur mein digital marketing aur branding ke liye definitely ek baar NexUdyam ko consider kar sakte ho. Overall experience very positive raha. Keep up the good work!",
+    name: "Krishang Gandhi",
+    role: "Verified Google Review",
+    company: "Google Business Profile",
+    initials: "KG",
+    rating: 5,
+    date: "4 weeks ago",
+    ownerReply: "Thanks a lot these words means a lot to us .",
   },
   {
-    quote: "The Grow plan was perfect for our agritech startup. We got a fast, professional website and a complete Meta and Google Ads setup. They delivered everything within 2 weeks and the support is outstanding.",
-    name: "Rajesh Yadav",
-    role: "Director",
-    company: "Yadav AgroTech",
-    initials: "RY"
-  }
+    quote: "Had a great experience with NexUdyam Brand Launch Agency. Their team is professional, supportive, and highly dedicated to helping brands grow and reach the right audience. The collaboration process was smooth, communication was excellent, and the overall service quality exceeded expectations. Highly recommended for startups, businesses, and brands looking for strong promotion and launch support. 🚀",
+    name: "Clamss International Limited",
+    role: "Corporate Client",
+    company: "Google Business Profile",
+    initials: "CI",
+    rating: 5,
+    date: "21 weeks ago",
+    ownerReply: "Thanks a lot",
+  },
 ];
