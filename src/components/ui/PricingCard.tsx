@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
+import { ShinyText } from "@/components/reactbits/ShinyText";
 
 interface PricingCardProps {
   name: string;
@@ -11,13 +13,20 @@ interface PricingCardProps {
 
 export function PricingCard({ name, price, target, features, isPopular }: PricingCardProps) {
   return (
-    <div className={cn(
-      "relative bg-white border rounded-2xl p-8 flex flex-col h-full transition-transform duration-300",
-      isPopular ? "border-brand shadow-xl md:-translate-y-4" : "border-border hover:shadow-md hover:-translate-y-1"
-    )}>
+    <SpotlightCard
+      className={cn(
+        "relative bg-white border rounded-2xl p-8 flex flex-col h-full transition-all duration-300",
+        isPopular ? "border-brand shadow-xl md:-translate-y-4 ring-1 ring-brand/10" : "border-border hover:shadow-md hover:-translate-y-1"
+      )}
+      spotlightColor={isPopular ? "rgba(0, 0, 0, 0.08)" : "rgba(0, 0, 0, 0.04)"}
+      borderColor={isPopular ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.12)"}
+    >
       {isPopular && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1 shadow-md">
-          <span>★</span> Most Popular
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md z-40">
+          <span className="text-amber-400">★</span>
+          <ShinyText speed={2.5} className="font-bold text-white">
+            Most Popular
+          </ShinyText>
         </div>
       )}
       
@@ -57,6 +66,6 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
           ))}
         </ul>
       </div>
-    </div>
+    </SpotlightCard>
   );
 }

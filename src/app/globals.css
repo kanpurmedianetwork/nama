@@ -34,3 +34,42 @@ body {
 h1, h2, h3, h4, h5, h6, .font-display {
   font-family: var(--font-display);
 }
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 3s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}

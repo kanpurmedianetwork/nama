@@ -8,6 +8,12 @@ import { HERO_CTA_TEXT, HERO_SUB_CTA_TEXT, WHATSAPP_URL, CONTACT_PHONE, CONTACT_
 import { LeadForm } from "@/components/ui/LeadForm";
 import { pageMetadata } from "@/lib/metadata";
 import { faqPage } from "@/lib/schema";
+import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
+import { ShinyText } from "@/components/reactbits/ShinyText";
+import { Marquee } from "@/components/reactbits/Marquee";
+import { CountUp } from "@/components/reactbits/CountUp";
+import { Magnet } from "@/components/reactbits/Magnet";
+import { HeroBackground } from "@/components/reactbits/HeroBackground";
 
 export const metadata = pageMetadata({
   title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
@@ -29,8 +35,15 @@ export default function Home() {
       ))}
 
       {/* Hero Section */}
-      <section className="pt-16 pb-12 md:pt-28 md:pb-20">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+      <section className="relative pt-16 pb-12 md:pt-28 md:pb-20 overflow-hidden">
+        <HeroBackground />
+        <div className="container relative z-10 mx-auto px-6 max-w-4xl text-center">
+          <div className="inline-flex items-center gap-2 bg-brand/5 border border-border px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <ShinyText speed={2.5} className="font-semibold text-foreground">
+              Empowering Startups &amp; MSMEs in Kanpur &amp; Uttar Pradesh
+            </ShinyText>
+          </div>
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
             Grow Your Business Online with Kanpur's Top Digital Marketing Agency
           </h1>
@@ -43,66 +56,91 @@ export default function Home() {
 
           {/* Configuration Hero CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand text-white px-8 py-4 rounded-full text-base font-bold hover:bg-brand-dark transition-all flex items-center gap-2 shadow-lg"
-            >
-              <span>{HERO_CTA_TEXT}</span>
-              <ArrowRight size={18} />
-            </a>
-            <Link
-              href="/pricing"
-              className="border border-border text-foreground bg-white px-8 py-4 rounded-full text-base font-bold hover:bg-surface transition-colors"
-            >
-              {HERO_SUB_CTA_TEXT}
-            </Link>
+            <Magnet strength={0.25} padding={60}>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand text-white px-8 py-4 rounded-full text-base font-bold hover:bg-brand-dark transition-all flex items-center gap-2 shadow-lg hover:shadow-xl cursor-pointer"
+              >
+                <span>{HERO_CTA_TEXT}</span>
+                <ArrowRight size={18} />
+              </a>
+            </Magnet>
+            <Magnet strength={0.25} padding={60}>
+              <Link
+                href="/pricing"
+                className="border border-border text-foreground bg-white px-8 py-4 rounded-full text-base font-bold hover:bg-surface transition-colors block cursor-pointer"
+              >
+                {HERO_SUB_CTA_TEXT}
+              </Link>
+            </Magnet>
           </div>
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5">● AI Content Marketing</span>
-            <span className="flex items-center gap-1.5">● Meta + Google Ads</span>
-            <span className="flex items-center gap-1.5">● Website Development</span>
+            <span className="flex items-center gap-1.5 font-medium">● AI Content Marketing</span>
+            <span className="flex items-center gap-1.5 font-medium">● Meta + Google Ads</span>
+            <span className="flex items-center gap-1.5 font-medium">● Website Development</span>
           </div>
         </div>
       </section>
 
       {/* Stats + Trusted By Strip */}
-      <section className="py-12 border-t border-border">
+      <section className="py-12 border-t border-border bg-surface/50">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Stats Row */}
           <div className="flex flex-wrap justify-center items-center gap-12 mb-8">
             <div className="flex items-center gap-3">
               <Users size={22} className="text-muted-foreground" />
               <div>
-                <span className="font-display text-3xl font-bold text-foreground">50+</span>
+                <CountUp to={50} suffix="+" className="font-display text-3xl font-bold text-foreground" />
                 <span className="text-sm text-muted-foreground ml-2">Businesses trust us</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Star size={22} className="text-amber-500 fill-amber-500" />
+              <div>
+                <span className="font-display text-3xl font-bold text-foreground">5.0</span>
+                <span className="text-sm text-muted-foreground ml-2">Google Maps Rating (3 reviews)</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <MapPin size={22} className="text-muted-foreground" />
               <div>
                 <span className="font-display text-3xl font-bold text-foreground">UP</span>
-                <span className="text-sm text-muted-foreground ml-2">Kanpur, Lucknow, Noida, Prayagraj & More</span>
+                <span className="text-sm text-muted-foreground ml-2">Kanpur, Lucknow, Noida, Prayagraj</span>
               </div>
             </div>
           </div>
 
           {/* Trusted By Label */}
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground text-center mb-6">
-            Trusted by Startups & Businesses across India
+            Trusted by Startups &amp; Businesses across India
           </p>
 
-          {/* Service Tags Strip */}
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            {["Brand Identity", "Social Media", "Google Ads", "Meta Ads", "Websites", "Shopify Stores", "Events", "AI Content"].map((tag) => (
-              <span key={tag} className="text-sm font-bold text-subtle-foreground border border-border px-4 py-1.5 rounded-full">
+          {/* Service Tags Marquee (React Bits Infinite Marquee) */}
+          <Marquee speed="normal" pauseOnHover={true} className="py-2">
+            {[
+              "Brand Identity Design",
+              "Social Media Marketing",
+              "Google Ads (Search & Display)",
+              "Meta Ads (FB + Instagram)",
+              "Next.js Website Development",
+              "Shopify E-commerce Stores",
+              "Google Business Profile (3-Pack)",
+              "AI Content Marketing",
+              "Event Promotion & Buzz",
+              "Local SEO Kanpur & UP",
+            ].map((tag) => (
+              <span 
+                key={tag} 
+                className="text-sm font-bold text-foreground bg-white border border-border px-4 py-2 rounded-full whitespace-nowrap shadow-xs hover:border-brand/40 transition-colors"
+              >
                 {tag}
               </span>
             ))}
-          </div>
+          </Marquee>
         </div>
       </section>
 
@@ -280,7 +318,9 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3">
               <CheckCircle2 size={14} className="text-emerald-600" />
-              <span>Google Business Profile Verified Reviews</span>
+              <ShinyText speed={3} className="text-emerald-700 font-semibold">
+                Google Business Profile Verified Reviews
+              </ShinyText>
             </div>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
               Rated 5.0 ★ on Google Reviews
@@ -301,9 +341,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {testimonials.map((t, idx) => (
-              <div 
+              <SpotlightCard 
                 key={idx} 
                 className="bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden"
+                spotlightColor="rgba(245, 158, 11, 0.05)"
+                borderColor="rgba(245, 158, 11, 0.25)"
               >
                 {/* Accent top border */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400" />
@@ -348,7 +390,7 @@ export default function Home() {
                     </div>
                   )}
                 </div>
-              </div>
+              </SpotlightCard>
             ))}
           </div>
 

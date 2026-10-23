@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TallyPopupButton } from "./TallyEmbed";
+import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 
 interface ServiceCardProps {
   title: string;
@@ -17,7 +18,7 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="group bg-white border border-border p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+    <SpotlightCard className="group bg-white border border-border p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
       {/* Decorative top border highlight on hover */}
       <div className="absolute top-0 left-0 w-full h-1 bg-brand transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
       
@@ -79,6 +80,6 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
           </button>
         </div>
       )}
-    </div>
+    </SpotlightCard>
   );
 }
