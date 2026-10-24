@@ -83,3 +83,29 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .animate-border-beam {
   animation: border-beam var(--duration, 12s) linear infinite;
 }
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-star-movement-top {
+  animation: star-movement-top var(--star-speed, 5s) linear infinite;
+}
+
+.animate-star-movement-bottom {
+  animation: star-movement-bottom var(--star-speed, 5s) linear infinite;
+}

@@ -18,6 +18,11 @@ import { ClickSpark } from "@/components/reactbits/ClickSpark";
 import { RotatingText } from "@/components/reactbits/RotatingText";
 import { TiltedCard } from "@/components/reactbits/TiltedCard";
 import { BorderBeam } from "@/components/reactbits/BorderBeam";
+import { BlurText } from "@/components/reactbits/BlurText";
+import { DecryptedText } from "@/components/reactbits/DecryptedText";
+import { StarBorder } from "@/components/reactbits/StarBorder";
+import { HeroShowcase } from "@/components/reactbits/HeroShowcase";
+import { BentoFeatures } from "@/components/reactbits/BentoFeatures";
 
 export const metadata = pageMetadata({
   title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
@@ -38,20 +43,34 @@ export default function Home() {
         />
       ))}
 
-      {/* Hero Section with React Bits ClickSpark, Squares Canvas, and RotatingText */}
+      {/* Hero Section with React Bits ClickSpark, Squares Canvas, BlurText & HeroShowcase */}
       <ClickSpark sparkColor="#111827" sparkCount={8} sparkRadius={26} sparkSize={5}>
         <section className="relative pt-16 pb-12 md:pt-28 md:pb-20 overflow-hidden">
           <HeroBackground />
-          <div className="container relative z-10 mx-auto px-6 max-w-4xl text-center">
+          <div className="container relative z-10 mx-auto px-6 max-w-5xl text-center">
+            {/* React Bits DecryptedText Badge */}
             <div className="inline-flex items-center gap-2 bg-brand/5 border border-border px-4 py-1.5 rounded-full text-xs font-semibold mb-6 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <ShinyText speed={2.5} className="font-semibold text-foreground">
-                Empowering Startups &amp; MSMEs in Kanpur &amp; Uttar Pradesh
-              </ShinyText>
+              <DecryptedText
+                text="Empowering Startups & MSMEs in Kanpur & Uttar Pradesh"
+                speed={40}
+                maxIterations={8}
+                animateOn="view"
+                className="font-semibold text-foreground"
+                encryptedClassName="font-mono text-brand font-semibold"
+              />
             </div>
-            <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-4 leading-[1.1]">
-              Grow Your Business Online with Kanpur's Top Digital Marketing Agency
-            </h1>
+
+            {/* React Bits BlurText H1 Headline */}
+            <div className="max-w-4xl mx-auto mb-4">
+              <BlurText
+                text="Grow Your Business Online with Kanpur's Top Digital Marketing Agency"
+                delay={40}
+                animateBy="words"
+                direction="top"
+                className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] justify-center text-center"
+              />
+            </div>
             
             {/* Dynamic Rotating Text Highlight (React Bits) */}
             <div className="flex flex-wrap items-center justify-center gap-2 text-base md:text-xl font-semibold text-foreground/80 mb-6">
@@ -74,23 +93,27 @@ export default function Home() {
               </a> before your competitors find your next customer.
             </p>
 
-            {/* Configuration Hero CTA Buttons */}
+            {/* Configuration Hero CTA Buttons with React Bits StarBorder & Magnet */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Magnet strength={0.25} padding={60}>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand text-white px-8 py-4 rounded-full text-base font-bold hover:bg-brand-dark transition-all flex items-center gap-2 shadow-lg hover:shadow-xl cursor-pointer"
+                  className="block cursor-pointer"
                 >
-                  <span>{HERO_CTA_TEXT}</span>
-                  <ArrowRight size={18} />
+                  <StarBorder color="#f59e0b" speed="5s">
+                    <span className="flex items-center gap-2">
+                      <span>{HERO_CTA_TEXT}</span>
+                      <ArrowRight size={18} />
+                    </span>
+                  </StarBorder>
                 </a>
               </Magnet>
               <Magnet strength={0.25} padding={60}>
                 <Link
                   href="/pricing"
-                  className="border border-border text-foreground bg-white px-8 py-4 rounded-full text-base font-bold hover:bg-surface transition-colors block cursor-pointer shadow-xs"
+                  className="border border-border text-foreground bg-white px-8 py-3.5 rounded-full text-base font-bold hover:bg-surface transition-colors block cursor-pointer shadow-xs"
                 >
                   {HERO_SUB_CTA_TEXT}
                 </Link>
@@ -98,11 +121,14 @@ export default function Home() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-4">
               <span className="flex items-center gap-1.5 font-medium">● AI Content Marketing</span>
               <span className="flex items-center gap-1.5 font-medium">● Meta + Google Ads</span>
               <span className="flex items-center gap-1.5 font-medium">● Website Development</span>
             </div>
+
+            {/* Interactive Hero Growth Engine Showcase (Load-balanced Interactive Centerpiece) */}
+            <HeroShowcase />
           </div>
         </section>
       </ClickSpark>
@@ -437,30 +463,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Nexudyam Section with SpotlightCards */}
+      {/* Why Nexudyam Section (React Bits Bento Grid with Load-Balanced Weight) */}
       <section className="py-24 bg-background border-b border-border">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-center text-foreground mb-16">
-            Why Hundreds of Businesses Choose Nexudyam
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SpotlightCard className="bg-white p-8 rounded-2xl border border-border shadow-xs hover:shadow-md transition-shadow">
-              <p className="font-display font-bold text-2xl mb-3">One Partner, Everything Included</p>
-              <p className="text-muted-foreground leading-relaxed">No juggling between a designer, a developer, and an agency. We handle brand, digital, and ads — together.</p>
-            </SpotlightCard>
-            <SpotlightCard className="bg-white p-8 rounded-2xl border border-border shadow-xs hover:shadow-md transition-shadow">
-              <p className="font-display font-bold text-2xl mb-3">AI-Powered, Agency Quality</p>
-              <p className="text-muted-foreground leading-relaxed">Our AI tools cut delivery time and cost in half. You get faster content, better results, and more savings than any traditional agency.</p>
-            </SpotlightCard>
-            <SpotlightCard className="bg-white p-8 rounded-2xl border border-border shadow-xs hover:shadow-md transition-shadow">
-              <p className="font-display font-bold text-2xl mb-3">MSME-First Pricing</p>
-              <p className="text-muted-foreground leading-relaxed">We built our packages for real Indian businesses — not for corporates. ₹4,999 gets you started. One new customer covers it.</p>
-            </SpotlightCard>
-            <SpotlightCard className="bg-white p-8 rounded-2xl border border-border shadow-xs hover:shadow-md transition-shadow">
-              <p className="font-display font-bold text-2xl mb-3">Local Roots, National Reach</p>
-              <p className="text-muted-foreground leading-relaxed">Based in Kanpur. Built for Bharat. We understand the Indian entrepreneur's journey — because we are one.</p>
-            </SpotlightCard>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-brand font-bold uppercase tracking-wider text-xs mb-2 block">
+              The Nexudyam Difference
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Why Hundreds of Businesses Choose Nexudyam
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg">
+              Engineered to give local Indian enterprises the strategic horsepower of a high-end agency at prices designed for Bharat.
+            </p>
           </div>
+          <BentoFeatures />
         </div>
       </section>
 
