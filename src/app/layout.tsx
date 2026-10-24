@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
     images: [
       {
-        url: "/og/home.png",
+        url: "https://www.nexudyam.in/og/home.png",
         width: 1200,
         height: 630,
-        alt: "Nexudyam logo",
+        alt: "Nexudyam - Digital Marketing & Branding Agency in Kanpur",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
     description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
-    images: ["/og/home.png"],
+    images: ["https://www.nexudyam.in/og/home.png"],
   },
   robots: {
     index: true,
