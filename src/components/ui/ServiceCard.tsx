@@ -4,7 +4,6 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TallyPopupButton } from "./TallyEmbed";
-import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 
 interface ServiceCardProps {
   title: string;
@@ -18,16 +17,16 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <SpotlightCard className="group bg-white border border-border p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+    <div className="group bg-white border border-border p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
       {/* Decorative top border highlight on hover */}
       <div className="absolute top-0 left-0 w-full h-1 bg-brand transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
       
-      <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
+      <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300 shrink-0">
         {icon}
       </div>
       
       <p className="font-display font-bold text-xl text-foreground mb-3">{title}</p>
-      <p className="text-muted-foreground text-sm mb-6">{description}</p>
+      <p className="text-muted-foreground text-sm mb-6 leading-relaxed">{description}</p>
       
       {!isExpanded ? (
         <>
@@ -35,7 +34,7 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
             {features.map((feature, i) => (
               <li key={i} className="flex items-start text-sm text-subtle-foreground">
                 <span className="text-brand mr-2 font-bold">•</span>
-                {feature}
+                <span>{feature}</span>
               </li>
             ))}
           </ul>
@@ -51,7 +50,7 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
           ) : (
             <button 
               onClick={() => setIsExpanded(true)}
-              className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button"
+              className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button cursor-pointer"
             >
               Learn more 
               <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
@@ -74,12 +73,12 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
           </div>
           <button 
             onClick={() => setIsExpanded(false)}
-            className="text-xs text-subtle-foreground hover:text-foreground transition-colors"
+            className="text-xs text-subtle-foreground hover:text-foreground transition-colors cursor-pointer"
           >
             ← Back to features
           </button>
         </div>
       )}
-    </SpotlightCard>
+    </div>
   );
 }

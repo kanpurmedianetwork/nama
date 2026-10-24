@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { ShinyText } from "@/components/reactbits/ShinyText";
 import { BorderBeam } from "@/components/reactbits/BorderBeam";
 
@@ -14,13 +13,13 @@ interface PricingCardProps {
 
 export function PricingCard({ name, price, target, features, isPopular }: PricingCardProps) {
   return (
-    <SpotlightCard
+    <div
       className={cn(
         "relative bg-white border rounded-2xl p-8 flex flex-col h-full transition-all duration-300",
-        isPopular ? "border-brand shadow-xl md:-translate-y-4 ring-1 ring-brand/10 overflow-hidden" : "border-border hover:shadow-md hover:-translate-y-1"
+        isPopular
+          ? "border-brand shadow-xl md:-translate-y-4 ring-1 ring-brand/10"
+          : "border-border hover:shadow-md hover:-translate-y-1"
       )}
-      spotlightColor={isPopular ? "rgba(0, 0, 0, 0.08)" : "rgba(0, 0, 0, 0.04)"}
-      borderColor={isPopular ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.12)"}
     >
       {isPopular && (
         <>
@@ -70,6 +69,6 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
           ))}
         </ul>
       </div>
-    </SpotlightCard>
+    </div>
   );
 }

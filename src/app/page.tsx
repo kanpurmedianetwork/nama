@@ -16,7 +16,6 @@ import { Magnet } from "@/components/reactbits/Magnet";
 import { HeroBackground } from "@/components/reactbits/HeroBackground";
 import { ClickSpark } from "@/components/reactbits/ClickSpark";
 import { RotatingText } from "@/components/reactbits/RotatingText";
-import { TiltedCard } from "@/components/reactbits/TiltedCard";
 import { BorderBeam } from "@/components/reactbits/BorderBeam";
 import { BlurText } from "@/components/reactbits/BlurText";
 import { DecryptedText } from "@/components/reactbits/DecryptedText";
@@ -389,57 +388,54 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {testimonials.map((t, idx) => (
-              <TiltedCard key={idx} maxAngle={6} scale={1.02} glare={true}>
-                <SpotlightCard 
-                  className="bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden h-full"
-                  spotlightColor="rgba(245, 158, 11, 0.06)"
-                  borderColor="rgba(245, 158, 11, 0.25)"
-                >
-                  {/* Accent top border */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400" />
-                  
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex text-amber-400 gap-1" aria-label={`${t.rating} out of 5 stars`}>
-                        {Array.from({ length: t.rating }).map((_, i) => (
-                          <Star key={i} size={16} fill="currentColor" />
-                        ))}
-                      </div>
-                      <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100 flex items-center gap-1">
-                        <CheckCircle2 size={11} />
-                        Verified
-                      </span>
+              <div 
+                key={idx} 
+                className="bg-white p-8 rounded-2xl border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full group"
+              >
+                {/* Accent top border */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500" />
+                
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex text-amber-400 gap-1" aria-label={`${t.rating} out of 5 stars`}>
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} size={16} fill="currentColor" />
+                      ))}
                     </div>
-
-                    <p className="text-foreground/90 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
+                    <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100 flex items-center gap-1">
+                      <CheckCircle2 size={11} />
+                      Verified
+                    </span>
                   </div>
 
-                  <div className="pt-4 border-t border-border/60">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-brand/10 text-brand font-bold flex items-center justify-center text-sm shrink-0">
-                        {t.initials}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="font-bold text-foreground text-sm truncate">{t.name}</p>
-                        <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-                          <span>{t.role}</span>
-                          <span>•</span>
-                          <span>{t.date}</span>
-                        </p>
-                      </div>
-                    </div>
+                  <p className="text-foreground/90 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
 
-                    {t.ownerReply && (
-                      <div className="bg-surface/80 border border-border/80 rounded-xl p-3 text-xs text-muted-foreground mt-3">
-                        <span className="font-semibold text-foreground block mb-0.5">Response from owner:</span>
-                        <p className="italic">&ldquo;{t.ownerReply}&rdquo;</p>
-                      </div>
-                    )}
+                <div className="pt-4 border-t border-border/60 mt-auto">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-brand/10 text-brand font-bold flex items-center justify-center text-sm shrink-0">
+                      {t.initials}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-foreground text-sm truncate">{t.name}</p>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1.5">
+                        <span>{t.role}</span>
+                        <span>•</span>
+                        <span>{t.date}</span>
+                      </p>
+                    </div>
                   </div>
-                </SpotlightCard>
-              </TiltedCard>
+
+                  {t.ownerReply && (
+                    <div className="bg-surface/80 border border-border/80 rounded-xl p-3 text-xs text-muted-foreground mt-3">
+                      <span className="font-semibold text-foreground block mb-0.5">Response from owner:</span>
+                      <p className="italic">&ldquo;{t.ownerReply}&rdquo;</p>
+                    </div>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
 
