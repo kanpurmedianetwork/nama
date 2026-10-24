@@ -1,38 +1,28 @@
 "use client";
 
 import React from "react";
-import { Squares } from "./Squares";
 
 export function HeroBackground() {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Interactive Squares Grid (React Bits) */}
-      <div className="absolute inset-0 pointer-events-auto [mask-image:radial-gradient(ellipse_75%_65%_at_50%_35%,#000_60%,transparent_100%)] opacity-80">
-        <Squares
-          direction="diagonal"
-          speed={0.35}
-          squareSize={44}
-          borderColor="rgba(0, 0, 0, 0.05)"
-          hoverFillColor="rgba(0, 0, 0, 0.04)"
-        />
-      </div>
-
-      {/* Ambient Animated Glow Aura 1 */}
+      {/* Subtle Architectural Dot Grid */}
       <div 
-        className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-gradient-to-tr from-brand/5 via-accent/30 to-transparent rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none"
-        style={{ animationDuration: "8s" }}
+        className="absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_35%,#000_60%,transparent_100%)]" 
       />
 
-      {/* Ambient Animated Glow Aura 2 */}
+      {/* Soft Ambient Light Glow 1 */}
       <div 
-        className="absolute top-[30%] -left-[10%] w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl opacity-60 animate-pulse pointer-events-none"
-        style={{ animationDuration: "12s" }}
+        className="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[800px] h-[550px] bg-gradient-to-b from-neutral-200/40 via-neutral-100/20 to-transparent rounded-full blur-3xl opacity-80"
       />
 
-      {/* Ambient Animated Glow Aura 3 */}
+      {/* Soft Ambient Light Glow 2 */}
       <div 
-        className="absolute top-[25%] -right-[10%] w-[450px] h-[450px] bg-amber-500/5 rounded-full blur-3xl opacity-60 animate-pulse pointer-events-none"
-        style={{ animationDuration: "10s" }}
+        className="absolute top-[20%] -left-[10%] w-[500px] h-[500px] bg-gradient-to-tr from-emerald-500/[0.04] to-transparent rounded-full blur-3xl"
+      />
+
+      {/* Soft Ambient Light Glow 3 */}
+      <div 
+        className="absolute top-[20%] -right-[10%] w-[500px] h-[500px] bg-gradient-to-tl from-amber-500/[0.04] to-transparent rounded-full blur-3xl"
       />
     </div>
   );
