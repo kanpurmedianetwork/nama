@@ -42,17 +42,21 @@ export function ServiceCard({ title, description, features, icon, href }: Servic
           {href ? (
             <Link
               href={href}
+              aria-label={`Learn more about ${title}`}
               className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button hover:underline"
             >
-              Learn more 
+              <span>Learn more</span>
+              <span className="sr-only"> about {title}</span>
               <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
             </Link>
           ) : (
             <button 
               onClick={() => setIsExpanded(true)}
+              aria-label={`Learn more about ${title}`}
               className="inline-flex items-center text-brand font-bold text-sm mt-auto group/button cursor-pointer"
             >
-              Learn more 
+              <span>Learn more</span>
+              <span className="sr-only"> about {title}</span>
               <ArrowRight size={16} className="ml-1 group-hover/button:translate-x-1 transition-transform" />
             </button>
           )}

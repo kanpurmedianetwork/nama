@@ -294,17 +294,17 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
               <Clock size={24} className="text-amber-400 mb-3" />
               <p className="font-bold text-lg mb-1">48-Hour Turnaround</p>
-              <p className="text-xs text-neutral-400 leading-relaxed">30-day social calendars, ad creatives, and copywriting produced in days, not weeks.</p>
+              <p className="text-xs text-neutral-300 leading-relaxed">30-day social calendars, ad creatives, and copywriting produced in days, not weeks.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
               <ShieldCheck size={24} className="text-emerald-400 mb-3" />
               <p className="font-bold text-lg mb-1">Human Strategic Direction</p>
-              <p className="text-xs text-neutral-400 leading-relaxed">Every AI-generated draft is edited and vetted by senior marketers for regional market nuances.</p>
+              <p className="text-xs text-neutral-300 leading-relaxed">Every AI-generated draft is edited and vetted by senior marketers for regional market nuances.</p>
             </div>
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
               <Layers size={24} className="text-sky-400 mb-3" />
               <p className="font-bold text-lg mb-1">70% Cost Savings</p>
-              <p className="text-xs text-neutral-400 leading-relaxed">No bloated agency overhead. We pass the operational efficiency directly back to you.</p>
+              <p className="text-xs text-neutral-300 leading-relaxed">No bloated agency overhead. We pass the operational efficiency directly back to you.</p>
             </div>
           </div>
         </div>
@@ -314,7 +314,7 @@ export default function Home() {
       <section className="py-20 md:py-24 bg-white border-b border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 mb-2 block">
               Why Partner With Us
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -326,22 +326,22 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-400 uppercase tracking-wider block mb-2">01 / INTEGRATED TEAM</span>
+              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">01 / INTEGRATED TEAM</span>
               <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">One Partner, Everything Included</p>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">No juggling between a freelance designer, an unvetted web developer, and an ad agency. We handle brand identity, custom website code, and ad campaigns under one roof.</p>
             </div>
             <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-400 uppercase tracking-wider block mb-2">02 / WORKFLOW SPEED</span>
+              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">02 / WORKFLOW SPEED</span>
               <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">AI-Powered, Agency Quality</p>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">Our AI tools cut delivery time and cost in half. You get faster content, better results, and more savings than any traditional agency with zero compromise on creative quality.</p>
             </div>
             <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-400 uppercase tracking-wider block mb-2">03 / HONEST PRICING</span>
+              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">03 / HONEST PRICING</span>
               <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">MSME-First Pricing</p>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">We built our packages for real Indian businesses — not for corporates. ₹4,999 gets you started with zero hidden retainers or multi-month lock-in commitments.</p>
             </div>
             <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-400 uppercase tracking-wider block mb-2">04 / LOCAL ROOTS</span>
+              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">04 / LOCAL ROOTS</span>
               <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">Local Roots, Statewide Reach</p>
               <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">Based in Kanpur. Built for Bharat. We understand regional consumer psychology and local market nuances across Kanpur, Lucknow, Noida, Prayagraj, and Varanasi.</p>
             </div>
@@ -440,7 +440,7 @@ export default function Home() {
                 
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="flex text-amber-400 gap-1" aria-label={`${t.rating} out of 5 stars`}>
+                    <div role="img" aria-label={`${t.rating} out of 5 stars`} className="flex text-amber-400 gap-1">
                       {Array.from({ length: t.rating }).map((_, i) => (
                         <Star key={i} size={16} fill="currentColor" />
                       ))}

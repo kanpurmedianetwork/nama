@@ -86,61 +86,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased scroll-smooth`}>
       <head>
-        {/* Suppress deprecation warnings from third-party scripts (e.g. GTM/gtag.js, Cloudflare) accessing deprecated browser APIs */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (typeof window !== 'undefined') {
-                  // 1. Suppress Fledge / Protected Audience API warnings
-                  if (window.navigator) {
-                    const proto = Object.getPrototypeOf(window.navigator);
-                    const keys = ['joinAdInterestGroup', 'runAdAuction', 'updateAdInterestGroups', 'leaveAdInterestGroup', 'protectedAudience', 'sharedStorage'];
-                    if (proto) {
-                      keys.forEach(function(key) {
-                        try { delete proto[key]; } catch (e) {}
-                      });
-                    }
-                    keys.forEach(function(key) {
-                      try {
-                        if (key in window.navigator) {
-                          Object.defineProperty(window.navigator, key, { value: undefined, configurable: true });
-                        }
-                      } catch (e) {}
-                    });
-                  }
-                  
-                  // 2. Suppress SharedStorage API warnings
-                  try {
-                    if ('sharedStorage' in window) {
-                      Object.defineProperty(window, 'sharedStorage', { value: undefined, configurable: true });
-                    }
-                  } catch (e) {}
-
-                  // 3. Suppress StorageType.persistent warnings (from webkitStorageInfo / StorageType)
-                  try {
-                    if ('StorageType' in window) {
-                      Object.defineProperty(window, 'StorageType', { value: undefined, configurable: true });
-                    }
-                  } catch (e) {}
-                  try {
-                    if ('webkitStorageInfo' in window) {
-                      Object.defineProperty(window, 'webkitStorageInfo', { value: undefined, configurable: true });
-                    }
-                  } catch (e) {}
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="bg-background text-foreground min-h-screen flex flex-col">
-        {/* Google tag (gtag.js) - loaded asynchronously after page is interactive */}
+        {/* Google tag (gtag.js) - loaded asynchronously via lazyOnload to protect Core Web Vitals */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0MD8HBWCWH"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -148,8 +103,8 @@ export default function RootLayout({
             gtag('config', 'G-0MD8HBWCWH');
           `}
         </Script>
-        {/* Google Tag Manager - loaded asynchronously after page is interactive */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        {/* Google Tag Manager - loaded asynchronously via lazyOnload */}
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
