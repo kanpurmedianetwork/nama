@@ -5,6 +5,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { TallyPopup } from "@/components/ui/TallyEmbed";
+import { DiwaliPopup } from "@/components/ui/DiwaliPopup";
 import Script from "next/script";
 import { JsonLd, organization, website } from "@/lib/schema";
 
@@ -67,8 +68,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.png", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
     apple: "/logo.png",
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -169,6 +175,7 @@ export default function RootLayout({
         <Footer />
         <FloatingWhatsApp />
         <TallyPopup />
+        <DiwaliPopup />
       </body>
     </html>
   );

@@ -73,8 +73,13 @@ export function pageMetadata({
           },
         },
     icons: {
-      icon: "/logo.png",
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/logo.png", type: "image/png" },
+        { url: "/logo.svg", type: "image/svg+xml" },
+      ],
       apple: "/logo.png",
+      shortcut: "/favicon.ico",
     },
   };
 }
