@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { ShinyText } from "@/components/reactbits/ShinyText";
+import { BorderBeam } from "@/components/reactbits/BorderBeam";
 
 interface PricingCardProps {
   name: string;
@@ -16,18 +17,21 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
     <SpotlightCard
       className={cn(
         "relative bg-white border rounded-2xl p-8 flex flex-col h-full transition-all duration-300",
-        isPopular ? "border-brand shadow-xl md:-translate-y-4 ring-1 ring-brand/10" : "border-border hover:shadow-md hover:-translate-y-1"
+        isPopular ? "border-brand shadow-xl md:-translate-y-4 ring-1 ring-brand/10 overflow-hidden" : "border-border hover:shadow-md hover:-translate-y-1"
       )}
       spotlightColor={isPopular ? "rgba(0, 0, 0, 0.08)" : "rgba(0, 0, 0, 0.04)"}
       borderColor={isPopular ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.12)"}
     >
       {isPopular && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md z-40">
-          <span className="text-amber-400">★</span>
-          <ShinyText speed={2.5} className="font-bold text-white">
-            Most Popular
-          </ShinyText>
-        </div>
+        <>
+          <BorderBeam size={220} duration={8} colorFrom="#111827" borderWidth={2} />
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md z-40">
+            <span className="text-amber-400">★</span>
+            <ShinyText speed={2.5} className="font-bold text-white">
+              Most Popular
+            </ShinyText>
+          </div>
+        </>
       )}
       
       <div className="mb-6">
@@ -47,7 +51,7 @@ export function PricingCard({ name, price, target, features, isPopular }: Pricin
         target="_blank" 
         rel="noopener noreferrer"
         className={cn(
-          "w-full block text-center py-3 rounded-lg font-bold mb-8 transition-colors",
+          "w-full block text-center py-3 rounded-lg font-bold mb-8 transition-colors relative z-10",
           isPopular 
             ? "bg-brand text-white hover:bg-brand-dark shadow-md hover:shadow-lg" 
             : "bg-surface text-foreground border border-border hover:bg-border/50"
