@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
+import { trackPhoneClick, trackWhatsAppClick, getPrefilledWhatsAppUrl } from "@/lib/tracking";
 
 export function Footer() {
   return (
@@ -52,7 +55,13 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand shrink-0" />
-                <span className="text-sm text-muted-foreground">+91-9161881100</span>
+                <a 
+                  href="tel:+919161881100" 
+                  onClick={() => trackPhoneClick("+919161881100")} 
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  +91-9161881100
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand shrink-0" />
@@ -76,6 +85,10 @@ export function Footer() {
           </p>
           <a
             href="https://wa.me/919161881100"
+            onClick={(e) => {
+              trackWhatsAppClick({ source: "footer_cta" });
+              e.currentTarget.href = getPrefilledWhatsAppUrl("Hi Nexudyam, I'd like to get a free 5-point lead audit for my business.");
+            }}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-white text-brand px-8 py-4 rounded-full font-bold hover:bg-accent transition-colors"

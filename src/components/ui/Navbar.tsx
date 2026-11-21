@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackPhoneClick } from "@/lib/tracking";
 
 const navLinks = [
   { name: "Services", href: "/services" },
@@ -65,6 +66,7 @@ export function Navbar() {
           </Link>
           <a
             href="tel:+919161881100"
+            onClick={() => trackPhoneClick("+919161881100")}
             className="flex items-center gap-2 text-sm font-bold text-foreground hover:opacity-75 transition-opacity"
             aria-label="Call Nexudyam"
           >
@@ -117,7 +119,10 @@ export function Navbar() {
           <div className="flex flex-col gap-2 mt-2">
             <a
               href="tel:+919161881100"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                trackPhoneClick("+919161881100");
+                setIsOpen(false);
+              }}
               className="flex items-center justify-center gap-2 border border-border text-foreground py-3 rounded-full font-bold w-full"
             >
               <Phone size={16} className="text-brand" />

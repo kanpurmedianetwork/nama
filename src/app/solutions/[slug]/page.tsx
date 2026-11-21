@@ -17,7 +17,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { faqPage, breadcrumbs, serviceSchema } from "@/lib/schema";
 import { Accordion } from "@/components/ui/Accordion";
 import { LeadForm } from "@/components/ui/LeadForm";
-import { HERO_CTA_TEXT, WHATSAPP_URL } from "@/lib/constants";
+import { HERO_CTA_TEXT } from "@/lib/constants";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export async function generateStaticParams() {
   return solutionsData.map((s) => ({
@@ -102,15 +103,7 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-foreground text-white px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-800 transition-all shadow-md"
-            >
-              <span>{HERO_CTA_TEXT}</span>
-              <ArrowRight size={18} />
-            </a>
+            <WhatsAppButton text={HERO_CTA_TEXT} />
             <Link
               href="#pricing-info"
               className="inline-flex items-center justify-center border border-neutral-300 text-foreground bg-white px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-50 transition-all shadow-xs"

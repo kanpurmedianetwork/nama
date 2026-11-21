@@ -42,6 +42,7 @@ import { CountUp } from "@/components/reactbits/CountUp";
 import { HeroBackground } from "@/components/reactbits/HeroBackground";
 import { RotatingText } from "@/components/reactbits/RotatingText";
 import { publishedCaseStudies } from "@/lib/case-studies-data";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export const metadata = pageMetadata({
   title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
@@ -103,15 +104,7 @@ export default function Home() {
 
           {/* Action Row: Primary WhatsApp CTA + Secondary Pricing */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-foreground text-white px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-            >
-              <span>{HERO_CTA_TEXT}</span>
-              <ArrowRight size={18} />
-            </a>
+            <WhatsAppButton text={HERO_CTA_TEXT} />
             <Link
               href="#pricing"
               className="inline-flex items-center justify-center border border-neutral-300 text-foreground bg-white/90 backdrop-blur-xs px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-50 hover:border-neutral-400 transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"

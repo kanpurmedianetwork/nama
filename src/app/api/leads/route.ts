@@ -5,24 +5,36 @@ import path from "path";
 export async function POST(request: Request) {
   let cleanName = "";
   let cleanWhatsapp = "";
+  let cleanBusinessType = "";
+  let cleanMainGoal = "";
+  let cleanMonthlyBudget = "";
+  let cleanPagePath = "";
   
   try {
-    const { name, whatsapp } = await request.json();
+    const { name, whatsapp, businessType, mainGoal, monthlyBudget, pagePath } = await request.json();
     
-    if (!name || !whatsapp) {
+    if (!name || !whatsapp || !businessType || !mainGoal) {
       return NextResponse.json(
-        { error: "Name and WhatsApp number are required" },
+        { error: "Name, WhatsApp, Business Type, and Main Goal are required fields" },
         { status: 400 }
       );
     }
 
-    cleanWhatsapp = whatsapp.trim();
-    cleanName = name.trim();
+    cleanWhatsapp = String(whatsapp).trim();
+    cleanName = String(name).trim();
+    cleanBusinessType = String(businessType).trim();
+    cleanMainGoal = String(mainGoal).trim();
+    cleanMonthlyBudget = monthlyBudget ? String(monthlyBudget).trim() : "unspecified";
+    cleanPagePath = pagePath ? String(pagePath).trim() : "/";
 
     // Prepare lead object
     const lead = {
       name: cleanName,
       whatsapp: cleanWhatsapp,
+      businessType: cleanBusinessType,
+      mainGoal: cleanMainGoal,
+      monthlyBudget: cleanMonthlyBudget,
+      pagePath: cleanPagePath,
       timestamp: new Date().toISOString(),
     };
 
@@ -64,11 +76,15 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("Critical error in leads API:", error);
-    // Even in case of a critical crash, let's log the lead data to console so it's not lost
+    // Even in case of a critical crash, log the lead data to console so it's not lost
     if (cleanName && cleanWhatsapp) {
       console.log("LEAD_CAPTURE_CRITICAL_FALLBACK:", JSON.stringify({
         name: cleanName,
         whatsapp: cleanWhatsapp,
+        businessType: cleanBusinessType,
+        mainGoal: cleanMainGoal,
+        monthlyBudget: cleanMonthlyBudget,
+        pagePath: cleanPagePath,
         timestamp: new Date().toISOString(),
         error: error instanceof Error ? error.message : String(error)
       }));
