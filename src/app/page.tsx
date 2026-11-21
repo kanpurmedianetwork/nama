@@ -1,5 +1,34 @@
 import Link from "next/link";
-import { ArrowRight, Zap, Palette, Share2, Megaphone, Monitor, MapPin, Calendar, ShoppingBag, Star, CheckCircle2, ExternalLink, ShieldCheck, Clock, Layers } from "lucide-react";
+import { 
+  ArrowRight, 
+  Zap, 
+  Palette, 
+  Share2, 
+  Megaphone, 
+  Monitor, 
+  MapPin, 
+  Calendar, 
+  ShoppingBag, 
+  Star, 
+  CheckCircle2, 
+  ExternalLink, 
+  ShieldCheck, 
+  Clock, 
+  Layers,
+  AlertCircle,
+  MousePointerClick,
+  MapPinOff,
+  Rocket,
+  Stethoscope,
+  Scissors,
+  GraduationCap,
+  Building2,
+  Utensils,
+  Store,
+  Factory,
+  Wrench,
+  Sparkles
+} from "lucide-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { Accordion } from "@/components/ui/Accordion";
@@ -12,6 +41,7 @@ import { Marquee } from "@/components/reactbits/Marquee";
 import { CountUp } from "@/components/reactbits/CountUp";
 import { HeroBackground } from "@/components/reactbits/HeroBackground";
 import { RotatingText } from "@/components/reactbits/RotatingText";
+import { publishedCaseStudies } from "@/lib/case-studies-data";
 
 export const metadata = pageMetadata({
   title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
@@ -32,11 +62,11 @@ export default function Home() {
         />
       ))}
 
-      {/* Hero Section: Editorial, Authoritative, High-End Agency Style */}
+      {/* 1. HERO SECTION */}
       <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-border/60">
         <HeroBackground />
         <div className="container relative z-10 mx-auto px-6 max-w-5xl text-center">
-          {/* Live Status Badge */}
+          {/* Eyebrow badge */}
           <div className="inline-flex items-center gap-2.5 bg-white/90 backdrop-blur-xs border border-neutral-200 px-4 py-1.5 rounded-full text-xs font-semibold mb-8 text-neutral-800 shadow-xs">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -45,7 +75,7 @@ export default function Home() {
             <span>Marketing for Startups &amp; MSMEs Across India</span>
           </div>
 
-          {/* Confident, Architectural H1 */}
+          {/* Architectural H1 */}
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.08] max-w-4xl mx-auto">
             Getting Traffic but Not Enough Leads? We Fix What&apos;s Broken Between the Click and the Customer.
           </h1>
@@ -71,7 +101,7 @@ export default function Home() {
             </a> before your competitors reach your next customer.
           </p>
 
-          {/* Action Row: High-End Buttons */}
+          {/* Action Row: Primary WhatsApp CTA + Secondary Pricing */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
               href={WHATSAPP_URL}
@@ -83,7 +113,7 @@ export default function Home() {
               <ArrowRight size={18} />
             </a>
             <Link
-              href="/pricing"
+              href="#pricing"
               className="inline-flex items-center justify-center border border-neutral-300 text-foreground bg-white/90 backdrop-blur-xs px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-50 hover:border-neutral-400 transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               {HERO_SUB_CTA_TEXT}
@@ -134,29 +164,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Infinite Services Marquee Strip */}
-      <section className="py-8 border-b border-border bg-surface/50 overflow-hidden">
-        <div className="container mx-auto px-6 max-w-6xl mb-4 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">
-            Trusted Core Capabilities for Startups &amp; MSMEs Across India
-          </p>
-        </div>
-        <Marquee speed="normal" pauseOnHover={true} className="py-2">
+      {/* Infinite Capability Marquee Strip */}
+      <section className="py-6 border-b border-border bg-surface/50 overflow-hidden">
+        <Marquee speed="normal" pauseOnHover={true} className="py-1">
           {[
             "Brand Identity Design",
-            "Social Media Marketing",
-            "Google Ads (Search & Display)",
-            "Meta Ads (FB + Instagram)",
+            "Meta & Google Ads Management",
             "Next.js Website Development",
-            "Shopify E-commerce Stores",
             "Google Business Profile (3-Pack)",
             "AI Content Marketing",
-            "Event Promotion & Coverage",
+            "Shopify E-commerce Stores",
             "Local SEO for Multi-City & Service-Area Businesses",
+            "Event Promotion & Coverage",
           ].map((tag) => (
             <span 
               key={tag} 
-              className="text-xs sm:text-sm font-semibold text-foreground bg-white border border-neutral-200 px-4 py-2 rounded-full whitespace-nowrap shadow-2xs hover:border-foreground/40 transition-colors"
+              className="text-xs sm:text-sm font-semibold text-foreground bg-white border border-neutral-200 px-4 py-2 rounded-full whitespace-nowrap shadow-2xs hover:border-foreground/40 transition-colors mx-2"
             >
               {tag}
             </span>
@@ -164,117 +187,275 @@ export default function Home() {
         </Marquee>
       </section>
 
-      {/* On-Page Copywriting Content Expansion Section (GEO/SEO Optimization) */}
-      <section className="py-16 bg-white border-b border-border">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">
-            Lead-Generation Marketing Engineered for Startups &amp; MSMEs Across India
-          </h2>
-          <div className="text-neutral-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto text-sm sm:text-base">
-            <p>
-              Nexudyam (a unit of Redside Technologies India) is a specialized <strong className="text-foreground">lead-generation marketing agency</strong> dedicated to helping startups, micro, small, and medium enterprises (MSMEs) scale their customer acquisition online. In an era where customer attention is fragmented across search engines, social media, and generative answer platforms, having a passive online presence is not enough. Businesses need an integrated system that captures high-intent demand and converts traffic into measurable sales inquiries.
+      {/* 2. PROBLEMS WE FIX GRID */}
+      <section className="py-20 md:py-24 bg-white border-b border-border" id="problems">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand mb-2 block">
+              Problem-Led Solutions
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Problems We Fix
+            </h2>
+            <p className="text-neutral-600 text-sm md:text-base">
+              You don&apos;t buy abstract agency services. You buy solutions to specific revenue bottlenecks. Select what is holding back your growth:
             </p>
-            <p>
-              As a remote-first <strong className="text-foreground">growth partner for Indian founders</strong>, we combine intelligent AI-assisted creative production with human strategic oversight. We deliver cohesive brand identities, high-converting Next.js websites, targeted Meta and Google ad campaigns, and multi-location Google Business Profile optimization for businesses operating across diverse industrial hubs and tier-1, tier-2, and tier-3 markets nationwide.
-            </p>
-            <p>
-              Whether you need to fix underperforming paid ads, redesign a website that fails to convert visitors, or dominate local search results in your service areas, our <strong className="text-foreground">transparent marketing packages</strong> start at just ₹4,999 per month with zero multi-month lock-in commitments. Stop losing leads to competitors and start growing your qualified pipeline with Nexudyam.
-            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link 
+              href="/solutions/ads-not-generating-leads"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <AlertCircle size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;I run ads but get low-quality leads&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Wasting ad budget on irrelevant clicks, wrong numbers, and tire-kickers? We overhaul targeting, install multi-step qualification filters, and align ad promises with buyer intent.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/solutions/website-not-converting"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <MousePointerClick size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;My website looks fine but doesn&apos;t convert&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Visitors browse and leave without filling a form or calling? We re-engineer value propositions above the fold, boost mobile speed, and install 1-click WhatsApp booking triggers.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/solutions/not-showing-on-google"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <MapPinOff size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;I don&apos;t show up on Google or Maps&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Competitors dominate local search while your store is invisible? We optimize your Google Business Profile, fix citations, and implement review generation for 3-pack dominance.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/solutions/brand-or-product-launch"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <Rocket size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;I&apos;m launching a brand or product&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Starting from scratch without identity or launch buzz? We deliver custom vector brand identity, launch-ready web engineering, and introductory awareness ad campaigns in days.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/solutions/consistent-content"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <Clock size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;I can&apos;t post consistently&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Too busy running operations to script Reels and design posts? We provide 30-day AI-assisted content calendars, scripts, and graphics in 48 hours. You just review and approve.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/solutions/sell-online-shopify"
+              className="group p-8 rounded-2xl border border-neutral-200 bg-surface/40 hover:bg-white hover:border-foreground/30 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <ShoppingBag size={24} />
+                </div>
+                <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-brand transition-colors">
+                  &ldquo;I want to sell online&rdquo;
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  Ready to launch an e-commerce channel? We build custom Shopify stores with Razorpay, COD OTP verification, shipping automation, and WhatsApp abandoned cart recovery.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand pt-4 border-t border-neutral-200/60">
+                <span>See how we fix this</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-20 md:py-24 bg-surface border-b border-border">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-3 block">
-            The Market Challenge
-          </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Most Startups &amp; Businesses Are Invisible Online. <span className="text-neutral-500">We Fix That.</span>
-          </h2>
-          <p className="text-base md:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-            You built something real. A business, a craft, a dream. But without the right digital presence, your potential customers can&apos;t find you — they&apos;re finding your competitors instead. The problem isn&apos;t your product. It&apos;s visibility and conversion. And that&apos;s exactly what Nexudyam was built to solve.
-          </p>
+      {/* 3. WHO WE WORK WITH (USE-CASE ROW) */}
+      <section className="py-20 md:py-24 bg-surface border-b border-border" id="use-cases">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2 block">
+              Industry Use Cases
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Who We Work With
+            </h2>
+            <p className="text-neutral-600 text-sm md:text-base">
+              Custom-built customer acquisition setups engineered for your specific business model:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            {[
+              { title: "Clinics & Doctors", slug: "clinics-doctors", icon: <Stethoscope size={20} />, desc: "Patient bookings & local Google Maps 3-Pack." },
+              { title: "Salons & Wellness", slug: "salons-wellness", icon: <Scissors size={20} />, desc: "Bridal packages & appointment scheduling." },
+              { title: "Coaching & Education", slug: "coaching-education", icon: <GraduationCap size={20} />, desc: "Batch enrollments & qualified student leads." },
+              { title: "Real Estate", slug: "real-estate", icon: <Building2 size={20} />, desc: "Verified buyer inquiries & site visit bookings." },
+              { title: "Restaurants & Cafes", slug: "restaurants-cafes", icon: <Utensils size={20} />, desc: "Weekend table reservations & local footfall." },
+              { title: "D2C & Fashion", slug: "d2c-fashion", icon: <Store size={20} />, desc: "Shopify stores, catalog ads & low RTO checkout." },
+              { title: "B2B Manufacturers & Exporters", slug: "b2b-manufacturers-exporters", icon: <Factory size={20} />, desc: "Wholesale RFQs & technical procurement SEO." },
+              { title: "Home & Local Services", slug: "home-local-services", icon: <Wrench size={20} />, desc: "Direct customer calls & service territory SEO." },
+              { title: "Creators & Artists", slug: "creators-artists", icon: <Sparkles size={20} />, desc: "Press kits, showreels & event booking funnels." },
+            ].map((uc) => (
+              <Link
+                key={uc.slug}
+                href={`/use-cases/${uc.slug}`}
+                className="group p-5 bg-white rounded-xl border border-neutral-200/80 hover:border-foreground/30 hover:shadow-sm transition-all flex items-start gap-3.5"
+              >
+                <div className="w-10 h-10 rounded-lg bg-surface text-foreground flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-colors">
+                  {uc.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-sm text-foreground group-hover:text-brand flex items-center gap-1.5 transition-colors">
+                    <span>{uc.title}</span>
+                    <ArrowRight size={13} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                  </h3>
+                  <p className="text-xs text-neutral-500 mt-1 leading-snug">{uc.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* 4. SERVICES (EXISTING CONDENSED) */}
       <section className="py-20 md:py-24 bg-white border-b border-border" id="services">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2 block">
-              What We Deliver
+              Core Capabilities
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
               Everything Your Business Needs — In One Place
             </h2>
             <p className="text-neutral-600 text-sm md:text-base">
-              High-converting execution across brand design, web engineering, local SEO, and paid performance ads.
+              Integrated execution across brand design, web engineering, local SEO, and paid performance ads.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             <ServiceCard 
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
-              icon={<Palette size={26} />}
+              icon={<Palette size={24} />}
               href="/services/brand-identity"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
-              icon={<Share2 size={26} />}
+              icon={<Share2 size={24} />}
               href="/services/social-media-marketing"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
-              icon={<Megaphone size={26} />}
+              icon={<Megaphone size={24} />}
               href="/services/meta-google-ads"
             />
             <ServiceCard 
               title="Website Development"
               description="Fast, mobile-first websites built on modern stack."
               features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
-              icon={<Monitor size={26} />}
+              icon={<Monitor size={24} />}
               href="/services/website-development"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
-              icon={<MapPin size={26} />}
+              icon={<MapPin size={24} />}
               href="/services/google-business-profile"
             />
             <ServiceCard 
               title="AI Content Marketing"
               description="Typical 30-day content calendar delivered in 48 hours."
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
-              icon={<Zap size={26} />}
+              icon={<Zap size={24} />}
               href="/services/ai-content-marketing"
             />
             <ServiceCard 
               title="Event Promotion"
               description="End-to-end event buzz and coverage."
               features={["Pre-event ads & WhatsApp", "Live coverage brief", "Post-event repurposing"]}
-              icon={<Calendar size={26} />}
+              icon={<Calendar size={24} />}
               href="/events"
             />
             <ServiceCard 
               title="E-commerce Websites"
               description="High-converting Shopify stores built to sell."
               features={["Custom Shopify store setup", "Payment & shipping setup", "Mobile-first & SEO-ready"]}
-              icon={<ShoppingBag size={26} />}
+              icon={<ShoppingBag size={24} />}
               href="/ecom-websites"
             />
           </div>
         </div>
       </section>
 
-      {/* AI Marketing Advantage Section (High-Contrast Editorial) */}
+      {/* AI Marketing Advantage Section (Method & Context) */}
       <section className="py-20 md:py-24 bg-neutral-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] [background-size:24px_24px]" />
         <div className="container relative mx-auto px-6 max-w-5xl text-center">
@@ -288,7 +469,7 @@ export default function Home() {
             AI-Powered Marketing. Agency Quality. Startup Price.
           </h2>
           <p className="text-base md:text-lg text-neutral-400 leading-relaxed max-w-3xl mx-auto mb-12">
-            We use artificial intelligence to accelerate creative workflows — meaning you get professional Reels scripts, ad copy, blog posts, and social content delivered faster and more efficiently than legacy agency models. Typical 30-day content calendar delivered in 48 hours via AI workflows and human editing.
+            We use artificial intelligence to accelerate creative production — meaning you get professional Reels scripts, ad copy, blog posts, and social content delivered faster and more efficiently than legacy agency models. Typical 30-day content calendar delivered in 48 hours via AI workflows and human editing.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
@@ -310,46 +491,119 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Nexudyam: 4 Pillars of Excellence */}
-      <section className="py-20 md:py-24 bg-white border-b border-border">
+      {/* 5. PROOF: REVIEWS + CASE STUDIES BLOCK */}
+      <section className="py-20 md:py-24 bg-white border-b border-border" id="proof">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 mb-2 block">
-              Why Partner With Us
-            </span>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 border border-emerald-200/80 px-4 py-1.5 rounded-full text-xs font-semibold mb-3">
+              <CheckCircle2 size={14} className="text-emerald-600" />
+              <span>Google Business Profile Verified Reviews</span>
+            </div>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-              Why 50+ Businesses Choose Nexudyam {/* {{TODO: confirm real client count}} */}
+              Rated 5.0 ★ on Google Reviews
             </h2>
-            <p className="text-neutral-600 text-sm md:text-base">
-              Engineered for Indian entrepreneurs who need transparent results, responsive communication, and affordable growth.
+            <p className="text-neutral-600 text-base md:text-lg mb-6">
+              Read authentic feedback from founders, startups, and business owners who partner with Nexudyam.
             </p>
+            <a
+              href="https://share.google/B15NK2QgaMEn9hpoX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold text-foreground hover:opacity-75 transition-opacity underline underline-offset-4"
+            >
+              <span>View our live listing &amp; reviews on Google Maps</span>
+              <ExternalLink size={14} />
+            </a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">01 / INTEGRATED TEAM</span>
-              <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">One Partner, Everything Included</p>
-              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">No juggling between a freelance designer, an unvetted web developer, and an ad agency. We handle brand identity, custom website code, and ad campaigns under one roof.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">02 / WORKFLOW SPEED</span>
-              <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">AI-Powered, Agency Quality</p>
-              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">Our AI tools cut delivery time and operational friction. You get faster content, better results, and substantial savings with zero compromise on creative quality.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">03 / HONEST PRICING</span>
-              <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">MSME-First Pricing</p>
-              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">We built our packages for real Indian businesses — not for corporates. ₹4,999 gets you started with zero hidden retainers or multi-month lock-in commitments.</p>
-            </div>
-            <div className="bg-surface p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-shadow">
-              <span className="font-mono text-xs font-bold text-neutral-600 uppercase tracking-wider block mb-2">04 / BUILT FOR BHARAT</span>
-              <p className="font-display font-bold text-xl sm:text-2xl mb-3 text-foreground">Built for Bharat: Remote-First Across India</p>
-              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">Built for Bharat: remote-first, working with founders across India. We understand regional consumer psychology, vernacular nuance, and tier-2/tier-3 market dynamics.</p>
-            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+            {testimonials.map((t, idx) => (
+              <div 
+                key={idx} 
+                className="bg-white p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400" />
+                
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div role="img" aria-label={`${t.rating} out of 5 stars`} className="flex text-amber-400 gap-1">
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} size={16} fill="currentColor" />
+                      ))}
+                    </div>
+                    <span className="text-[11px] font-medium text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
+                      <CheckCircle2 size={11} />
+                      Verified
+                    </span>
+                  </div>
+
+                  <p className="text-neutral-700 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-neutral-200/70 mt-auto">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-neutral-100 text-foreground font-bold flex items-center justify-center text-sm shrink-0 border border-neutral-200">
+                      {t.initials}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-foreground text-sm truncate">{t.name}</p>
+                      <p className="text-xs text-neutral-500 flex items-center gap-1.5">
+                        <span>{t.role}</span>
+                        <span>•</span>
+                        <span>{t.date}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {t.ownerReply && (
+                    <div className="bg-surface border border-neutral-200/80 rounded-xl p-3 text-xs text-neutral-600 mt-3">
+                      <span className="font-semibold text-foreground block mb-0.5">Response from owner:</span>
+                      <p className="italic">&ldquo;{t.ownerReply}&rdquo;</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
+
+          {/* Case Studies Block (Hidden when publishedCaseStudies is empty) */}
+          {publishedCaseStudies.length > 0 && (
+            <div className="mt-20 pt-16 border-t border-neutral-200">
+              <div className="text-center mb-12">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand mb-2 block">
+                  Proven Case Studies
+                </span>
+                <h3 className="font-display text-2xl md:text-4xl font-bold text-foreground">
+                  Real Growth Stories
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {publishedCaseStudies.map((cs) => (
+                  <Link
+                    key={cs.slug}
+                    href={`/case-studies/${cs.slug}`}
+                    className="p-8 bg-surface rounded-2xl border border-neutral-200 hover:border-foreground/30 transition-all block group"
+                  >
+                    <span className="text-xs font-semibold text-brand uppercase tracking-wider block mb-2">{cs.industry}</span>
+                    <h4 className="font-display font-bold text-xl text-foreground group-hover:text-brand transition-colors mb-3">
+                      {cs.title}
+                    </h4>
+                    <p className="text-sm text-neutral-600 leading-relaxed mb-6">{cs.challenge}</p>
+                    <div className="flex items-center gap-2 text-sm font-bold text-foreground group-hover:text-brand">
+                      <span>Read full case study</span>
+                      <ArrowRight size={16} />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* 6. PRICING SECTION */}
       <section className="py-20 md:py-24 bg-surface border-b border-border" id="pricing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -404,124 +658,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section (Authentic Google Business Profile Verified Reviews) */}
-      <section className="py-20 md:py-24 bg-white border-b border-border">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 border border-emerald-200/80 px-4 py-1.5 rounded-full text-xs font-semibold mb-3">
-              <CheckCircle2 size={14} className="text-emerald-600" />
-              <span>Google Business Profile Verified Reviews</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-              Rated 5.0 ★ on Google Reviews
-            </h2>
-            <p className="text-neutral-600 text-base md:text-lg mb-6">
-              Read authentic feedback from founders, startups, and business owners who partner with Nexudyam.
-            </p>
-            <a
-              href="https://share.google/B15NK2QgaMEn9hpoX"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-bold text-foreground hover:opacity-75 transition-opacity underline underline-offset-4"
-            >
-              <span>View our live listing &amp; reviews on Google Maps</span>
-              <ExternalLink size={14} />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
-            {testimonials.map((t, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white p-8 rounded-2xl border border-neutral-200/90 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full"
-              >
-                {/* Accent top border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400" />
-                
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div role="img" aria-label={`${t.rating} out of 5 stars`} className="flex text-amber-400 gap-1">
-                      {Array.from({ length: t.rating }).map((_, i) => (
-                        <Star key={i} size={16} fill="currentColor" />
-                      ))}
-                    </div>
-                    <span className="text-[11px] font-medium text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
-                      <CheckCircle2 size={11} />
-                      Verified
-                    </span>
-                  </div>
-
-                  <p className="text-neutral-700 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-neutral-200/70 mt-auto">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-neutral-100 text-foreground font-bold flex items-center justify-center text-sm shrink-0 border border-neutral-200">
-                      {t.initials}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="font-bold text-foreground text-sm truncate">{t.name}</p>
-                      <p className="text-xs text-neutral-500 flex items-center gap-1.5">
-                        <span>{t.role}</span>
-                        <span>•</span>
-                        <span>{t.date}</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  {t.ownerReply && (
-                    <div className="bg-surface border border-neutral-200/80 rounded-xl p-3 text-xs text-neutral-600 mt-3">
-                      <span className="font-semibold text-foreground block mb-0.5">Response from owner:</span>
-                      <p className="italic">&ldquo;{t.ownerReply}&rdquo;</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <a
-              href="https://share.google/B15NK2QgaMEn9hpoX"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white border border-neutral-200 px-6 py-3 rounded-full text-sm font-bold text-foreground hover:bg-neutral-50 transition-colors shadow-2xs"
-            >
-              <svg className="w-4 h-4" viewBox="0 0 24 24">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-              </svg>
-              <span>Review Nexudyam on Google Business Profile</span>
-              <ExternalLink size={14} className="text-neutral-400" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Free Audit Lead Capture Form Section */}
-      <section className="py-20 md:py-24 bg-surface border-b border-border">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <div className="max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2 block">
-              Free 5-Point Lead Audit
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get Your Free 5-Point Lead Audit
-            </h2>
-            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
-              Fill out the form below with your details. Our strategy team will analyze your website conversion flow, local map rankings, and ad funnels, and get in touch with an actionable roadmap.
-            </p>
-          </div>
-          <LeadForm />
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 md:py-24 bg-white">
+      {/* 7. FAQ SECTION (LOCATION-NEUTRAL) */}
+      <section className="py-20 md:py-24 bg-white border-b border-border" id="faq">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2 block">
@@ -532,6 +670,24 @@ export default function Home() {
             </h2>
           </div>
           <Accordion items={faqData} />
+        </div>
+      </section>
+
+      {/* 8. FINAL CTA + AUDIT FORM */}
+      <section className="py-20 md:py-24 bg-surface" id="lead-audit">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <div className="max-w-2xl mx-auto mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand mb-2 block">
+              Free 5-Point Lead Audit
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Get Your Free 5-Point Lead Audit
+            </h2>
+            <p className="text-neutral-600 text-sm md:text-base leading-relaxed">
+              Fill out the form below with your details. Our strategy team will analyze your website conversion flow, local map rankings, and ad funnels, and get in touch with an actionable roadmap.
+            </p>
+          </div>
+          <LeadForm />
         </div>
       </section>
     </>
@@ -693,7 +849,7 @@ const testimonials = [
   },
   {
     // {{TODO: review contains Kanpur in original text - decide whether to keep or edit customer quote}}
-    quote: "NexUdyam ke saath mera experience kaafi achha raha. Starting se hi team kaafi professional aur cooperative thi. Inhone meri requirements ko properly samjha aur uske according suggestions diye, jo mujhe kaafi useful lage. Communication bhi smooth raha aur kaam ko lekar response time bhi achha tha. Sabse achhi baat ye lagi ki sirf service provide karne ke liye nahi, but business ko actually kaise grow kiya ja sakta hai uss perspective se bhi guidance di. Kanpur mein digital marketing aur branding ke liye definitely ek baar NexUdyam ko consider kar sakte ho. Overall experience very positive raha. Keep up the good work!",
+    quote: "NexUdyam ke saath mera experience kaafi achha raha. Starting se hi team kaafi professional aur cooperative thi. Inhone meri requirements ko properly samjha aur uske according suggestions diye, jo mujhe kaafi useful lage. Communication bhi smooth raha aur kaam ko lekar response time bhi achha था. Sabse achhi baat ye lagi ki sirf service provide karne ke liye nahi, but business ko actually kaise grow kiya ja sakta hai uss perspective se bhi guidance di. Kanpur mein digital marketing aur branding ke liye definitely ek baar NexUdyam ko consider kar sakte ho. Overall experience very positive raha. Keep up the good work!",
     name: "Krishang Gandhi",
     role: "Verified Google Review",
     company: "Google Business Profile",
