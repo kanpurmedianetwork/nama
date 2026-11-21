@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackPhoneClick } from "@/lib/tracking";
+import { Logo3D } from "@/components/ui/Logo3D";
 
 const navLinks = [
   { name: "Services", href: "/services" },
@@ -36,8 +37,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <Image src="/logo.svg" alt="Nexudyam logo" width={28} height={28} className="w-7 h-7" />
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Logo3D size={32} />
           <span className="font-display font-bold text-lg tracking-tight group-hover:opacity-70 transition-opacity">
             NEXUDYAM
           </span>

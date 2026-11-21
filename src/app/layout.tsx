@@ -4,8 +4,6 @@ import "./globals.css";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
-import { TallyPopup } from "@/components/ui/TallyEmbed";
-import { DiwaliPopup } from "@/components/ui/DiwaliPopup";
 import Script from "next/script";
 import { JsonLd, organization, website } from "@/lib/schema";
 
@@ -129,8 +127,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingWhatsApp />
-        <TallyPopup />
-        <DiwaliPopup />
       </body>
     </html>
   );

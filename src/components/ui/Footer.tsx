@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 import { trackPhoneClick, trackWhatsAppClick, getPrefilledWhatsAppUrl } from "@/lib/tracking";
+import { Logo3D } from "@/components/ui/Logo3D";
 
 export function Footer() {
   return (
@@ -11,9 +12,9 @@ export function Footer() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <Image src="/logo.svg" alt="Nexudyam logo" width={32} height={32} className="w-8 h-8" />
-              <span className="font-display font-bold text-xl tracking-tight text-foreground">
+            <Link href="/" className="flex items-center gap-2.5 mb-6 group">
+              <Logo3D size={32} />
+              <span className="font-display font-bold text-xl tracking-tight text-foreground group-hover:opacity-75 transition-opacity">
                 NEXUDYAM
               </span>
             </Link>
