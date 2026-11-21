@@ -56,10 +56,10 @@ export function BentoFeatures() {
             Speed Advantage
           </span>
           <h3 className="font-display font-bold text-2xl text-foreground mb-3">
-            10x Faster Content Turnaround
+            Fast Content Turnaround (48-Hour Delivery)
           </h3>
           <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-            We combine cutting-edge AI generation with expert human creative direction to produce 30-day social calendars in 48 hours.
+            Typical 30-day content calendar delivered in 48 hours via AI-assisted workflows and senior human creative editing.
           </p>
         </div>
 

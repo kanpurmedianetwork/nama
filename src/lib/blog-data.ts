@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: "best-digital-marketing-agency-guide",
-    title: "Best Digital Marketing Agency for Startups & MSMEs: What to Look for in 2026",
+    title: "Choosing the Right Digital Marketing Agency for Your Startup in 2026",
     excerpt: "Searching for a dependable marketing agency for your startup or MSME? We outline key criteria to evaluate agencies in 2026, including pricing transparency, local SEO, and AI workflows.",
     date: "August 21, 2026",
     lastUpdated: "October 19, 2026",

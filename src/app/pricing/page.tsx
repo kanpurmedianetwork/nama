@@ -104,7 +104,7 @@ export default function PricingPage() {
                 "Full ads management",
                 "Event promotion (1/month)",
                 "Shopify / E-com store setup",
-                "Priority support (2-hour response)"
+                "Priority support (4-hour response)" // {{TODO: confirm}}
               ]}
             />
           </div>
