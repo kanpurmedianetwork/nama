@@ -9,63 +9,63 @@ module.exports = [
       },
     ],
     destination: "https://www.nexudyam.in/:path*",
-    permanent: true,
+    statusCode: 301,
   },
   // Permanent 301 redirects for service URLs dropping -kanpur
   {
     source: "/services/website-development-kanpur",
     destination: "/services/website-development",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/services/google-business-profile-kanpur",
     destination: "/services/google-business-profile",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/services/meta-google-ads-kanpur",
     destination: "/services/meta-google-ads",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/services/brand-identity-kanpur",
     destination: "/services/brand-identity",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/services/social-media-marketing-kanpur",
     destination: "/services/social-media-marketing",
-    permanent: true,
+    statusCode: 301,
   },
   // Permanent 301 redirects for de-localized blog slugs
   {
     source: "/blog/ai-content-marketing-vs-traditional-agency-comparison",
     destination: "/blog/ai-content-marketing-vs-traditional",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/blog/google-business-profile-setup-india-msme",
     destination: "/blog/google-business-profile-guide",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/blog/google-business-profile-kanpur",
     destination: "/blog/google-business-profile-guide",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/blog/digital-marketing-cost-kanpur",
     destination: "/blog/digital-marketing-cost-india",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/blog/best-digital-marketing-agency-kanpur",
     destination: "/blog/best-digital-marketing-agency-guide",
-    permanent: true,
+    statusCode: 301,
   },
   {
     source: "/blog/rank-google-maps-local-seo-up",
     destination: "/blog/rank-google-maps-local-seo-guide",
-    permanent: true,
+    statusCode: 301,
   },
 ];

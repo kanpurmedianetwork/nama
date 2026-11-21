@@ -82,7 +82,7 @@ export default function Home() {
           </h1>
           
           {/* Service Cycling Highlight */}
-          <div className="flex flex-wrap items-center justify-center gap-2 text-base md:text-xl font-medium text-neutral-600 mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-base md:text-xl font-medium text-neutral-600 mb-8 min-h-[36px]">
             <span>Specializing in</span>
             <RotatingText
               words={[
