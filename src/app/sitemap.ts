@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 import { execSync } from "child_process";
 import { blogPosts } from "@/lib/blog-data";
+import { solutionsData } from "@/lib/solutions-data";
+import { useCasesData } from "@/lib/use-cases-data";
+import { publishedCaseStudies } from "@/lib/case-studies-data";
 
 function getFileLastMod(filePath: string): Date {
   try {
@@ -49,11 +52,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const blogDataLastMod = getFileLastMod("src/lib/blog-data.ts");
+  const solutionsLastMod = getFileLastMod("src/lib/solutions-data.ts");
+  const useCasesLastMod = getFileLastMod("src/lib/use-cases-data.ts");
+  const caseStudiesLastMod = getFileLastMod("src/lib/case-studies-data.ts");
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: blogDataLastMod,
   }));
 
-  return [...routes, ...blogRoutes];
+  const solutionRoutes: MetadataRoute.Sitemap = solutionsData.map((solution) => ({
+    url: `${baseUrl}/solutions/${solution.slug}`,
+    lastModified: solutionsLastMod,
+  }));
+
+  const useCaseRoutes: MetadataRoute.Sitemap = useCasesData.map((useCase) => ({
+    url: `${baseUrl}/use-cases/${useCase.slug}`,
+    lastModified: useCasesLastMod,
+  }));
+
+  // Only published case studies (draft: false) are included
+  const caseStudyRoutes: MetadataRoute.Sitemap = publishedCaseStudies.map((cs) => ({
+    url: `${baseUrl}/case-studies/${cs.slug}`,
+    lastModified: caseStudiesLastMod,
+  }));
+
+  return [...routes, ...blogRoutes, ...solutionRoutes, ...useCaseRoutes, ...caseStudyRoutes];
 }
