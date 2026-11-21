@@ -29,8 +29,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nexudyam.in"),
-  title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
-  description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+  title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
+  description: "We help startups and MSMEs across India get more leads with Meta & Google Ads, conversion-ready websites, brand identity and AI-assisted content. Get a free lead audit.",
   alternates: {
     canonical: "/",
   },
@@ -39,21 +39,21 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.nexudyam.in",
     siteName: "Nexudyam",
-    title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
-    description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+    title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
+    description: "We help startups and MSMEs across India get more leads with Meta & Google Ads, conversion-ready websites, brand identity and AI-assisted content. Get a free lead audit.",
     images: [
       {
         url: "https://www.nexudyam.in/og/home.png",
         width: 1200,
         height: 630,
-        alt: "Nexudyam - Digital Marketing & Branding Agency in Kanpur",
+        alt: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing & Branding Agency in Kanpur | Nexudyam",
-    description: "Nexudyam helps startups & MSMEs in Kanpur & UP get more customers. We design brands, build websites, and run Meta/Google Ads. Get a free audit today!",
+    title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
+    description: "We help startups and MSMEs across India get more leads with Meta & Google Ads, conversion-ready websites, brand identity and AI-assisted content. Get a free lead audit.",
     images: ["https://www.nexudyam.in/og/home.png"],
   },
   robots: {

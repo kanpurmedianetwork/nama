@@ -5,7 +5,7 @@ import { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/constants";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Contact Nexudyam | Digital Marketing Agency in Kanpur",
+  title: "Contact Nexudyam | Lead-Generation Partner for Startups & MSMEs",
   description: "Reach Nexudyam on WhatsApp, call +91-9161881100, or fill our contact form. We respond within 4 hours on business days.",
   path: "/contact",
 });
@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Contact Our Kanpur Marketing Team
+              Contact Our Growth &amp; Strategy Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Let&apos;s talk about your business growth. Whether you need digital marketing, web design, or paid advertising help, we are here to support your journey. Reach out to us directly or fill out the form below.
@@ -76,8 +76,14 @@ export default function ContactPage() {
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground">Headquarters</p>
-                      <p className="text-muted-foreground mt-1">Kanpur, Uttar Pradesh<br/>India</p>
+                      <p className="font-bold text-foreground">Registered Office &amp; Operations</p>
+                      <p className="text-muted-foreground mt-1">
+                        Kanpur, Uttar Pradesh, India
+                        <span className="block text-[11px] text-neutral-400 mt-1">
+                          {"{{TODO: confirm with CA/lawyer if registered address is legally required on contact page}}"}
+                        </span>
+                      </p>
+                      <p className="text-xs text-brand font-medium mt-1">Remote-first nationwide delivery across India</p>
                     </div>
                   </li>
                   <li className="flex items-start">

@@ -27,7 +27,7 @@ const svgDefault = `
     <image href="${logoUri}" x="-60" y="-110" width="120" height="120"/>
     <text y="50" font-family="sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="4">NEXUDYAM</text>
     <text y="110" font-family="sans-serif" font-size="26" font-weight="500" fill="#a1a1aa">Digital Marketing &amp; Branding Agency</text>
-    <text y="150" font-family="sans-serif" font-size="20" font-weight="400" fill="#71717a">Kanpur, Uttar Pradesh • nexudyam.in</text>
+    <text y="150" font-family="sans-serif" font-size="20" font-weight="400" fill="#71717a">Lead Generation for Startups &amp; MSMEs Across India • nexudyam.in</text>
   </g>
 </svg>`;
 
@@ -46,7 +46,7 @@ const svgHome = `
     <image href="${logoUri}" x="-55" y="-100" width="110" height="110"/>
     <text y="50" font-family="sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="3">NEXUDYAM</text>
     <text y="110" font-family="sans-serif" font-size="28" font-weight="600" fill="#e4e4e7">Digital Marketing, Website &amp; Branding Services</text>
-    <text y="155" font-family="sans-serif" font-size="22" font-weight="400" fill="#a1a1aa">Helping Kanpur MSMEs &amp; Startups Grow Online • nexudyam.in</text>
+    <text y="155" font-family="sans-serif" font-size="22" font-weight="400" fill="#a1a1aa">Lead-Generation Marketing for Startups &amp; MSMEs Across India • nexudyam.in</text>
   </g>
 </svg>`;
 

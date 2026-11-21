@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = pageMetadata({
-  title: "Website Development Services in Kanpur | Nexudyam",
-  description: "Professional website development in Kanpur for MSMEs and startups. Fast, mobile-first websites built with Next.js and WordPress with on-page SEO.",
-  path: "/services/website-development-kanpur",
+  title: "Website Development Services for Startups & MSMEs | Nexudyam",
+  description: "Professional website development for MSMEs and startups across India. Fast, mobile-first websites built with Next.js and WordPress with on-page SEO.",
+  path: "/services/website-development",
   ogImage: "/og/default.png",
 });
 
@@ -38,14 +38,14 @@ export default function WebsiteDevelopmentPage() {
         data={breadcrumbs([
           { name: "Home", url: "/" },
           { name: "Services", url: "/services" },
-          { name: "Website Development in Kanpur", url: "/services/website-development-kanpur" },
+          { name: "Website Development", url: "/services/website-development" },
         ])}
       />
       <JsonLd
         data={serviceSchema({
-          name: "Website Development in Kanpur",
-          description: "Professional website development in Kanpur for MSMEs and startups. Fast, mobile-first websites built with Next.js and WordPress with on-page SEO.",
-          url: "https://www.nexudyam.in/services/website-development-kanpur",
+          name: "Website Development",
+          description: "Professional website development across India for MSMEs and startups. Fast, mobile-first websites built with Next.js and WordPress with on-page SEO.",
+          url: "https://www.nexudyam.in/services/website-development",
           serviceType: "Website Development",
           price: "9999",
         })}
@@ -68,11 +68,11 @@ export default function WebsiteDevelopmentPage() {
               Web Engineering Vertical
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Website Development in Kanpur
+              Website Development for Startups &amp; MSMEs
             </h1>
             <div className="p-6 bg-surface border-l-4 border-brand rounded-r-2xl">
               <p className="text-lg text-foreground font-medium leading-relaxed">
-                Nexudyam provides custom website development in Kanpur for local businesses, MSMEs, and startups. We engineer mobile-responsive, fast-loading websites built with Next.js or WordPress, complete with on-page SEO, contact forms, and security configurations. Every project includes structured metadata and technical optimization designed to convert visitors into business inquiries across Uttar Pradesh.
+                Nexudyam provides custom website development for businesses, MSMEs, and startups across India. We engineer mobile-responsive, fast-loading websites built with Next.js or WordPress, complete with on-page SEO, contact forms, and security configurations. Every project includes structured metadata and technical optimization designed to convert visitors into business inquiries nationwide.
               </p>
             </div>
           </header>
@@ -155,10 +155,10 @@ export default function WebsiteDevelopmentPage() {
           {/* CTA Banner */}
           <div className="p-8 md:p-12 bg-brand rounded-2xl text-white text-center flex flex-col items-center">
             <h3 className="font-display text-3xl font-bold mb-4">
-              Ready to Build Your Business Website in Kanpur?
+              Ready to Build Your Conversion-Ready Business Website?
             </h3>
             <p className="text-white/80 max-w-xl mx-auto mb-8 text-base">
-              Get in touch with our web engineering team to discuss your project scope and receive a transparent project quote.
+              Get in touch with our web engineering team to discuss your project scope and receive a transparent quote and lead-generation audit.
             </p>
             <a
               href={WHATSAPP_URL}

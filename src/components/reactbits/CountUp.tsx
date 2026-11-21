@@ -24,10 +24,16 @@ export function CountUp({
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
-  const [value, setValue] = useState<number>(from);
+  // Initialize with `to` so SSR renders the real client count in static HTML for crawlers
+  const [value, setValue] = useState<number>(to);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     if (!inView) return;
+    if (!hasStarted) {
+      setHasStarted(true);
+      setValue(from);
+    }
 
     let startTimestamp: number | null = null;
     const durationMs = duration * 1000;
@@ -48,8 +54,9 @@ export function CountUp({
       }
     };
 
-    requestAnimationFrame(step);
-  }, [inView, from, to, duration]);
+    const animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
+  }, [inView, from, to, duration, hasStarted]);
 
   const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
 

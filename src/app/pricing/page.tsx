@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Affordable Digital Marketing Packages in Kanpur | Nexudyam",
+  title: "Transparent Digital Marketing Packages for Indian MSMEs | Nexudyam",
   description: "Simple monthly packages starting ₹4,999. Brand identity, social media, ads management, and website development for Indian small businesses.",
   path: "/pricing",
 });
@@ -12,11 +12,11 @@ export const metadata = pageMetadata({
 const faqData = [
   {
     question: "What is Nexudyam and what does it do?",
-    answer: "Nexudyam is a next-generation entrepreneurship platform based in Kanpur, India. We help small businesses, MSMEs, and individual creators build their brand identity, grow their digital presence through social media and paid advertising — all under one roof at affordable prices."
+    answer: "Nexudyam is a lead-generation digital marketing agency built for Indian startups and MSMEs. We help businesses build authority, generate qualified customer inquiries, and scale through brand identity design, conversion-focused websites, Google Maps local SEO, and Meta/Google Ads with zero long-term lock-in."
   },
   {
     question: "How much does Nexudyam charge?",
-    answer: "Our packages start at ₹4,999 per month for the Launch plan, which includes brand identity design, Google Business Profile setup, and 8 AI-powered social posts. Our most popular Grow plan is ₹9,999/month and includes a website and ads setup."
+    answer: "Our packages start at ₹4,999 per month for the Launch plan, which includes brand identity design, Google Business Profile setup, and 8 AI-powered social posts. Our most popular Grow plan is ₹9,999/month and includes a custom 5-page website and Meta/Google Ads setup."
   },
   {
     question: "Are there any hidden costs?",
@@ -63,7 +63,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Affordable Digital Marketing Packages in Kanpur
+              Affordable Digital Marketing Packages for Startups &amp; MSMEs
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We offer simple monthly pricing packages designed for real business growth. No hidden fees or corporate jargon — just real results for Indian MSMEs.

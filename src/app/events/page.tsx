@@ -3,8 +3,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Event Promotion & Live Coverage Services in Kanpur | Nexudyam",
-  description: "End-to-end event promotion, live coverage, and post-event content repurposing for businesses and creators in Kanpur & UP.",
+  title: "Event Promotion & Digital Coverage Services | Nexudyam",
+  description: "End-to-end event promotion, digital campaign management, and post-event content repurposing for business summits, expos, and brand launches across India.",
   path: "/events",
 });
 
@@ -34,7 +34,7 @@ export default function EventsPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Event Promotion & Digital Coverage in Kanpur
+              Event Promotion &amp; Digital Campaign Coverage
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We make your next event unforgettable by handling the digital buzz so you can focus on hosting. From pre-event promotions to live coverage and post-event content generation.

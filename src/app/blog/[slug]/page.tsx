@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 Recommended Solution
               </p>
               <h4 className="text-lg font-bold text-foreground mb-2">
-                Need help with this for your business in Kanpur?
+                Need help implementing this for your business?
               </h4>
               <p className="text-sm text-muted-foreground mb-4">
                 Explore our dedicated service package with transparent pricing, fast turnaround, and local execution.

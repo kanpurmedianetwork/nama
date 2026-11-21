@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = pageMetadata({
-  title: "AI Content Marketing Services in Kanpur | Nexudyam",
+  title: "AI Content Marketing Services for Startups & MSMEs | Nexudyam",
   description: "Fast, affordable AI content marketing for Indian MSMEs. Scalable video scripts, SEO articles, and messaging workflows with human review.",
   path: "/services/ai-content-marketing",
   ogImage: "/og/default.png",
@@ -38,12 +38,12 @@ export default function AiContentMarketingPage() {
         data={breadcrumbs([
           { name: "Home", url: "/" },
           { name: "Services", url: "/services" },
-          { name: "AI Content Marketing Services in Kanpur", url: "/services/ai-content-marketing" },
+          { name: "AI Content Marketing Services", url: "/services/ai-content-marketing" },
         ])}
       />
       <JsonLd
         data={serviceSchema({
-          name: "AI Content Marketing Services in Kanpur",
+          name: "AI Content Marketing Services",
           description: "Fast, affordable AI content marketing for Indian MSMEs. Scalable video scripts, SEO articles, and messaging workflows with human review.",
           url: "https://www.nexudyam.in/services/ai-content-marketing",
           serviceType: "AI Content Marketing & Copywriting",
@@ -68,11 +68,11 @@ export default function AiContentMarketingPage() {
               AI Acceleration Vertical
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              AI Content Marketing Services in Kanpur
+              AI Content Marketing Services
             </h1>
             <div className="p-6 bg-surface border-l-4 border-brand rounded-r-2xl">
               <p className="text-lg text-foreground font-medium leading-relaxed">
-                Nexudyam provides structured AI content marketing services in Kanpur, combining artificial intelligence software with human editorial oversight. We generate high-volume Instagram Reels scripts, marketing email campaigns, promotional WhatsApp broadcasts, and search-optimized blog posts. Every piece of content is fact-checked, edited, and tailored to Indian MSME market requirements before publication.
+                Nexudyam provides structured AI content marketing services across India, combining artificial intelligence software with human editorial oversight. We generate high-volume Instagram Reels scripts, marketing email campaigns, promotional WhatsApp broadcasts, and search-optimized blog posts. Every piece of content is fact-checked, edited, and tailored to Indian business requirements before publication.
               </p>
             </div>
           </header>
@@ -158,7 +158,7 @@ export default function AiContentMarketingPage() {
               Accelerate Your Marketing Output Today
             </h3>
             <p className="text-white/80 max-w-xl mx-auto mb-8 text-base">
-              Request a free sample content batch customized for your business in Kanpur.
+              Request a free sample content batch customized for your business.
             </p>
             <a
               href={WHATSAPP_URL}

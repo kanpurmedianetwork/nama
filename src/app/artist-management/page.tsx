@@ -5,8 +5,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = pageMetadata({
-  title: "Artist Management & Creator Growth Agency in UP | Nexudyam",
-  description: "Professional brand building, booking management, and Instagram/YouTube growth execution for artists and independent creators in Kanpur & UP.",
+  title: "Artist Management & Creator Growth Agency | Nexudyam",
+  description: "Professional brand building, booking management, and content growth execution for artists and independent creators across India.",
   path: "/artist-management",
 });
 
@@ -26,7 +26,7 @@ export default function ArtistManagementPage() {
               Creator Vertical
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Artist Management & Creator Growth in UP
+              Artist Management &amp; Creator Growth
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We handle the rest while you build your fanbase and focus on your art. We focus on building your brand, growing your reach on Instagram and YouTube, and managing bookings.
@@ -88,7 +88,7 @@ export default function ArtistManagementPage() {
                <div className="relative text-center p-8 bg-white/80 backdrop-blur-sm rounded-xl m-8 border border-white/50 shadow-xl">
                  <Users size={48} className="text-brand mx-auto mb-4" />
                  <p className="font-display font-bold text-2xl text-foreground">Nexudyam Artists</p>
-                 <p className="text-sm text-muted-foreground">Representing talent in Uttar Pradesh</p>
+                 <p className="text-sm text-muted-foreground">Representing and scaling creative talent across India</p>
                </div>
             </div>
           </div>

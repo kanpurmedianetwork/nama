@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Digital Marketing Blog & Guides for Indian MSMEs | Nexudyam",
-  description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for businesses in Kanpur and India.",
+  description: "Read actionable guides on digital marketing, local SEO, Google Business Profile, and Meta Ads for startups and MSMEs across India.",
   path: "/blog",
 });
 

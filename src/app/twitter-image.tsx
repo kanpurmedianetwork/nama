@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
-export const alt = "Nexudyam - Digital Marketing & Branding Agency in Kanpur";
+export const alt = "Nexudyam | Lead-Generation Marketing for Startups & MSMEs";
 export const size = {
   width: 1200,
   height: 630,
@@ -89,7 +89,7 @@ export default function Image() {
           >
             <span>5.0 / 5.0 Google Rating</span>
             <span style={{ color: "#9ca3af" }}>•</span>
-            <span style={{ color: "#ffffff" }}>Kanpur, UP</span>
+            <span style={{ color: "#ffffff" }}>Pan-India Support</span>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default function Image() {
               maxWidth: "1000px",
             }}
           >
-            Digital Marketing, Website &amp; Branding Services
+            Lead-Generation Marketing for Startups &amp; MSMEs
           </div>
           <div
             style={{
@@ -114,7 +114,7 @@ export default function Image() {
               maxWidth: "850px",
             }}
           >
-            Helping Startups &amp; MSMEs in Kanpur &amp; Uttar Pradesh Scale Online.
+            Helping Startups &amp; MSMEs Across India Scale Online &amp; Get More Leads.
           </div>
         </div>
 

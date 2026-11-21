@@ -4,8 +4,8 @@ import { WHATSAPP_URL } from "@/lib/constants";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "E-commerce Website Development (Shopify) in Kanpur | Nexudyam",
-  description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs in Kanpur & UP.",
+  title: "Shopify & E-commerce Website Development | Nexudyam",
+  description: "Custom Shopify e-commerce store setup, payment gateway integration, product catalog design, and conversion rate optimization for MSMEs across India.",
   path: "/ecom-websites",
 });
 
@@ -41,11 +41,7 @@ export default function EcomWebsitesPage() {
             name: "Nexudyam"
           },
           url: "https://www.nexudyam.in/ecom-websites",
-          areaServed: [
-            { "@type": "City", name: "Kanpur" },
-            { "@type": "City", name: "Lucknow" },
-            { "@type": "State", name: "Uttar Pradesh" }
-          ]
+          areaServed: "IN"
         }}
       />
       
@@ -57,7 +53,7 @@ export default function EcomWebsitesPage() {
               E-commerce & Retail Solutions
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              E-commerce & Shopify Website Development in Kanpur
+              E-commerce &amp; Shopify Website Development
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Turn your retail business into a 24/7 selling machine. We design custom, high-converting Shopify e-commerce stores with automated payment gateways, shipping integrations, and mobile-first checkouts.
@@ -130,7 +126,7 @@ export default function EcomWebsitesPage() {
                  <ShoppingBag size={48} className="text-brand mx-auto mb-4" />
                  <p className="font-display font-bold text-2xl text-foreground">Shopify Partner Agency</p>
                  <p className="text-sm text-muted-foreground mt-2">
-                   Helping Kanpur & Uttar Pradesh retail brands, apparel stores, and manufacturers sell directly to customers nationwide.
+                   Helping Indian retail brands, apparel stores, and manufacturers sell directly to customers nationwide.
                  </p>
                </div>
             </div>
@@ -142,7 +138,7 @@ export default function EcomWebsitesPage() {
               Why Indian MSMEs Are Choosing Shopify in 2026
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you run a boutique, manufacturing business, footwear brand, leather goods showroom, or FMCG company in Kanpur, relying solely on third-party marketplaces like Amazon or Flipkart eats up 15% to 35% of your margins in commission. With your own independent <strong className="text-foreground">Shopify e-commerce website</strong>, you own your customer database, protect your profit margins, and build lasting brand equity.
+              If you run a boutique, manufacturing business, footwear brand, apparel label, or FMCG company in India, relying solely on third-party marketplaces like Amazon or Flipkart eats up 15% to 35% of your margins in commission. With your own independent <strong className="text-foreground">Shopify e-commerce website</strong>, you own your customer database, protect your profit margins, and build lasting brand equity.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Nexudyam provides complete end-to-end Shopify setup: from domain registration, collection architecture, variant setup (sizes, colors), to high-speed hosting and payment gateway approval. We pair your Shopify storefront with our Meta Ads and Google Ads management to drive direct profitable traffic from day one.

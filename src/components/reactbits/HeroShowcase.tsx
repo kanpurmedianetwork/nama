@@ -78,7 +78,7 @@ export function HeroShowcase() {
               <div className="flex items-center gap-3 bg-surface border border-neutral-200/70 rounded-full px-4 py-2.5 text-xs text-muted-foreground">
                 <Search size={15} className="text-brand shrink-0" />
                 <span className="text-foreground font-medium truncate">
-                  "top digital marketing agency near me in kanpur"
+                  "lead generation agency for startups in india"
                 </span>
                 <span className="ml-auto text-[11px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full shrink-0">
                   Rank #1 in 3-Pack
@@ -89,7 +89,7 @@ export function HeroShowcase() {
               <div className="bg-white border-2 border-brand/20 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <p className="font-bold text-base text-foreground">Nexudyam Kanpur</p>
+                    <p className="font-bold text-base text-foreground">Nexudyam</p>
                     <span className="text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
                       <CheckCircle2 size={11} /> Verified Listing
                     </span>
@@ -100,11 +100,11 @@ export function HeroShowcase() {
                     </span>
                     <span>(3 Google Reviews)</span>
                     <span>•</span>
-                    <span className="text-foreground font-medium">Digital Marketing Agency</span>
+                    <span className="text-foreground font-medium">Lead-Generation Marketing Agency</span>
                   </div>
                   <p className="text-xs text-muted-foreground flex items-center gap-1">
                     <MapPin size={12} className="text-muted-foreground" />
-                    <span>Serving Kanpur, Lucknow &amp; Uttar Pradesh • Open now</span>
+                    <span>Serving Startups &amp; MSMEs Across India • Remote-first</span>
                   </p>
                 </div>
 

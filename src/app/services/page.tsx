@@ -5,8 +5,8 @@ import { JsonLd, breadcrumbs } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Digital Marketing, Website & Branding Services in Kanpur | Nexudyam",
-  description: "Explore Nexudyam's digital marketing, website development, and branding services in Kanpur. Tailored growth packages for MSMEs and startups.",
+  title: "Digital Marketing, Website & Branding Services | Nexudyam",
+  description: "Explore Nexudyam's digital marketing, website development, and branding services. Tailored lead-generation packages for startups and MSMEs across India.",
   path: "/services",
   ogImage: "/og/default.png",
 });
@@ -26,10 +26,10 @@ export default function ServicesPage() {
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Digital Marketing, Website & Branding Services in Kanpur
+              Digital Marketing, Website & Branding Services Across India
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We provide all the digital marketing, web development, and branding services your business needs to grow and find more customers. Get a free audit today!
+              We provide all the digital marketing, web development, and branding services your business needs to grow and generate qualified leads. Get a free lead audit today!
             </p>
           </div>
 
@@ -40,35 +40,35 @@ export default function ServicesPage() {
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
               icon={<Palette size={28} />}
-              href="/services/brand-identity-kanpur"
+              href="/services/brand-identity"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
               icon={<Share2 size={28} />}
-              href="/services/social-media-marketing-kanpur"
+              href="/services/social-media-marketing"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
               icon={<Megaphone size={28} />}
-              href="/services/meta-google-ads-kanpur"
+              href="/services/meta-google-ads"
             />
             <ServiceCard 
               title="Website Development"
               description="Fast, mobile-first websites built on modern stack."
               features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
               icon={<Monitor size={28} />}
-              href="/services/website-development-kanpur"
+              href="/services/website-development"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
               icon={<MapPin size={28} />}
-              href="/services/google-business-profile-kanpur"
+              href="/services/google-business-profile"
             />
             <ServiceCard 
               title="AI Content Marketing"
@@ -107,14 +107,14 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  A professional brand identity is the foundational block of business trust and customer recognition. At Nexudyam, we work with startups and MSMEs in Kanpur to design custom logos, select target brand color palettes, define typography guidelines, and build comprehensive brand manuals. A brand is not merely a graphic or symbol; it is the entire visual story that separates your company from competitors. Our structured design workflow takes just 7 working days, delivering high-resolution vector assets, print-ready templates, and tailored social media profile kits.
+                  A professional brand identity is the foundational block of business trust and customer recognition. At Nexudyam, we work with startups and MSMEs across India to design custom logos, select target brand color palettes, define typography guidelines, and build comprehensive brand manuals. A brand is not merely a graphic or symbol; it is the entire visual story that separates your company from competitors. Our structured design workflow takes just 7 working days, delivering high-resolution vector assets, print-ready templates, and tailored social media profile kits.
                 </p>
                 <p>
-                  By establishing a cohesive, polished visual identity, your startup projects the authority of a seasoned corporate player. This visual credibility makes it much easier to attract high-value leads, secure partnership deals, and establish long-term equity in the Uttar Pradesh marketplace. Whether you run a manufacturing plant, a retail showroom, or an agritech venture, a solid visual presence is what turns initial impressions into sales. We make sure that all typography, colors, and layout elements align perfectly with your target audience's psychological triggers, building trust from the very first click.
+                  By establishing a cohesive, polished visual identity, your startup projects the authority of a seasoned corporate player. This visual credibility makes it much easier to attract high-value leads, secure partnership deals, and establish long-term equity in the Indian marketplace. Whether you run a manufacturing plant, a retail showroom, or an agritech venture, a solid visual presence is what turns initial impressions into sales. We make sure that all typography, colors, and layout elements align perfectly with your target audience&apos;s psychological triggers, building trust from the very first click.
                 </p>
                 <div className="pt-2">
-                  <Link href="/services/brand-identity-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-                    Learn more about Brand Identity Design in Kanpur <ArrowRight size={16} />
+                  <Link href="/services/brand-identity" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Brand Identity Design <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -128,14 +128,14 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Maintaining a consistent social media presence is essential for building a loyal customer community, but managing posts daily can be exhausting for busy business owners. Nexudyam handles the entire social media marketing process for your brand in Kanpur, UP. We formulate tailored Instagram Reels strategies, establish optimized Facebook business pages, write engaging captions, and develop interactive post calendars. You don't have to worry about graphic designing or video editing; our team provides a full 30-day content calendar for your approval before anything goes live.
+                  Maintaining a consistent social media presence is essential for building a loyal customer community, but managing posts daily can be exhausting for busy business owners. Nexudyam handles the entire social media marketing process for your brand across India. We formulate tailored Instagram Reels strategies, establish optimized Facebook business pages, write engaging captions, and develop interactive post calendars. You don&apos;t have to worry about graphic designing or video editing; our team provides a full 30-day content calendar for your approval before anything goes live.
                 </p>
                 <p>
-                  By combining modern AI-assisted copy production with experienced editors, we deliver consistent, algorithm-optimized content that keeps your followers engaged. This regular digital touchpoint increases your brand recall value, boosts organic profile reach, and converts random social media scrollers into active, recurring customers. Our approach goes beyond generic posts. We research local trends and create hyper-localized content that speaks directly to the community in Kanpur and wider Uttar Pradesh. From festive graphics to educational posts, we align everything with your direct lead generation goals.
+                  By combining modern AI-assisted copy production with experienced editors, we deliver consistent, algorithm-optimized content that keeps your followers engaged. This regular digital touchpoint increases your brand recall value, boosts organic profile reach, and converts random social media scrollers into active, recurring customers. Our approach goes beyond generic posts. We research industry trends and create localized content that speaks directly to your target buyers. From festive graphics to educational posts, we align everything with your direct lead generation goals.
                 </p>
                 <div className="pt-2">
-                  <Link href="/services/social-media-marketing-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-                    Learn more about Social Media Marketing in Kanpur <ArrowRight size={16} />
+                  <Link href="/services/social-media-marketing" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Social Media Marketing <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -149,14 +149,14 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Organic reach takes time, but paid advertising is the fastest way to get immediate leads and conversions. Nexudyam specializes in setting up and managing high-converting Meta Ads (Facebook & Instagram) and Google Ads (Search, Display, and Maps) campaigns. We assist local UP businesses in launching targeted ad campaigns starting with budgets as low as ₹2,000 in ad spend. We perform detailed audience research, construct compelling ad copy, run A/B copy tests, and configure conversion tracking.
+                  Organic reach takes time, but paid advertising is the fastest way to get immediate leads and conversions. Nexudyam specializes in setting up and managing high-converting Meta Ads (Facebook & Instagram) and Google Ads (Search, Display, and Maps) campaigns. We assist growing businesses in launching targeted ad campaigns starting with budgets as low as ₹2,000 in ad spend. We perform detailed audience research, construct compelling ad copy, run A/B copy tests, and configure conversion tracking.
                 </p>
                 <p>
                   Whether you are seeking direct phone calls, map directions, website traffic, or WhatsApp inquiries, we optimize your ad spend for the highest conversion rates. With weekly optimizations and transparent monthly reporting, we track which campaigns deliver the highest return on investment. This data-driven strategy ensures your marketing budget is spent directly on acquiring customers rather than wasting impressions on irrelevant audiences. Our campaign managers stay updated on the latest shifts in Google and Meta algorithms, avoiding common pitfalls like broad-match keyword bleeding or poor audience segmentation. We focus purely on low cost-per-lead (CPL) and high return on ad spend (ROAS) for your business.
                 </p>
                 <div className="pt-2">
-                  <Link href="/services/meta-google-ads-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-                    Learn more about Meta & Google Ads in Kanpur <ArrowRight size={16} />
+                  <Link href="/services/meta-google-ads" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Meta & Google Ads <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -170,14 +170,14 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Your website is your digital office—it is where conversions happen. Nexudyam builds fast, responsive, and SEO-optimized business websites on modern developer stacks like Next.js. We specialize in creating high-performance 5-page business profile sites and full-service e-commerce stores on Shopify. Every website we build is optimized for mobile responsiveness and speed from day one, ensuring that pages load in milliseconds to keep bounce rates low. We include basic search engine optimization, domain routing, custom typography, secure hosting configuration, and a Google Business Profile setup as part of our web development package.
+                  Your website is your digital office—it is where conversions happen. Nexudyam builds fast, responsive, and SEO-optimized business websites on modern developer stacks like Next.js. We specialize in creating high-performance 5-page business profile sites and full-service e-commerce stores on Shopify. Every website we build is optimized for mobile responsiveness and speed from day one, ensuring that pages load in milliseconds to keep bounce rates low. We include search engine optimization, domain routing, custom typography, secure hosting configuration, and a Google Business Profile setup as part of our web development package.
                 </p>
                 <p>
                   A fast, beautifully designed website increases user trust and elevates your professional brand. This ensures that when prospective clients find your site, they are guided by clear navigation paths directly to call or message you, maximizing your conversion funnel. We avoid clunky website builders that slow down your load speed. By coding clean, lightweight structures, we guarantee that your website ranks well in Core Web Vitals audits. We also make it easy to update contents, allowing your site to evolve as your business scales.
                 </p>
                 <div className="pt-2">
-                  <Link href="/services/website-development-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-                    Learn more about Website Development in Kanpur <ArrowRight size={16} />
+                  <Link href="/services/website-development" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Website Development <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -191,14 +191,14 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  For local retail showrooms, restaurants, dental clinics, and service providers in Kanpur, ranking on Google Maps is the most profitable digital channel. Nexudyam's local SEO services claim, verify, and fully optimize your Google Business Profile (GBP) to put your business in Google's local 3-pack. We enforce strict Name, Address, and Phone (NAP) consistency across directories, set up accurate categories, upload geotagged photos, and establish weekly posting schedules. We also implement a review acquisition plan to help you collect positive customer reviews containing high-intent keywords.
+                  For retail showrooms, restaurants, clinics, and service-area providers across India, ranking on Google Maps is the most profitable digital channel. Nexudyam&apos;s local SEO services claim, verify, and fully optimize your Google Business Profile (GBP) to put your business in Google&apos;s local 3-pack. We enforce strict Name, Address, and Phone (NAP) consistency across directories, set up accurate categories, upload geotagged photos, and establish weekly posting schedules. We also implement a review acquisition plan to help you collect positive customer reviews containing high-intent keywords.
                 </p>
                 <p>
-                  Local SEO ensures that when a customer searches for your services 'near me', your profile appears immediately with directions, call buttons, and opening hours. This local search optimization drives immediate store foot traffic, direct phone calls, and highly qualified inquiries from customers ready to buy. We build dozens of local citations on high-authority Indian business directories like JustDial, IndiaMART, and trade portals. This search engine validation reinforces your geographic authority, making it easier to outrank competitors in surrounding Uttar Pradesh areas.
+                  Local SEO ensures that when a customer searches for your services &apos;near me&apos; or in your service area, your profile appears immediately with directions, call buttons, and opening hours. This local search optimization drives immediate store foot traffic, direct phone calls, and highly qualified inquiries from customers ready to buy. We build dozens of local citations on high-authority Indian business directories like JustDial, IndiaMART, and trade portals. This search engine validation reinforces your geographic authority, making it easier to outrank competitors across multi-city markets.
                 </p>
                 <div className="pt-2">
-                  <Link href="/services/google-business-profile-kanpur" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
-                    Learn more about Google Business Profile in Kanpur <ArrowRight size={16} />
+                  <Link href="/services/google-business-profile" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+                    Learn more about Google Business Profile & Local SEO <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -212,10 +212,10 @@ export default function ServicesPage() {
               </div>
               <div className="text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Content creation is the bottleneck of modern marketing, but AI has revolutionized speed and affordability. Nexudyam's AI content marketing combines artificial intelligence tools with professional human editors to produce Reels scripts, WhatsApp broadcasts, and blog articles in 48 hours. By automating the research and initial drafting stages, we cut traditional content production costs by up to 70%. We don't just dump generic AI text; our editorial team reviews, rewrites, and customizes every post to ensure it incorporates Kanpur-specific context and aligns with your brand voice.
+                  Content creation is the bottleneck of modern marketing, but AI has revolutionized speed and affordability. Nexudyam&apos;s AI content marketing combines artificial intelligence tools with professional human editors to produce Reels scripts, WhatsApp broadcasts, and blog articles in 48 hours. By automating the research and initial drafting stages, we cut traditional content production costs by up to 70%. We don&apos;t just dump generic AI text; our editorial team reviews, rewrites, and customizes every post to ensure it incorporates authentic industry context and aligns with your brand voice.
                 </p>
                 <p>
-                  This hybrid system gives startups and MSMEs a high volume of consistent, high-quality content that engages audiences without the bloated retainer budgets of traditional agencies. This cost-efficient approach allows even micro-enterprises to run robust content campaigns that build authority and drive organic traffic. From scripts that hooks viewer attention in the first 3 seconds of a Reel to detailed blog articles structured to answer search engine queries, we calibrate our AI systems for conversion. This ensures that you stay top-of-mind for your audience while keeping your overhead low.
+                  This hybrid system gives startups and MSMEs a high volume of consistent, high-quality content that engages audiences without the bloated retainer budgets of traditional agencies. This cost-efficient approach allows even micro-enterprises to run robust content campaigns that build authority and drive organic traffic. From scripts that hook viewer attention in the first 3 seconds of a Reel to detailed blog articles structured to answer search engine queries, we calibrate our AI systems for conversion. This ensures that you stay top-of-mind for your audience while keeping your overhead low.
                 </p>
                 <div className="pt-2">
                   <Link href="/services/ai-content-marketing" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">

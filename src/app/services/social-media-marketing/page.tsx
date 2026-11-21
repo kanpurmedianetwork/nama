@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = pageMetadata({
-  title: "Social Media Marketing Services in Kanpur | Nexudyam",
-  description: "Monthly social media marketing in Kanpur. Structured post calendars, Instagram Reels scripts, graphics, and community management.",
-  path: "/services/social-media-marketing-kanpur",
+  title: "Social Media Marketing Services for Startups & MSMEs | Nexudyam",
+  description: "Monthly social media marketing for startups and MSMEs across India. Structured post calendars, Instagram Reels scripts, graphics, and community engagement.",
+  path: "/services/social-media-marketing",
   ogImage: "/og/default.png",
 });
 
@@ -38,14 +38,14 @@ export default function SocialMediaMarketingPage() {
         data={breadcrumbs([
           { name: "Home", url: "/" },
           { name: "Services", url: "/services" },
-          { name: "Social Media Marketing in Kanpur", url: "/services/social-media-marketing-kanpur" },
+          { name: "Social Media Marketing", url: "/services/social-media-marketing" },
         ])}
       />
       <JsonLd
         data={serviceSchema({
-          name: "Social Media Marketing in Kanpur",
-          description: "Monthly social media marketing in Kanpur. Structured post calendars, Instagram Reels scripts, graphics, and community management.",
-          url: "https://www.nexudyam.in/services/social-media-marketing-kanpur",
+          name: "Social Media Marketing",
+          description: "Monthly social media marketing across India. Structured post calendars, Instagram Reels scripts, graphics, and community engagement.",
+          url: "https://www.nexudyam.in/services/social-media-marketing",
           serviceType: "Social Media Marketing",
           price: "4999",
         })}
@@ -68,11 +68,11 @@ export default function SocialMediaMarketingPage() {
               Social Growth Vertical
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Social Media Marketing in Kanpur
+              Social Media Marketing Services
             </h1>
             <div className="p-6 bg-surface border-l-4 border-brand rounded-r-2xl">
               <p className="text-lg text-foreground font-medium leading-relaxed">
-                Nexudyam provides end-to-end social media marketing services in Kanpur for retail brands, service providers, and local institutions. We plan monthly editorial calendars, design on-brand static and carousel graphics, write engaging post copy, produce short-form video scripts, and manage community engagement across Instagram and Facebook to build consistent audience recognition.
+                Nexudyam provides end-to-end social media marketing services across India for retail brands, service providers, and growing businesses. We plan monthly editorial calendars, design on-brand static and carousel graphics, write engaging post copy, produce short-form video scripts, and manage community engagement across Instagram and Facebook to build consistent audience recognition and generate inbound customer interest.
               </p>
             </div>
           </header>
@@ -111,7 +111,7 @@ export default function SocialMediaMarketingPage() {
                 "12 to 16 branded social media posts per month (mix of graphics, carousels, and announcements)",
                 "4 to 8 Instagram Reels scripts with hook, shot list, and caption instructions",
                 "Monthly content calendar delivered in advance for client approval",
-                "Researched local Kanpur and industry-specific hashtag clusters",
+                "Researched industry-specific and high-reach hashtag clusters",
                 "Bio and highlight cover design optimization for Instagram and Facebook",
                 "Monthly engagement and follower growth summary report",
               ].map((item, idx) => (

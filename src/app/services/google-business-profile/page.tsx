@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/metadata";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = pageMetadata({
-  title: "Google Business Profile Optimization in Kanpur | Nexudyam",
-  description: "Claim, verify, and optimize your Google Business Profile in Kanpur. Increase local visibility on Google Maps and search results.",
-  path: "/services/google-business-profile-kanpur",
+  title: "Google Business Profile & Local SEO Services | Nexudyam",
+  description: "Claim, verify, and optimize your Google Business Profile for multi-city and service-area visibility. Rank in Google Maps 3-Pack and near-me searches.",
+  path: "/services/google-business-profile",
   ogImage: "/og/default.png",
 });
 
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "Do I need a physical shop to have a profile?",
-    answer: "Businesses without physical storefronts can be configured as Service Area Businesses serving specific localities in Kanpur.",
+    answer: "Businesses without physical storefronts can be configured as Service Area Businesses serving specific cities or regions nationwide.",
   },
 ];
 
@@ -38,14 +38,14 @@ export default function GoogleBusinessProfilePage() {
         data={breadcrumbs([
           { name: "Home", url: "/" },
           { name: "Services", url: "/services" },
-          { name: "Google Business Profile in Kanpur", url: "/services/google-business-profile-kanpur" },
+          { name: "Google Business Profile & Local SEO", url: "/services/google-business-profile" },
         ])}
       />
       <JsonLd
         data={serviceSchema({
-          name: "Google Business Profile Services in Kanpur",
-          description: "Claim, verify, and optimize your Google Business Profile in Kanpur. Increase local visibility on Google Maps and search results.",
-          url: "https://www.nexudyam.in/services/google-business-profile-kanpur",
+          name: "Google Business Profile & Local SEO Services",
+          description: "Claim, verify, and optimize your Google Business Profile for multi-city and service-area visibility across India. Rank in Google Maps 3-Pack and near-me searches.",
+          url: "https://www.nexudyam.in/services/google-business-profile",
           serviceType: "Local SEO & Google Business Profile",
           price: "4999",
         })}
@@ -68,11 +68,11 @@ export default function GoogleBusinessProfilePage() {
               Local SEO Vertical
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Google Business Profile Services in Kanpur
+              Google Business Profile &amp; Local SEO Services
             </h1>
             <div className="p-6 bg-surface border-l-4 border-brand rounded-r-2xl">
               <p className="text-lg text-foreground font-medium leading-relaxed">
-                Nexudyam offers professional Google Business Profile setup and local SEO services for businesses in Kanpur. We verify your business listing, optimize your categories, publish accurate NAP details, upload storefront media, and implement localized review acquisition processes. This ensures your physical store or service appears clearly in Google Maps and local search queries.
+                Nexudyam offers professional Google Business Profile setup and local SEO services for businesses across India. We verify your business listing, optimize your categories, publish accurate NAP details, upload storefront media, and implement localized review acquisition processes. This ensures your physical store or service area appears clearly in Google Maps and local search queries.
               </p>
             </div>
           </header>
@@ -132,7 +132,7 @@ export default function GoogleBusinessProfilePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 "Profile claim, verification guidance (video, postcard, or phone), and ownership setup",
-                "Primary and secondary category selection matched to Kanpur search patterns",
+                "Primary and secondary category selection matched to high-intent buyer search patterns",
                 "Complete NAP (Name, Address, Phone number) alignment across local directories",
                 "10+ optimized business photos and storefront imagery",
                 "Product catalog and service list configuration with pricing details",
@@ -181,7 +181,7 @@ export default function GoogleBusinessProfilePage() {
               Get Your Business Verified on Google Maps
             </h3>
             <p className="text-white/80 max-w-xl mx-auto mb-8 text-base">
-              Start capturing local phone calls and foot traffic from customers searching near your Kanpur location.
+              Start capturing local phone calls and foot traffic from customers searching across your service areas.
             </p>
             <a
               href={WHATSAPP_URL}

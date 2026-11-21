@@ -124,25 +124,25 @@ export function BentoFeatures() {
             <MapPin size={24} />
           </div>
           <span className="text-xs font-bold uppercase tracking-wider text-brand mb-2 block">
-            Hyper-Local Insight
+            Pan-India Insight
           </span>
           <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-3">
-            Local Roots in Kanpur. High-Impact Reach Across UP.
+            Built for Bharat: remote-first, working with founders across India.
           </h3>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-6 max-w-xl">
-            We understand consumer psychology, local Hindi/Hinglish phrasing, and regional market trends across Uttar Pradesh — giving your campaigns genuine resonance that generic metro agencies miss.
+            We understand consumer psychology, regional market dynamics, and multilingual communication across Indian business hubs — giving your campaigns genuine resonance and qualified leads that generic agencies miss.
           </p>
         </div>
 
         {/* Region Badges */}
         <div className="flex flex-wrap gap-2 pt-4 border-t border-neutral-100">
-          {["Kanpur Nagar", "Lucknow", "Noida / Greater Noida", "Prayagraj", "Varanasi", "Agra", "Bareilly"].map(
-            (city) => (
+          {["Delhi NCR", "Bengaluru", "Mumbai", "Hyderabad", "Tier-2 & Tier-3 Hubs", "Pan-India"].map(
+            (region) => (
               <span
-                key={city}
+                key={region}
                 className="bg-surface border border-neutral-200/80 text-foreground text-xs font-semibold px-3 py-1.5 rounded-full"
               >
-                ● {city}
+                ● {region}
               </span>
             )
           )}

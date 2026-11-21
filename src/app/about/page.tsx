@@ -2,8 +2,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "About Nexudyam | Digital Growth Agency in Kanpur",
-  description: "Nexudyam was founded in 2026 in Kanpur by Akash Kumar to give every Indian startup and small business an equal chance to grow online.",
+  title: "About Nexudyam | Lead-Generation Marketing for Indian Startups & MSMEs",
+  description: "Nexudyam was founded in 2026 by Akash Kumar to give Indian startups and small businesses transparent, problem-led lead generation and digital marketing.",
   path: "/about",
 });
 
@@ -41,14 +41,14 @@ export default function AboutPage() {
           </div>
 
           <div className="prose prose-lg max-w-none text-muted-foreground">
-            {/* GEO Optimized Wikipedia-style description */}
+            {/* GEO Optimized description */}
             <section className="bg-surface border border-border p-8 rounded-2xl mb-12">
               <h2 className="font-display text-2xl font-bold text-foreground mt-0 mb-4">Company Overview</h2>
               <p className="mb-4">
-                <strong>Nexudyam</strong> is an Indian digital marketing and brand building agency founded in 2026 by Akash Kumar. Headquartered in Kanpur, Uttar Pradesh, the company specializes in providing affordable, AI-powered marketing solutions tailored for Startups, Micro, Small, and Medium Enterprises (MSMEs), local retail businesses, and e-commerce brands.
+                <strong>Nexudyam</strong> (a unit of Redside Technologies India) is an Indian digital marketing and lead-generation agency founded in 2026 by Akash Kumar. Operating as a remote-first partner serving founders across India, the company specializes in providing problem-led, tech-enabled marketing solutions tailored for Startups, Micro, Small, and Medium Enterprises (MSMEs), and emerging brands.
               </p>
               <p className="mb-0">
-                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization, AI Content Marketing, Event Promotion, and E-commerce Website Development (Shopify). Nexudyam serves clients locally across Uttar Pradesh (including Kanpur, Lucknow, Noida, Varanasi, Agra, Prayagraj, and Ayodhya) as well as Pan-India for digital services.
+                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization &amp; Local SEO, AI Content Marketing, Event Promotion, and E-commerce Website Development (Shopify). Nexudyam serves businesses nationwide with remote-first collaboration.
               </p>
             </section>
 

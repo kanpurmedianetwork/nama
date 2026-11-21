@@ -22,14 +22,14 @@ export function Footer() {
           <div>
             <p className="font-display font-bold text-foreground mb-4">Services</p>
             <ul className="flex flex-col gap-3">
-              <li><Link href="/services/website-development-kanpur" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
-              <li><Link href="/services/google-business-profile-kanpur" className="text-sm text-muted-foreground hover:text-brand">Google Business Profile</Link></li>
-              <li><Link href="/services/meta-google-ads-kanpur" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
-              <li><Link href="/services/brand-identity-kanpur" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
-              <li><Link href="/services/social-media-marketing-kanpur" className="text-sm text-muted-foreground hover:text-brand">Social Media Marketing</Link></li>
+              <li><Link href="/services/website-development" className="text-sm text-muted-foreground hover:text-brand">Website Development</Link></li>
+              <li><Link href="/services/google-business-profile" className="text-sm text-muted-foreground hover:text-brand">Google Business Profile</Link></li>
+              <li><Link href="/services/meta-google-ads" className="text-sm text-muted-foreground hover:text-brand">Meta & Google Ads</Link></li>
+              <li><Link href="/services/brand-identity" className="text-sm text-muted-foreground hover:text-brand">Brand Identity</Link></li>
+              <li><Link href="/services/social-media-marketing" className="text-sm text-muted-foreground hover:text-brand">Social Media Marketing</Link></li>
               <li><Link href="/services/ai-content-marketing" className="text-sm text-muted-foreground hover:text-brand">AI Content Marketing</Link></li>
               <li><Link href="/ecom-websites" className="text-sm text-muted-foreground hover:text-brand">Shopify & E-commerce</Link></li>
-              <li><Link href="/artist-management" className="text-sm text-muted-foreground hover:text-brand">Artist Management</Link></li>
+              {/* {{TODO: confirm whether to restore Artist Management if strategy finalized}} */}
             </ul>
           </div>
 
@@ -48,7 +48,7 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-brand shrink-0 mt-0.5" />
-                <span className="text-sm text-muted-foreground">Kanpur, Uttar Pradesh, India</span>
+                <span className="text-sm text-muted-foreground">India (Remote-first nationwide)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand shrink-0" />
@@ -72,7 +72,7 @@ export function Footer() {
             One Call. One Partner. Everything Your Business Needs to Grow.
           </h2>
           <p className="text-white/90 max-w-2xl mx-auto mb-8 text-lg">
-            Stop losing customers to businesses with better online presence. Start with a free audit — we'll show you exactly what's missing and how to fix it.
+            Stop losing customers to businesses with better online presence. Start with a free 5-point lead audit — we'll show you exactly what's missing and how to fix it.
           </p>
           <a
             href="https://wa.me/919161881100"
@@ -85,10 +85,11 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border">
-          <p className="text-sm text-subtle-foreground mb-4 md:mb-0">
-            © {new Date().getFullYear()} Nexudyam. All rights reserved.
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-4">
+          <div className="text-sm text-subtle-foreground text-center md:text-left">
+            <p>© {new Date().getFullYear()} Nexudyam. All rights reserved.</p>
+            <p className="text-xs text-neutral-400 mt-0.5">Nexudyam is a unit of Redside Technologies India.</p>
+          </div>
           <div className="flex gap-4">
             <Link href="/privacy" className="text-sm text-subtle-foreground hover:text-foreground">Privacy Policy</Link>
             <Link href="/terms" className="text-sm text-subtle-foreground hover:text-foreground">Terms of Service</Link>
