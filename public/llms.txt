@@ -1,37 +1,48 @@
 # Nexudyam
 
-> Nexudyam is a lead-generation digital marketing and branding agency for startups and MSMEs across India. Nexudyam is a unit of Redside Technologies India. We fix what is broken between the click and the customer with Meta & Google Ads, conversion-ready websites, brand identity, and AI-assisted content workflows.
+> Nexudyam is a lead-generation digital marketing and branding agency for startups and MSMEs across India. Nexudyam is a unit of Redside Technologies India. We fix what is broken between the click and the customer with high-intent Meta & Google Ads, conversion-ready Next.js websites, brand identity design, and AI-assisted content workflows.
 
-Remote-first and operating nationwide across India, Nexudyam delivers transparent, high-ROI marketing packages designed for founders, small business owners, and multi-city service businesses.
+Remote-first and operating nationwide across India, Nexudyam delivers transparent, high-ROI marketing packages designed for founders, small business owners, and multi-city service businesses with zero lock-in contracts.
 
 ## Core Pages
 
-- [Homepage](https://www.nexudyam.in/): Overview of services, agency philosophy, and lead generation solutions.
-- [About Us](https://www.nexudyam.in/about): Mission, remote-first philosophy, and vision for Indian entrepreneurship.
-- [Pricing](https://www.nexudyam.in/pricing): Transparent digital marketing packages starting at ₹4,999/month with zero lock-in contracts.
+- [Homepage](https://www.nexudyam.in/): Overview of agency capabilities, lead generation solutions, client reviews, and pricing.
+- [About Us](https://www.nexudyam.in/about): Mission, remote-first philosophy, and vision for Indian MSME growth.
+- [Pricing](https://www.nexudyam.in/pricing): Transparent digital marketing packages (Launch ₹4,999/mo, Grow ₹9,999/mo, Scale ₹18,999/mo).
 - [Blog](https://www.nexudyam.in/blog): Actionable guides on digital marketing, local SEO, and startup lead generation.
 - [Contact](https://www.nexudyam.in/contact): Communication channels including WhatsApp (+91-9161881100), phone, and inquiry form.
 
-## Services
+## Solutions (Problems We Fix)
 
-- [Services Hub](https://www.nexudyam.in/services): Overview of all digital marketing, branding, and web development offerings.
+- [Ads Not Generating Leads](https://www.nexudyam.in/solutions/ads-not-generating-leads): Overhaul ad targeting parameters and add lead qualification filters to stop wasting ad spend on low-quality leads.
+- [Website Not Converting](https://www.nexudyam.in/solutions/website-not-converting): Turn passive website traffic into direct WhatsApp inquiries and phone calls with high-speed Next.js architecture.
+- [Not Showing on Google or Maps](https://www.nexudyam.in/solutions/not-showing-on-google): Dominate Google Maps 3-Pack and local search with verified Google Business Profile optimization.
+- [Brand or Product Launch](https://www.nexudyam.in/solutions/brand-or-product-launch): Complete visual identity, launch-ready websites, and awareness campaigns for new startups.
+- [Consistent Content Creation](https://www.nexudyam.in/solutions/consistent-content): 30-day AI-assisted social media calendars, Reels scripts, and graphics delivered in 48 hours.
+- [Sell Online with Shopify](https://www.nexudyam.in/solutions/sell-online-shopify): Custom Shopify store development with Razorpay, COD OTP verification, and WhatsApp cart recovery.
+
+## Industry Use Cases
+
+- [Clinics & Doctors](https://www.nexudyam.in/use-cases/clinics-doctors): Patient lead generation and local Google Maps 3-Pack ranking for healthcare practices.
+- [D2C & Fashion Brands](https://www.nexudyam.in/use-cases/d2c-fashion): Scale online orders, catalog ads, and low-RTO checkout on Shopify.
+- [Coaching & Education](https://www.nexudyam.in/use-cases/coaching-education): Batch admission marketing, course landing pages, and student inquiry funnels.
+- [B2B Manufacturers & Exporters](https://www.nexudyam.in/use-cases/b2b-manufacturers-exporters): Technical SEO, domestic wholesale buyer inquiries, and export RFQs.
+- [Salons & Wellness](https://www.nexudyam.in/use-cases/salons-wellness): Bridal packages, appointment scheduling, and localized Instagram marketing.
+- [Real Estate](https://www.nexudyam.in/use-cases/real-estate): Verified property buyer inquiries and site-visit bookings.
+- [Restaurants & Cafes](https://www.nexudyam.in/use-cases/restaurants-cafes): Google Maps 3-Pack rankings, weekend dining footfall, and table reservations.
+- [Home & Local Services](https://www.nexudyam.in/use-cases/home-local-services): Google Call-Only Ads and service territory local SEO for contractors.
+- [Creators & Artists](https://www.nexudyam.in/use-cases/creators-artists): Digital press kits, showreel portfolios, and corporate event booking funnels.
+
+## Core Services
+
 - [Website Development](https://www.nexudyam.in/services/website-development): Fast, mobile-first, SEO-ready business websites built on Next.js.
-- [Google Business Profile](https://www.nexudyam.in/services/google-business-profile): Setup, verification, optimization, and local review strategy for multi-city and service-area Google Maps ranking.
+- [Google Business Profile](https://www.nexudyam.in/services/google-business-profile): Setup, verification, optimization, and local review strategy for multi-city Google Maps ranking.
 - [Meta & Google Ads](https://www.nexudyam.in/services/meta-google-ads): High-intent Meta Ads (Facebook & Instagram) and Google Search ad management.
 - [Brand Identity Design](https://www.nexudyam.in/services/brand-identity): Custom logo design, brand guidelines, typography hierarchies, and vector assets.
 - [Social Media Marketing](https://www.nexudyam.in/services/social-media-marketing): Monthly content calendars, Instagram Reels strategy, graphics, and community growth.
 - [AI Content Marketing](https://www.nexudyam.in/services/ai-content-marketing): Rapid video scripts, WhatsApp broadcast copy, and SEO articles with expert human review.
 - [E-commerce Websites (Shopify)](https://www.nexudyam.in/ecom-websites): Custom Shopify store setup, payment gateway integration, and conversion optimization.
 - [Event Promotion](https://www.nexudyam.in/events): Pre-event ads, live coverage coordination, and evergreen post-event content repurposing.
-
-## Blog Articles
-
-- [How to Get Your Business Found on Google in 2026](https://www.nexudyam.in/blog/get-found-on-google-2026): A complete guide on search engine visibility and ranking strategies.
-- [Why Every Small Business Needs a Google Business Profile](https://www.nexudyam.in/blog/why-small-business-needs-google-business-profile): Why local and multi-city businesses need Google Maps optimization.
-- [AI Content Marketing vs Traditional Agency](https://www.nexudyam.in/blog/ai-content-marketing-vs-traditional): A comparative study on which marketing method delivers the highest ROI for MSMEs.
-- [How Much Does Digital Marketing Cost in India?](https://www.nexudyam.in/blog/digital-marketing-cost-india): Transparent review of marketing service prices and packages for small businesses.
-- [Choosing the Right Digital Marketing Agency for Your Startup](https://www.nexudyam.in/blog/how-to-choose-digital-marketing-agency): Objective criteria to evaluate marketing partners for founders.
-- [How to Rank on Google Maps: Local SEO Blueprint](https://www.nexudyam.in/blog/how-to-rank-on-google-maps-local-seo): Actionable local SEO blueprint for Google Maps 3-Pack rankings.
 
 ## Legal
 
