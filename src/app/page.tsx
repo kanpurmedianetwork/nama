@@ -397,6 +397,7 @@ export default function Home() {
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
               icon={<Palette size={24} />}
               href="/services/brand-identity"
+              imageSrc="/services/brand-identity.jpg"
             />
             <ServiceCard 
               title="Social Media Marketing"
@@ -404,6 +405,7 @@ export default function Home() {
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
               icon={<Share2 size={24} />}
               href="/services/social-media-marketing"
+              imageSrc="/services/social-media-marketing.jpg"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
@@ -411,6 +413,7 @@ export default function Home() {
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
               icon={<Megaphone size={24} />}
               href="/services/meta-google-ads"
+              imageSrc="/services/meta-google-ads.jpg"
             />
             <ServiceCard 
               title="Website & E-commerce Development"
@@ -418,6 +421,7 @@ export default function Home() {
               features={["Custom business sites & Shopify", "SEO-optimized & mobile-first", "Includes Google Business setup"]}
               icon={<Monitor size={24} />}
               href="/services/website-development"
+              imageSrc="/services/website-development.jpg"
             />
             <ServiceCard 
               title="Google Business Profile"
@@ -425,6 +429,7 @@ export default function Home() {
               features={["Claim and verify", "Full optimization", "Review management"]}
               icon={<MapPin size={24} />}
               href="/services/google-business-profile"
+              imageSrc="/services/google-business-profile.jpg"
             />
             <ServiceCard 
               title="AI Content Marketing"
@@ -432,6 +437,7 @@ export default function Home() {
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Zap size={24} />}
               href="/services/ai-content-marketing"
+              imageSrc="/services/ai-content-marketing.jpg"
             />
           </div>
         </div>

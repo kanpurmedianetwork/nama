@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Clock, IndianRupee, ArrowRight, Cpu } from "lucide-react";
 import { Accordion } from "@/components/ui/Accordion";
 import { JsonLd, breadcrumbs, serviceSchema, faqPage } from "@/lib/schema";
@@ -97,6 +98,31 @@ export default function AiContentMarketingPage() {
                 <p className="text-xs font-mono uppercase text-muted-foreground">Batch Turnaround</p>
                 <p className="text-2xl font-display font-bold text-foreground">48 to 72 Hours</p>
                 <p className="text-xs text-muted-foreground">Per approved topic schedule</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual Deliverables Showcase */}
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl bg-neutral-950 mb-16 group">
+            <div className="relative h-[320px] md:h-[440px] w-full">
+              <Image
+                src="/services/ai-content-marketing.jpg"
+                alt="AI Content Marketing Calendar & Viral Video Scripting Pipeline"
+                fill
+                priority
+                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 80vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-black/50 border border-white/10 rounded-xl">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs uppercase tracking-wider font-mono text-emerald-400 font-semibold">48-Hour Velocity</span>
+                </div>
+                <p className="font-display font-bold text-lg md:text-xl text-white">AI-Accelerated Content Calendars &amp; Reels Scripting</p>
+                <p className="text-xs md:text-sm text-neutral-300 mt-1">
+                  30-day multi-format content roadmaps, viral video storyboards, and SEO/GEO-targeted blog publications refined with senior human editorial review.
+                </p>
               </div>
             </div>
           </div>

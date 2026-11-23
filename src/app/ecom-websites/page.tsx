@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ShoppingBag, CreditCard, Truck, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { WHATSAPP_URL } from "@/lib/constants";
@@ -120,15 +121,26 @@ export default function EcomWebsitesPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-brand/20 to-accent rounded-2xl h-full min-h-[400px] flex items-center justify-center border border-brand/20 relative overflow-hidden">
-               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_black_1px,_transparent_1px)] [background-size:20px_20px]" />
-               <div className="relative text-center p-8 bg-white/80 backdrop-blur-sm rounded-xl m-8 border border-white/50 shadow-xl max-w-sm">
-                 <ShoppingBag size={48} className="text-brand mx-auto mb-4" />
-                 <p className="font-display font-bold text-2xl text-foreground">Shopify Partner Agency</p>
-                 <p className="text-sm text-muted-foreground mt-2">
-                   Helping Indian retail brands, apparel stores, and manufacturers sell directly to customers nationwide.
-                 </p>
-               </div>
+            <div className="relative rounded-2xl overflow-hidden border border-border/80 shadow-2xl bg-neutral-950 group h-full min-h-[460px] flex flex-col justify-end">
+              <Image
+                src="/services/shopify-ecommerce.jpg"
+                alt="Shopify E-Commerce Store Architecture & Live Dashboard"
+                fill
+                priority
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
+              <div className="relative z-10 p-6 md:p-8 backdrop-blur-md bg-black/50 border border-white/10 m-4 rounded-xl">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs uppercase tracking-wider font-mono text-emerald-400 font-semibold">Verified Shopify Architecture</span>
+                </div>
+                <p className="font-display font-bold text-xl text-white">Turnkey E-commerce Launchpad</p>
+                <p className="text-sm text-neutral-300 mt-1">
+                  1-click UPI checkout, automated Shiprocket fulfillment &amp; live sales metrics engineered for direct-to-consumer growth.
+                </p>
+              </div>
             </div>
           </div>
 

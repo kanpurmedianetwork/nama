@@ -39,43 +39,49 @@ export default function ServicesPage() {
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
               features={["Logo, palette, typography", "Brand guidelines", "Delivered in 7 days"]}
-              icon={<Palette size={28} />}
+              icon={<Palette size={24} />}
               href="/services/brand-identity"
+              imageSrc="/services/brand-identity.jpg"
             />
             <ServiceCard 
               title="Social Media Marketing"
               description="Consistent posting — you just approve."
               features={["Instagram Reels strategy", "Facebook page setup", "AI captions & scripts"]}
-              icon={<Share2 size={28} />}
+              icon={<Share2 size={24} />}
               href="/services/social-media-marketing"
+              imageSrc="/services/social-media-marketing.jpg"
             />
             <ServiceCard 
               title="Ads Campaign Setup"
               description="Starting at ₹2,000 ad spend — any budget."
               features={["Meta Ads (FB + Insta)", "Google Search & Display", "A/B testing & reporting"]}
-              icon={<Megaphone size={28} />}
+              icon={<Megaphone size={24} />}
               href="/services/meta-google-ads"
+              imageSrc="/services/meta-google-ads.jpg"
             />
             <ServiceCard 
               title="Website & E-commerce Development"
               description="Fast, mobile-first websites and conversion-ready Shopify stores."
               features={["Custom business sites & Shopify", "SEO-optimized from day one", "Includes Google Business setup"]}
-              icon={<Monitor size={28} />}
+              icon={<Monitor size={24} />}
               href="/services/website-development"
+              imageSrc="/services/website-development.jpg"
             />
             <ServiceCard 
               title="Google Business Profile"
               description="Rank in Google Maps and 'near me' searches."
               features={["Claim and verify", "Full optimization", "Review management"]}
-              icon={<MapPin size={28} />}
+              icon={<MapPin size={24} />}
               href="/services/google-business-profile"
+              imageSrc="/services/google-business-profile.jpg"
             />
             <ServiceCard 
               title="AI Content Marketing"
               description="Fast Reels scripts, blog posts, and calendar planning."
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
-              icon={<Cpu size={28} />}
+              icon={<Cpu size={24} />}
               href="/services/ai-content-marketing"
+              imageSrc="/services/ai-content-marketing.jpg"
             />
           </div>
 

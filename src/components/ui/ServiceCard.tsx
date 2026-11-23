@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TallyPopupButton } from "./TallyEmbed";
@@ -11,19 +12,36 @@ interface ServiceCardProps {
   features: string[];
   icon: ReactNode;
   href?: string;
+  imageSrc?: string;
 }
 
-export function ServiceCard({ title, description, features, icon, href }: ServiceCardProps) {
+export function ServiceCard({ title, description, features, icon, href, imageSrc }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="group bg-white border border-border p-8 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
       {/* Decorative top border highlight on hover */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-brand transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-brand transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
       
-      <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300 shrink-0">
-        {icon}
-      </div>
+      {imageSrc ? (
+        <div className="relative h-44 -mx-8 -mt-8 mb-6 overflow-hidden bg-neutral-950 border-b border-border">
+          <Image
+            src={imageSrc}
+            alt={title}
+            fill
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute top-4 left-4 w-10 h-10 bg-black/60 backdrop-blur-md text-white rounded-xl flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
+            {icon}
+          </div>
+        </div>
+      ) : (
+        <div className="w-14 h-14 bg-brand/10 text-brand rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300 shrink-0">
+          {icon}
+        </div>
+      )}
       
       <p className="font-display font-bold text-xl text-foreground mb-3">{title}</p>
       <p className="text-muted-foreground text-sm mb-6 leading-relaxed">{description}</p>
