@@ -29,7 +29,107 @@ interface UseCaseMockupProps {
   className?: string;
 }
 
-export function UseCaseMockup({ slug, industry, className = "" }: UseCaseMockupProps) {
+const SLUG_TO_REEL: Record<string, { video: string; poster: string; title: string }> = {
+  "clinics-doctors": {
+    video: "/reels/clinics-doctors.mp4",
+    poster: "/reels/clinics-doctors_poster.jpg",
+    title: "Clinics & Doctors Growth Reel"
+  },
+  "d2c-fashion": {
+    video: "/reels/d2c-fashion.mp4",
+    poster: "/reels/d2c-fashion_poster.jpg",
+    title: "D2C Fashion & Apparel Case Reel"
+  },
+  "coaching-education": {
+    video: "/reels/coaching-education.mp4",
+    poster: "/reels/coaching-education_poster.jpg",
+    title: "Coaching & EdTech Student Reel"
+  },
+  "real-estate": {
+    video: "/reels/real-estate.mp4",
+    poster: "/reels/real-estate_poster.jpg",
+    title: "Real Estate Property Buyer Reel"
+  },
+  "restaurants-cafes": {
+    video: "/reels/restaurants.mp4",
+    poster: "/reels/restaurants_poster.jpg",
+    title: "Restaurants Footfall Reel"
+  },
+  "b2b-manufacturers-exporters": {
+    video: "/reels/hardware-manufacturers.mp4",
+    poster: "/reels/hardware-manufacturers_poster.jpg",
+    title: "B2B Manufacturers Reel"
+  },
+  "salons-wellness": {
+    video: "/reels/salons-spas.mp4",
+    poster: "/reels/salons-spas_poster.jpg",
+    title: "Salons & Luxury Spas Reel"
+  },
+  "home-local-services": {
+    video: "/reels/home-decor.mp4",
+    poster: "/reels/home-decor_poster.jpg",
+    title: "Home Decor & Showrooms Reel"
+  },
+  "creators-artists": {
+    video: "/reels/d2c-fashion.mp4",
+    poster: "/reels/d2c-fashion_poster.jpg",
+    title: "Brand Monetization Reel"
+  }
+};
+
+function ReelPlayerView({ reel, industry }: { reel: { video: string; poster: string; title: string }; industry: string }) {
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <div className="relative max-w-xs sm:max-w-sm mx-auto select-none">
+      <div className="bg-neutral-950 p-2.5 sm:p-3 rounded-[36px] sm:rounded-[40px] border-4 border-neutral-800 shadow-2xl overflow-hidden">
+        {/* Dynamic Island */}
+        <div className="w-28 h-4 bg-neutral-900 rounded-full mx-auto mb-2.5 flex items-center justify-center">
+          <div className="w-2.5 h-2.5 rounded-full bg-neutral-800 mr-2" />
+          <div className="w-8 h-1 rounded-full bg-neutral-800" />
+        </div>
+
+        {/* Video Screen */}
+        <div className="relative aspect-[9/16] rounded-[24px] sm:rounded-[28px] overflow-hidden bg-black group cursor-pointer" onClick={togglePlay}>
+          <video
+            ref={videoRef}
+            src={reel.video}
+            poster={reel.poster}
+            playsInline
+            controls
+            className="w-full h-full object-cover"
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+          />
+          {!isPlaying && (
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] flex flex-col items-center justify-center transition-all group-hover:bg-black/25">
+              <div className="w-16 h-16 rounded-full bg-emerald-500 text-black flex items-center justify-center shadow-lg shadow-emerald-500/30 transform transition-transform group-hover:scale-110">
+                <Play size={28} fill="currentColor" className="ml-1" />
+              </div>
+              <span className="text-white text-xs font-bold tracking-wide mt-3 bg-black/70 px-3.5 py-1.5 rounded-full border border-white/20">
+                Watch 9:16 Strategy Reel
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function renderMockupBySlug(slug: string, industry: string, className = "") {
   switch (slug) {
     case "clinics-doctors":
       return <ClinicMockup industry={industry || "Clinics & Doctors"} className={className} />;
@@ -52,6 +152,51 @@ export function UseCaseMockup({ slug, industry, className = "" }: UseCaseMockupP
     default:
       return <GeneralFunnelMockup industry={industry || "Service Business"} className={className} />;
   }
+}
+
+export function UseCaseMockup({ slug, industry = "Industry Use Case", className = "" }: UseCaseMockupProps) {
+  const [activeTab, setActiveTab] = React.useState<"blueprint" | "reel">("blueprint");
+  const reel = SLUG_TO_REEL[slug];
+
+  return (
+    <div className={`space-y-6 ${className}`}>
+      {reel && (
+        <div className="flex items-center justify-center">
+          <div className="inline-flex p-1 bg-neutral-100 rounded-full border border-neutral-200/80 shadow-2xs">
+            <button
+              type="button"
+              onClick={() => setActiveTab("blueprint")}
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                activeTab === "blueprint"
+                  ? "bg-white text-foreground shadow-xs font-bold"
+                  : "text-neutral-500 hover:text-foreground"
+              }`}
+            >
+              📱 Funnel Blueprint
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("reel")}
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                activeTab === "reel"
+                  ? "bg-emerald-600 text-white shadow-xs font-bold"
+                  : "text-neutral-500 hover:text-foreground"
+              }`}
+            >
+              <Play size={12} fill="currentColor" />
+              <span>Watch 9:16 Strategy Reel</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "reel" && reel ? (
+        <ReelPlayerView reel={reel} industry={industry} />
+      ) : (
+        renderMockupBySlug(slug, industry)
+      )}
+    </div>
+  );
 }
 
 /**
