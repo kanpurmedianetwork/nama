@@ -19,6 +19,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { LeadForm } from "@/components/ui/LeadForm";
 import { HERO_CTA_TEXT } from "@/lib/constants";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { UseCaseMockup } from "@/components/ui/UseCaseMockup";
 
 export async function generateStaticParams() {
   return useCasesData.map((u) => ({
@@ -187,6 +188,24 @@ export default async function UseCasePage({ params }: { params: Promise<{ slug: 
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Visual Deliverable Blueprint Mockup */}
+          <div className="mt-16 pt-12 border-t border-neutral-100">
+            <div className="text-center mb-8 max-w-xl mx-auto">
+              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400 block mb-1">
+                Visual Deliverable Blueprint
+              </span>
+              <h3 className="font-display font-bold text-2xl text-foreground">
+                The {useCase.industry} Conversion Setup
+              </h3>
+              <p className="text-neutral-500 text-xs mt-1">
+                A live architectural preview of how customer demand is captured and converted into verified leads:
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <UseCaseMockup slug={useCase.slug} industry={useCase.industry} className="w-full" />
             </div>
           </div>
         </div>

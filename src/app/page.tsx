@@ -42,6 +42,7 @@ import { HeroBackground } from "@/components/reactbits/HeroBackground";
 import { RotatingText } from "@/components/reactbits/RotatingText";
 import { publishedCaseStudies } from "@/lib/case-studies-data";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { UseCaseShowcase } from "@/components/ui/UseCaseShowcase";
 
 export const metadata = pageMetadata({
   title: "Nexudyam | Lead-Generation Marketing for Startups & MSMEs",
@@ -369,6 +370,9 @@ export default function Home() {
               </Link>
             ))}
           </div>
+
+          {/* Interactive Deliverable Blueprint Showcase */}
+          <UseCaseShowcase />
         </div>
       </section>
 
