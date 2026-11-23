@@ -133,14 +133,14 @@ export default function GoogleBusinessProfilePage() {
                 alt="Google Maps Local 3-Pack SEO & Verified Profile Ranking Showcase"
                 fill
                 priority
-                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                className="object-cover object-center grayscale contrast-110 group-hover:scale-102 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 80vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-black/50 border border-white/10 rounded-xl">
+              <div className="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-black/60 border border-white/10 rounded-xl">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs uppercase tracking-wider font-mono text-emerald-400 font-semibold">Local 3-Pack Dominance</span>
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <span className="text-xs uppercase tracking-wider font-mono text-neutral-300 font-semibold">Local 3-Pack Dominance</span>
                 </div>
                 <p className="font-display font-bold text-lg md:text-xl text-white">Google Maps Multi-City Citation &amp; Review Architecture</p>
                 <p className="text-xs md:text-sm text-neutral-300 mt-1">

@@ -127,14 +127,14 @@ export default function EcomWebsitesPage() {
                 alt="Shopify E-Commerce Store Architecture & Live Dashboard"
                 fill
                 priority
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className="object-cover object-center grayscale contrast-110 group-hover:scale-105 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
-              <div className="relative z-10 p-6 md:p-8 backdrop-blur-md bg-black/50 border border-white/10 m-4 rounded-xl">
+              <div className="relative z-10 p-6 md:p-8 backdrop-blur-md bg-black/60 border border-white/10 m-4 rounded-xl">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs uppercase tracking-wider font-mono text-emerald-400 font-semibold">Verified Shopify Architecture</span>
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <span className="text-xs uppercase tracking-wider font-mono text-neutral-300 font-semibold">Verified Shopify Architecture</span>
                 </div>
                 <p className="font-display font-bold text-xl text-white">Turnkey E-commerce Launchpad</p>
                 <p className="text-sm text-neutral-300 mt-1">
