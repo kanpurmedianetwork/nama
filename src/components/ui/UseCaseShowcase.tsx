@@ -2,16 +2,55 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Stethoscope, Store, GraduationCap, Factory, ArrowRight, Sparkles } from "lucide-react";
+import { 
+  Stethoscope, 
+  Scissors,
+  GraduationCap, 
+  Building2,
+  Utensils,
+  Store, 
+  Factory, 
+  Wrench,
+  Sparkles,
+  ArrowRight
+} from "lucide-react";
 import { UseCaseMockup } from "@/components/ui/UseCaseMockup";
 
-const featuredUseCases = [
+const allUseCases = [
   {
     slug: "clinics-doctors",
     industry: "Clinics & Doctors",
     icon: Stethoscope,
     badge: "Local 3-Pack & WhatsApp",
     summary: "Patient acquisition funnel combining Google Maps local 3-pack authority with instant 1-tap WhatsApp slot bookings."
+  },
+  {
+    slug: "salons-wellness",
+    industry: "Salons & Wellness",
+    icon: Scissors,
+    badge: "Instagram Reels & Booking",
+    summary: "High-ticket bridal package lookbooks, Instagram Reels transformation ads, and seamless WhatsApp appointment scheduling."
+  },
+  {
+    slug: "coaching-education",
+    industry: "Coaching & Education",
+    icon: GraduationCap,
+    badge: "High-Intent Google Ads",
+    summary: "Student enrollment pipeline targeting parents and students with high-intent search ads and automated WhatsApp brochure delivery."
+  },
+  {
+    slug: "real-estate",
+    industry: "Real Estate",
+    icon: Building2,
+    badge: "Qualified Buyer Leads",
+    summary: "Verified homebuyer site-visit funnels with RERA project landing pages, budget qualification filters, and automated sales CRM dispatch."
+  },
+  {
+    slug: "restaurants-cafes",
+    industry: "Restaurants & Cafes",
+    icon: Utensils,
+    badge: "0% Commission Direct Booking",
+    summary: "Pack your dining tables on weekends with Google Maps food SEO, signature dish Instagram Reels, and direct WhatsApp table reservations."
   },
   {
     slug: "d2c-fashion",
@@ -21,43 +60,50 @@ const featuredUseCases = [
     summary: "Direct-to-consumer store setup with Meta catalog ads, 1-click mobile checkout, and automated WhatsApp abandoned cart recovery."
   },
   {
-    slug: "coaching-education",
-    industry: "Coaching & Education",
-    icon: GraduationCap,
-    badge: "High-Intent Google Ads",
-    summary: "Enrollment pipeline targeting parents and students with high-intent search ads and automated WhatsApp brochure delivery."
-  },
-  {
     slug: "b2b-manufacturers-exporters",
     industry: "B2B Manufacturers",
     icon: Factory,
     badge: "Procurement SEO & RFQ",
     summary: "Industrial lead funnel designed for wholesale inquiries, technical specification matrix, and 4-hour commercial RFQ turnarounds."
+  },
+  {
+    slug: "home-local-services",
+    industry: "Home & Local Services",
+    icon: Wrench,
+    badge: "Google Call-Only Ads",
+    summary: "Emergency doorstep repair bookings and contractor inquiries via mobile Google Call ads and automated technician dispatch alerts."
+  },
+  {
+    slug: "creators-artists",
+    industry: "Creators & Artists",
+    icon: Sparkles,
+    badge: "Digital Press Kit & Gigs",
+    summary: "Authoritative artist portfolio website, video showreel showcases, and dedicated inquiry forms for corporate events and brand sponsorships."
   }
 ];
 
 export function UseCaseShowcase() {
-  const [activeSlug, setActiveSlug] = useState(featuredUseCases[0].slug);
+  const [activeSlug, setActiveSlug] = useState(allUseCases[0].slug);
 
-  const active = featuredUseCases.find((u) => u.slug === activeSlug) || featuredUseCases[0];
+  const active = allUseCases.find((u) => u.slug === activeSlug) || allUseCases[0];
 
   return (
     <div className="mt-16 pt-12 border-t border-neutral-200/80">
       <div className="text-center max-w-2xl mx-auto mb-8">
         <span className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400 block mb-1">
-          Interactive Deliverable Blueprint
+          Interactive Deliverable Blueprints
         </span>
         <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
-          See What We Build For Your Industry
+          See What We Build For All 9 Industries
         </h3>
         <p className="text-neutral-500 text-xs md:text-sm mt-2">
-          Select an industry below to preview the exact customer acquisition setup and conversion interface we engineer:
+          Select any industry below to preview the exact customer acquisition setup and conversion interface we engineer:
         </p>
       </div>
 
-      {/* Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mb-10 max-w-4xl mx-auto">
-        {featuredUseCases.map((item) => {
+      {/* Tabs for all 9 industries */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-10 max-w-5xl mx-auto">
+        {allUseCases.map((item) => {
           const Icon = item.icon;
           const isActive = activeSlug === item.slug;
           return (
@@ -65,13 +111,13 @@ export function UseCaseShowcase() {
               key={item.slug}
               type="button"
               onClick={() => setActiveSlug(item.slug)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
                 isActive
                   ? "bg-neutral-900 text-white shadow-md scale-[1.02]"
                   : "bg-white text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200"
               }`}
             >
-              <Icon size={16} className={isActive ? "text-emerald-400" : "text-neutral-400"} />
+              <Icon size={14} className={isActive ? "text-emerald-400" : "text-neutral-400"} />
               <span>{item.industry}</span>
             </button>
           );
