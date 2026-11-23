@@ -7,7 +7,6 @@ import {
   Megaphone, 
   Monitor, 
   MapPin, 
-  Calendar, 
   ShoppingBag, 
   Star, 
   CheckCircle2, 
@@ -168,7 +167,7 @@ export default function Home() {
             "AI Content Marketing",
             "Shopify E-commerce Stores",
             "Local SEO for Multi-City & Service-Area Businesses",
-            "Event Promotion & Coverage",
+            "Conversion Rate Optimization (CRO)",
           ].map((tag) => (
             <span 
               key={tag} 
@@ -387,7 +386,7 @@ export default function Home() {
               Integrated execution across brand design, web engineering, local SEO, and paid performance ads.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             <ServiceCard 
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
@@ -410,9 +409,9 @@ export default function Home() {
               href="/services/meta-google-ads"
             />
             <ServiceCard 
-              title="Website Development"
-              description="Fast, mobile-first websites built on modern stack."
-              features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
+              title="Website & E-commerce Development"
+              description="Fast Next.js websites and high-converting Shopify stores."
+              features={["Custom business sites & Shopify", "SEO-optimized & mobile-first", "Includes Google Business setup"]}
               icon={<Monitor size={24} />}
               href="/services/website-development"
             />
@@ -429,20 +428,6 @@ export default function Home() {
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Zap size={24} />}
               href="/services/ai-content-marketing"
-            />
-            <ServiceCard 
-              title="Event Promotion"
-              description="End-to-end event buzz and coverage."
-              features={["Pre-event ads & WhatsApp", "Live coverage brief", "Post-event repurposing"]}
-              icon={<Calendar size={24} />}
-              href="/events"
-            />
-            <ServiceCard 
-              title="E-commerce Websites"
-              description="High-converting Shopify stores built to sell."
-              features={["Custom Shopify store setup", "Payment & shipping setup", "Mobile-first & SEO-ready"]}
-              icon={<ShoppingBag size={24} />}
-              href="/ecom-websites"
             />
           </div>
         </div>
@@ -768,20 +753,6 @@ const serviceSchemas = [
     offers: {
       "@type": "Offer",
       "price": "4999",
-      "priceCurrency": "INR",
-      "url": "https://www.nexudyam.in/pricing"
-    }
-  },
-  {
-    "@type": "Service",
-    name: "Event Promotion & Coverage",
-    description: "Pre-event buzz, live coverage via Instagram Reels/Stories, and post-event evergreen content repurposing.",
-    provider: { "@type": "Organization", name: "Nexudyam", url: "https://www.nexudyam.in" },
-    url: "https://www.nexudyam.in/events",
-    areaServed: "IN",
-    offers: {
-      "@type": "Offer",
-      "price": "18999",
       "priceCurrency": "INR",
       "url": "https://www.nexudyam.in/pricing"
     }

@@ -106,7 +106,19 @@ export function Navbar() {
   const pathname = usePathname();
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const servicesBtnRef = useRef<HTMLButtonElement>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [whatsappHref, setWhatsappHref] = useState("https://wa.me/919161881100");
+
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setIsMegaOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsMegaOpen(false);
+    }, 150);
+  };
 
   useEffect(() => {
     setWhatsappHref(getPrefilledWhatsAppUrl());
@@ -212,6 +224,8 @@ export function Navbar() {
               ref={servicesBtnRef}
               type="button"
               onClick={() => setIsMegaOpen(!isMegaOpen)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               aria-expanded={isMegaOpen}
               className={cn(
                 "flex items-center gap-1.5 h-9 px-4 rounded-full text-[13.5px] font-medium transition-all duration-200 cursor-pointer",
@@ -291,6 +305,8 @@ export function Navbar() {
         {isMegaOpen && (
           <div
             ref={megaMenuRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className="hidden lg:block absolute top-full left-0 right-0 w-full bg-[#070b16] border-b border-white/10 shadow-2xl z-50 animate-in fade-in slide-in-from-top-1 duration-200"
           >
             <div className="max-w-7xl mx-auto px-6 py-8">
@@ -410,7 +426,7 @@ export function Navbar() {
       {/* 3. MOBILE FULLSCREEN OVERLAY (Monochrome, NO BLUE) */}
       {isMobileOpen && (
         <div 
-          className="lg:hidden fixed inset-0 z-50 bg-[#070b16] text-white flex flex-col justify-between overflow-y-auto px-6 py-6 animate-in fade-in zoom-in-95 duration-200"
+          className="lg:hidden fixed inset-0 z-[60] bg-[#070b16] text-white flex flex-col justify-between overflow-y-auto px-6 py-6 animate-in fade-in zoom-in-95 duration-200"
           style={{
             backgroundImage: `radial-gradient(70% 45% at 100% 0%, rgba(255, 255, 255, 0.06), transparent 70%)`
           }}

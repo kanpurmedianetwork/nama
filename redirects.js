@@ -68,4 +68,10 @@ module.exports = [
     destination: "/blog/rank-google-maps-local-seo-guide",
     statusCode: 301,
   },
+  // Permanent 301 redirect for deprecated /events route
+  {
+    source: "/events",
+    destination: "/services",
+    statusCode: 301,
+  },
 ];

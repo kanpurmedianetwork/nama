@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <strong>Nexudyam</strong> (a unit of Redside Technologies India) is an Indian digital marketing and lead-generation agency founded in 2026 by Akash Kumar. Operating as a remote-first partner serving founders across India, the company specializes in providing problem-led, tech-enabled marketing solutions tailored for Startups, Micro, Small, and Medium Enterprises (MSMEs), and emerging brands.
               </p>
               <p className="mb-0">
-                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization &amp; Local SEO, AI Content Marketing, Event Promotion, and E-commerce Website Development (Shopify). Nexudyam serves businesses nationwide with remote-first collaboration.
+                The platform offers a comprehensive suite of services including Brand Identity Design, Meta and Google Ads Management, Website Development, Google Business Profile Optimization &amp; Local SEO, AI Content Marketing, and E-commerce Website Development (Shopify). Nexudyam serves businesses nationwide with remote-first collaboration.
               </p>
             </section>
 

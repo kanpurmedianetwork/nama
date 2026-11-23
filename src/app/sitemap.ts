@@ -38,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/pricing", file: "src/app/pricing/page.tsx" },
     { route: "/ecom-websites", file: "src/app/ecom-websites/page.tsx" },
     { route: "/artist-management", file: "src/app/artist-management/page.tsx" },
-    { route: "/events", file: "src/app/events/page.tsx" },
     { route: "/about", file: "src/app/about/page.tsx" },
     { route: "/contact", file: "src/app/contact/page.tsx" },
     { route: "/blog", file: "src/app/blog/page.tsx" },

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { Palette, Share2, Megaphone, Monitor, MapPin, Calendar, Cpu, ShoppingBag, ArrowRight } from "lucide-react";
+import { Palette, Share2, Megaphone, Monitor, MapPin, Cpu, ArrowRight } from "lucide-react";
 import { JsonLd, breadcrumbs } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -34,7 +34,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Service Cards Grid linking to dedicated service routes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-24">
             <ServiceCard 
               title="Brand Identity Design"
               description="Visual identity that builds trust and recognition."
@@ -57,9 +57,9 @@ export default function ServicesPage() {
               href="/services/meta-google-ads"
             />
             <ServiceCard 
-              title="Website Development"
-              description="Fast, mobile-first websites built on modern stack."
-              features={["5-page business site", "SEO-optimized from day one", "Includes Google Business setup"]}
+              title="Website & E-commerce Development"
+              description="Fast, mobile-first websites and conversion-ready Shopify stores."
+              features={["Custom business sites & Shopify", "SEO-optimized from day one", "Includes Google Business setup"]}
               icon={<Monitor size={28} />}
               href="/services/website-development"
             />
@@ -76,20 +76,6 @@ export default function ServicesPage() {
               features={["AI Reels & blog scripts", "WhatsApp broadcast content", "30-day calendars in 48h"]}
               icon={<Cpu size={28} />}
               href="/services/ai-content-marketing"
-            />
-            <ServiceCard 
-              title="Event Promotion"
-              description="End-to-end event buzz and coverage."
-              features={["Pre-event ads & WhatsApp", "Live coverage brief", "Post-event repurposing"]}
-              icon={<Calendar size={28} />}
-              href="/events"
-            />
-            <ServiceCard 
-              title="E-commerce Websites"
-              description="High-converting Shopify stores built to sell."
-              href="/ecom-websites"
-              features={["Custom Shopify store setup", "Payment & shipping setup", "Mobile-first & SEO-ready"]}
-              icon={<ShoppingBag size={28} />}
             />
           </div>
 
